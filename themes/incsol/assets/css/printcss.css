@@ -1,0 +1,41 @@
+@media print {
+.pcoded .pcoded-header[header-theme="theme1"],.pcoded .pcoded-navbar[navbar-theme="themelight1"] .main-menu, .page-header{display:none;}	
+.card-block form{display:none;}
+.pcoded-main-container{margin-top:0px !important; margin-left: -233px !important;}
+.main-footer{display:none !important;}
+.print_btn, .excel_btn {display:none;}
+.table-responsive {overflow-x: unset !important;}
+table .action-btn-align .btn, .btn-inverse, .btn-mini {display:none !important;}
+table .label {background-color: #cd853f00 !important; font-size: 0.875em !important; color: #455a64 !important; font-family: "Roboto", sans-serif;}
+table{margin-top:0px; font-size:11px !important;}
+.print_header{display:block !important; margin-top:-5px !important; width:100% !important;}
+.print_header_logo {width:20% !important; float:left;}
+.print_header_tit{float:left; width:80% !important; float:left;}
+.print_header_logo{float:left; padding:5px; display:none;}
+table thead{ font-weight:500;}
+.hide_class{display:none !important; border:0px solid #ccc !important;}
+.card-header{margin-top:-15px; display:none;}
+.card-header .md-trigger{display:none !important;} 
+.dataTables_info, .pagination, .dataTables_length, .dataTables_filter{display:none !important;}
+.table thead tr {border:1px solid #ccc;}
+table{width:100% !important;}
+@page {size:A4 portrait;}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after{display:none;}
+table thead{font-weight:bold !important;}
+table tfoot td.center.net_bg {
+  color:#455a64 !important; font-weight:bold !important;}
+.print-line{border-bottom:2px solid #ddd !important; margin-top:3px; margin-bottom:10px;}
+.card-header{margin-top:-5px;}
+.card-block{margin-top:-20px;}
+.table thead {margin-top:0px !important;}
+table { }
+						thead{  page-break-inside:auto; }
+                        tbody { page-break-inside:always; }
+                        
+                        tfoot { page-break-after:always !important; display:table-header-group; }
+thead th {
+height: 2.1cm;
+}
+.card-header h5{dispaly:none !important;}
+}
+@page {margin: 0.1cm;}

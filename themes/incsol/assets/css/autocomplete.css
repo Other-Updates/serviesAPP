@@ -1,0 +1,30 @@
+.ui-autocomplete {
+    position: absolute;
+    display: none;
+    padding: 7px 0;
+    z-index: 1000;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.ui-autocomplete .ui-menu-item{
+    color:black;
+}
+.ui-menu .ui-menu-item > a:hover {
+    color: #fff;
+}
+.ui-menu-item div:hover{
+	background-color: #448aff;
+    color: white;   
+}
+.ui-menu-item div{
+	padding-left:5px;
+}
+.ui-autocomplete{
+	background-color: #fff;
+    color: black;    
+	border:1px solid #ccc;
+	line-height:1.5rem
+	
+}
+
