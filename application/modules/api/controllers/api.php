@@ -94,18 +94,18 @@ class Api extends REST_Controller {
                 $mobile_number = $data_input['mobile_number'];
                 $password = $data_input['password'];
                 $customer_data = $this->api_model->get_customer_by_login($mobile_number, $password);
-                if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] != 1) {
-                    $output = array('status' => 'error', 'message' => 'Your OTP has not been verified!Please verify');
-                    $this->response($output);
-                } else if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] == 1) {
-                    $customer_data[0]['type'] = 'customer';
-                    if ($customer_data[0]['profile_image'] != '') {
-                        $profile_image = base_url() . 'attachement/cust_image/' . $customer_data[0]['profile_image'];
-                    } else {
-                        $profile_image = '';
-                    }
-                    $customer_data[0]['profile_image'] = $profile_image;
-                    $this->admin_model->users_logs_updates('insert', 2, $customer_data[0]['id']);
+                // if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] != 1) {
+                //     $output = array('status' => 'error', 'message' => 'Your OTP has not been verified!Please verify');
+                //     $this->response($output);
+                // } else if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] == 1) {
+                //     $customer_data[0]['type'] = 'customer';
+                //     if ($customer_data[0]['profile_image'] != '') {
+                //         $profile_image = base_url() . 'attachement/cust_image/' . $customer_data[0]['profile_image'];
+                //     } else {
+                //         $profile_image = '';
+                //     }
+                //     $customer_data[0]['profile_image'] = $profile_image;
+                //     $this->admin_model->users_logs_updates('insert', 2, $customer_data[0]['id']);
                     $this->response([
                         'status' => "Success",
                         'message' => 'Customer login successful.',
@@ -885,29 +885,29 @@ class Api extends REST_Controller {
         exit;
     }
 
-    public function get_all_invoice_id_post() {
-        $data_input = $this->_get_custom_post_values(); // JSON Input
-        if (!empty($data_input)) {
-            if (!empty($data_input['customer_id'])) {
-                $customer_id = $data_input['customer_id'];
-                $incoice_id_list = $this->api_model->get_all_invoice_id($customer_id);
+    // public function get_all_invoice_id_post() {
+    //     $data_input = $this->_get_custom_post_values(); // JSON Input
+    //     if (!empty($data_input)) {
+    //         if (!empty($data_input['customer_id'])) {
+    //             $customer_id = $data_input['customer_id'];
+    //             $incoice_id_list = $this->api_model->get_all_invoice_id($customer_id);
 
-                if (!empty($incoice_id_list)) {
-                    $output = array('status' => 'success', 'message' => 'Invoice Id', 'data' => $incoice_id_list);
-                    $this->response($output);
-                } else {
-                    $output = array('status' => 'false', 'message' => 'Data Not Found');
-                    $this->response($output);
-                }
-            } else {
-                $output = array('status' => 'false', 'message' => 'Incorrect Customer ID, please try again.');
-                $this->response($output);
-            }
-        } else {
-            $output = array('status' => 'false', 'message' => 'Please enter the Customer ID.');
-            $this->response($output);
-        }
-    }
+    //             if (!empty($incoice_id_list)) {
+    //                 $output = array('status' => 'success', 'message' => 'Invoice Id', 'data' => $incoice_id_list);
+    //                 $this->response($output);
+    //             } else {
+    //                 $output = array('status' => 'false', 'message' => 'Data Not Found');
+    //                 $this->response($output);
+    //             }
+    //         } else {
+    //             $output = array('status' => 'false', 'message' => 'Incorrect Customer ID, please try again.');
+    //             $this->response($output);
+    //         }
+    //     } else {
+    //         $output = array('status' => 'false', 'message' => 'Please enter the Customer ID.');
+    //         $this->response($output);
+    //     }
+    // }
 
     public function get_invoice_details_by_id_post() {
         $data_input = $this->_get_custom_post_values(); // JSON Input

@@ -53,7 +53,7 @@ class Admin extends MX_Controller {
                 $this->admin_model->users_logs_updates('insert', 1, $user_info[0]['id']);
 
 
-                redirect($this->config->item('base_url') . 'admin/dashboard');
+                redirect($this->config->item('base_url') .'service/to_do_service');
             } else
                 redirect($this->config->item('base_url') . 'admin?login=fail');
         }
@@ -342,7 +342,7 @@ class Admin extends MX_Controller {
         $frommonth = $this->input->post('frommonth');
         $toyear = $this->input->post('toyear');
         $tomonth = $this->input->post('tomonth');
-        $data['service'] = $this-> ->getServicedata($year);
+        $data['service'] = $this->getServicedata($year);
 
         print_r(json_encode($data, true));
     }

@@ -40,13 +40,14 @@ $job_type_arr = array(
                 <thead>
                     <tr>
                         <th width="33">S.No</th>
-                        <th width="35">Inv #</th>
+                        <!-- <th width="35">Inv #</th> -->
                         <th width="35">Ticket #</th>
                         <!--<th width="35">Product Image</th>-->
                         <th width="35">Description</th>
-                        <th width="35">Warranty</th>
+                        <!-- <th width="35">Warranty</th> -->
+                        <th width="35">Staffname</th>
                         <th width="35">Inv Date</th>
-                        <th width="92">Status</th>
+                        <th width="75">Status</th>
                         <th width="107" class="action-btn-align">Action</th>
                     </tr>
                 </thead>

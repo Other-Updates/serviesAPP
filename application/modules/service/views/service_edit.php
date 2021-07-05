@@ -31,7 +31,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                         ?>
                                         <form class="form-material" action="<?php echo $this->config->item('base_url'); ?>service/to_do_service/update_service/<?php echo $val['id']; ?>" method="POST" enctype="multipart/form-data">
                                             <div class="form-material row">
-                                                <div class="col-md-3">
+                                                <!-- <div class="col-md-3">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-address-book"></i>
@@ -43,7 +43,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
 
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="col-md-3">
                                                     <div class="material-group">
                                                         <div class="material-addone">
@@ -72,7 +72,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <!-- <div class="col-md-3">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-briefcase-alt-1"></i>
@@ -81,6 +81,22 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                             <label class="float-label">Warranty</label>
                                                             <input type="text" class=" form-control " value="<?= $val['warrenty'] ?>"  tabindex="1" readonly/>
                                                             <span id="cuserror8" class="val text-danger"></span>
+                                                            <span class="form-bar"></span>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                                <div class="col-md-3">
+                                                    <div class="material-group">
+                                                        <div class="material-addone">
+                                                            <i class="icofont icofont-notepad"></i>
+                                                        </div>
+                                                        <div class="form-group form-primary">
+                                                            <select name="status" class="form-control " id="status"  tabindex="1">
+                                                                <option value="2" <?php echo ($val['status'] == 2) ? 'selected' : ''; ?>>Pending</option>
+                                                                <option value="1" <?php echo ($val['status'] == 1) ? 'selected' : ''; ?>>Completed</option>
+                                                                <option value="0" <?php echo ($val['status'] == 0) ? 'selected' : ''; ?>>In-Progress</option>
+                                                            </select>
+                                                            <span id="cuserror3" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
                                                     </div>
@@ -150,7 +166,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 }
                                                 ?>
 
-                                                <div class="col-md-3">
+                                                <!-- <div class="col-md-3">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-notepad"></i>
@@ -165,7 +181,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                             <span class="form-bar"></span>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="col-md-12">
                                                     <div class="material-group">
                                                         <div class="material-addone">

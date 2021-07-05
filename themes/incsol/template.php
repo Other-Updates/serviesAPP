@@ -785,7 +785,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="pcoded-navigation-label">Dashboard</div>
+                                <!-- <div class="pcoded-navigation-label">Dashboard</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li class="<?php echo ($cur_class == 'admin') ? 'active' : '' ?>">
                                         <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>" class="waves-effect waves-dark">
@@ -794,7 +794,7 @@
                                             <span class="pcoded-mcaret"></span>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
                                 <div class="pcoded-navigation-label">Masters</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li class="pcoded-hasmenu <?php echo $menu_trigger; ?> <?= ($cur_class == 'users' || $cur_class == 'master_colour' || $cur_class == 'product' || $cur_class == 'master_size' || $cur_class == 'item_code' || $cur_class == 'master_style_type' || $cur_class == 'master_fit' || $cur_class == 'vendor' || $cur_class == 'agent' || $cur_class == 'customer' || $cur_class == 'master_brand' || $cur_class == 'master_category' || $cur_class == 'master_transport' || $cur_class == 'email' || $cur_class == 'advertisement' || $cur_class == 'expense_category' && $cur_method == 'fixed_expense' && $cur_method == 'variable_expense' || $cur_class == 'manage_links' ) ? 'active' : '' ?>">
@@ -804,7 +804,7 @@
                                             <span class="pcoded-mcaret"></span>
                                         </a>
                                         <ul class="pcoded-submenu">
-                                            <?php if ($this->user_auth->is_section_allowed('masters', 'vendor')): ?>
+                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'vendor')): ?>
                                                 <li class="<?php echo ($cur_class == 'vendor') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'vendor/index' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -812,8 +812,8 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?>
-                                            <?php if ($this->user_auth->is_section_allowed('masters', 'customer')): ?>
+                                            <?php endif; ?> -->
+                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'customer')): ?>
                                                 <li class="<?php echo ($cur_class == 'customer') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'customer/index' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -821,7 +821,7 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?>
+                                            <?php endif; ?> -->
                                             <?php if (($user_info[0]['role'] != 2)) { ?>
                                                 <?php if ($this->user_auth->is_section_allowed('masters', 'user_roles')): ?>
                                                     <li class="<?php echo ($cur_class == 'user_roles') ? 'active' : '' ?>">
@@ -842,7 +842,7 @@
                                                     </li>
                                                 <?php endif; ?>
                                             <?php } ?>
-                                            <?php if ($this->user_auth->is_section_allowed('masters', 'product')): ?>
+                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'product')): ?>
                                                 <li class="<?php echo ($cur_class == 'product') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'product/index' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -850,7 +850,7 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?>
+                                            <?php endif; ?> -->
                                             <?php if ($this->user_auth->is_section_allowed('masters', 'master_category')): ?>
                                                 <li class="<?php echo ($cur_class == 'master_category') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'master_category/index' ?>" class="waves-effect waves-dark">
@@ -860,7 +860,7 @@
                                                     </a>
                                                 </li>
                                             <?php endif; ?>
-                                            <?php if ($this->user_auth->is_section_allowed('masters', 'master_brand')): ?>
+                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'master_brand')): ?>
                                                 <li class="<?php echo ($cur_class == 'master_brand') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'master_brand/index' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -868,8 +868,8 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?>
-                                            <?php if (($user_info[0]['role'] != 2)) { ?>
+                                            <?php endif; ?> -->
+                                            <!-- <?php if (($user_info[0]['role'] != 2)) { ?>
                                                 <?php if ($this->user_auth->is_section_allowed('masters', 'email')): ?>
                                                     <li class="<?php echo ($cur_class == 'email') ? 'active' : '' ?>">
                                                         <a href="<?php echo $this->config->item('base_url') . 'email/index' ?>" class="waves-effect waves-dark">
@@ -879,7 +879,7 @@
                                                         </a>
                                                     </li>
                                                 <?php endif; ?>
-                                            <?php } ?>
+                                            <?php } ?> -->
                                             <?php if ($this->user_auth->is_section_allowed('masters', 'advertisement')): ?>
                                                 <li class="<?php echo ($cur_class == 'advertisement') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'advertisement' ?>" class="waves-effect waves-dark">
@@ -898,7 +898,7 @@
                                                     </a>
                                                 </li>
                                             <?php endif; ?>
-                                            <?php if ($this->user_auth->is_section_allowed('masters', 'expense_category')): ?>
+                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'expense_category')): ?>
                                                 <li class="<?php echo ($cur_class == 'expense_category') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'masters/expense_category' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -906,8 +906,8 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?>
-                                            <?php if ($this->user_auth->is_section_allowed('masters', 'db_backup')): ?>
+                                            <?php endif; ?> -->
+                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'db_backup')): ?>
                                                 <li class="<?php echo ($cur_class == 'back_up') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'admin/back_up' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -915,7 +915,7 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?>
+                                            <?php endif; ?> -->
                                         </ul>
                                     </li>
                                 </ul>
@@ -934,7 +934,8 @@
                                         </li>
                                     </ul>
                                 <?php endif; ?>
-                                <?php if ($user_info[0]['role'] != 5) { ?>
+
+                                <!-- <?php if ($user_info[0]['role'] != 5) { ?>
                                     <?php if ($user_info[0]['role'] != 4) { ?>
                                         <?php if ($this->user_auth->is_section_allowed('quotation', 'quotation')): ?>
                                             <div class="pcoded-navigation-label">Quotation</div>
@@ -951,8 +952,8 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                        <?php endif; ?>
-                                        <?php if ($user_info[0]['role'] != 3) { ?>
+                                        <?php endif; ?> -->
+                                        <!-- <?php if ($user_info[0]['role'] != 3) { ?>
                                             <div class="pcoded-navigation-label">Purchase</div>
                                             <ul class="pcoded-item pcoded-left-item">
                                                 <?php if ($this->user_auth->is_section_allowed('purchase_order', 'purchase_order')): ?>
@@ -995,8 +996,8 @@
                                                     </li>
                                                 <?php endif; ?>
                                             </ul>
-                                        <?php } ?>
-                                        <?php if ($this->user_auth->is_section_allowed('stock', 'stock')): ?>
+                                        <?php } ?> -->
+                                        <!-- <?php if ($this->user_auth->is_section_allowed('stock', 'stock')): ?>
                                             <div class="pcoded-navigation-label">Stock</div>
                                             <ul class="pcoded-item pcoded-left-item">
                                                 <li class="<?php echo ($cur_class == 'stock') ? 'active' : '' ?>">
@@ -1004,12 +1005,12 @@
                                                         <span class="pcoded-micon"><i class="ti-shopping-cart-full"></i><b>S</b></span>
                                                         <span class="pcoded-mtext">Stock
                                                             <?php // if (count($stock_count) != 0) {      ?></span>
-                                                            <!--<span class="label label-rounded label-info pull-right pcount"  data-toggle="tooltip" data-placement="left" data-original-title="Pending Count"><?php //echo count($stock_count);                                   ?></span>-->
+                                                            <span class="label label-rounded label-info pull-right pcount"  data-toggle="tooltip" data-placement="left" data-original-title="Pending Count"><?php //echo count($stock_count);?></span>
                                                         <?php // }    ?>
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
-                                                </li>
-                                                <li class="<?php echo ($cur_class == 'death_stock') ? 'active' : '' ?>">
+                                                </li> -->
+                                                <!-- <li class="<?php echo ($cur_class == 'death_stock') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'stock/death_stock' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-shopping-cart-full"></i><b>S</b></span>
                                                         <span class="pcoded-mtext">Dead Stock
@@ -1018,8 +1019,8 @@
                                                 </li>
                                             </ul>
                                         <?php endif; ?>
-                                    <?php } ?>
-
+                                    <?php } ?> -->
+<!-- 
                                     <div class="pcoded-navigation-label">Sales</div>
                                     <ul class="pcoded-item pcoded-left-item">
                                         <?php if ($this->user_auth->is_section_allowed('project_cost', 'project_cost')): ?>
@@ -1060,17 +1061,17 @@
                                                 <?php endif; ?>
                                             <?php } ?>
                                         <?php } ?>
-                                    </ul>
+                                    </ul> -->
                                     <?php if ($this->user_auth->is_section_allowed('service', 'service')): ?>
-                                        <div class="pcoded-navigation-label">Service and Repair</div>
+                                        <div class="pcoded-navigation-label">Services</div>
                                         <ul class="pcoded-item pcoded-left-item">
-                                            <li class="<?php echo ($cur_class == 'service') ? 'active' : '' ?>">
+                                            <!-- <li class="<?php echo ($cur_class == 'service') ? 'active' : '' ?>">
                                                 <a href="<?php echo $this->config->item('base_url') . 'service/service_list' ?>" class="waves-effect waves-dark">
                                                     <span class="pcoded-micon"><i class="ti-share"></i><b>SR</b></span>
                                                     <span class="pcoded-mtext">Service and Repair</span>
                                                     <span class="pcoded-mcaret"></span>
                                                 </a>
-                                            </li>
+                                            </li> -->
                                             <?php if ($this->user_auth->is_module_allowed('services')): ?>
                                                 <li class="<?php echo ($cur_class == 'to_do_service') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'service/to_do_service' ?>" class="waves-effect waves-dark">
@@ -1082,7 +1083,7 @@
                                             <?php endif; ?>
                                         </ul>
                                     <?php endif; ?>
-                                    <?php if ($this->user_auth->is_section_allowed('service_inward_and_outward_dc', 'service_inward_and_outward_dc')): ?>
+                                    <!-- <?php if ($this->user_auth->is_section_allowed('service_inward_and_outward_dc', 'service_inward_and_outward_dc')): ?>
                                         <div class="pcoded-navigation-label">Service Inward and Outward DC</div>
                                         <ul class="pcoded-item pcoded-left-item">
                                             <li class="<?php echo ($cur_class == 'service_inward_and_outward_dc') ? 'active' : '' ?>">
@@ -1093,7 +1094,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    <?php endif; ?>
+                                    <?php endif; ?> -->
                                     <?php if ($this->user_auth->is_section_allowed('to_do_list', 'to_do_list')): ?>
                                         <div class="pcoded-navigation-label">To do List</div>
                                         <ul class="pcoded-item pcoded-left-item">
@@ -1106,7 +1107,7 @@
                                             </li>
                                         </ul>
                                     <?php endif; ?>
-                                    <?php if ($this->user_auth->is_module_allowed('attendance', 'attendance')): ?>
+                                    <!-- <?php if ($this->user_auth->is_module_allowed('attendance', 'attendance')): ?>
                                         <div class="pcoded-navigation-label">Attendance</div>
                                     <?php endif; ?>
                                     <ul class="pcoded-item pcoded-left-item">
@@ -1119,8 +1120,8 @@
                                                 </a>
                                             </li>
                                         <?php endif; ?>
-                                    </ul>
-                                    <?php if ($this->user_auth->is_module_allowed('expense', 'expense')): ?>
+                                    </ul> -->
+                                    <!-- <?php if ($this->user_auth->is_module_allowed('expense', 'expense')): ?>
                                         <div class="pcoded-navigation-label">Spending</div>
                                         <ul class="pcoded-item pcoded-left-item">
                                             <li class="pcoded-hasmenu <?php echo $menu_trigger; ?> <?= ($cur_class == 'expense') ? 'active' : '' ?>">
@@ -1160,9 +1161,9 @@
                                                 </ul>
                                             </li>
                                         </ul>
-                                    <?php endif; ?>
+                                    <?php endif; ?> -->
 
-                                    <?php if ($this->user_auth->is_module_allowed('report')): ?>
+                                    <!-- <?php if ($this->user_auth->is_module_allowed('report')): ?>
                                         <div class="pcoded-navigation-label">Reports</div>
                                         <ul class="pcoded-item pcoded-left-item">
                                             <li class="pcoded-hasmenu <?php echo $menu_trigger; ?> <?php echo ($cur_class == 'report') ? 'active' : '' ?>">
@@ -1316,7 +1317,7 @@
                                         </li>
                                         </ul>
                                     <?php endif; ?>
-                                <?php } ?>
+                                <?php } ?> -->
                             </div>
                         </nav>
                         <div class="pcoded-content">
@@ -1362,7 +1363,7 @@
                                 <div class="">
                                     <div class="copyright" id="bot_copyright">
 
-                                        <div class="nvqc-show-hide-log  mt-foot">Copyright <?php echo date('Y'); ?> &COPY; <b><a href='http://www.incsol.net/' target="_blank" style='color:#448aff'>Incredible Solutions</a><span class="pull-right">Powered By <a href="http://f2fsolutions.co.in/" target="_blank" style="">F2F Solutions</a></span></div>
+                                        <div class="nvqc-show-hide-log  mt-foot">Copyright <?php echo date('Y'); ?> &COPY; <b><a href='http://www.incsol.net/' target="_blank" style='color:#448aff'>F2F Solutions</a><span class="pull-right">Powered By <a href="http://f2fsolutions.co.in/" target="_blank" style="">F2F Solutions</a></span></div>
                                     </div>
                                 </div>
                             </footer>

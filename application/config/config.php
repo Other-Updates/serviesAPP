@@ -34,7 +34,7 @@ if (!defined('BASEPATH'))
 
   ||||||| .r872
  */
-$config['base_url'] = 'http://localhost/F2F/INCSL/';
+$config['base_url'] = 'http://localhost/F2F/serviesAPP/';
 
 
 /* $config['base_url']	= 'http://192.168.1.30/ots_svn/trunk/code/hive/'; */
