@@ -753,7 +753,7 @@ $config['default_email'] = "info@f2fsolutions.co.in";
 
 $config['default_email_name'] = "F2F solutions";
 
-$config['site_title'] = "Incredible solutions";
+$config['site_title'] = "F2F  solutions";
 
 $config['salt'] = 'billing_software';
 
