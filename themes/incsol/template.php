@@ -47,7 +47,7 @@
         <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
         <meta name="author" content="Phoenixcoded" />
         <!-- Favicon icon -->
-        <link rel="icon" href="<?= $theme_path; ?>/assets/images/favicon.png" type="image/x-icon">
+        <link rel="icon" href="<?= $theme_path; ?>/assets/images/f2f-logo.png" type="image/x-icon">
         <!--Google font    -->
         <link href="<?= $theme_path; ?>/assets/css/font-style.css?family=Roboto:400,500" rel="stylesheet">
         <!-- Required Fremwork -->
@@ -172,7 +172,7 @@
 
          </div>-->
         <div class="preloader" >
-            <div class="pageloader"><img src="<?= $theme_path; ?>/assets/images/solutions12gif.gif" alt="processing"></div>
+            <div class="pageloader"><img src="<?= $theme_path; ?>/assets/images/f2f-logo.png" alt="processing"></div>
         </div>
         <!-- Pre-loader start -->
         <!--<div class="theme-loader">
