@@ -161,6 +161,7 @@ class Api extends REST_Controller {
             $customer['mobil_number'] = $data_input['mobile_number'];
             $customer['state_id'] = "31";
             $customer['otp_pincode'] = mt_rand(1000, 9999);
+            $customer['otp_verification_status'] = "1";
             $is_mobile_number_exists = $this->api_model->is_mobile_number_exists($customer['mobil_number']);
             if ($is_mobile_number_exists) {
                 $output = array('status' => 'false', 'message' => "The given mobile number already exists.");
