@@ -65,7 +65,8 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Description</label>
-                                                            <textarea class="form-control" readonly="" tabindex="1"><?php echo $val['description']; ?></textarea>
+                                                            <!-- <textarea class="form-control" readonly="" tabindex="1"><?php echo $val['description']; ?></textarea> -->
+                                                            <input type="text" class="form-control form-align uppercase_class" id="nick" value="<?= $val['description'] ?>" tabindex="1" />
                                                             <span class="form-bar"></span>
                                                             <span id="nick"  class="val text-danger"></span>
 
@@ -110,9 +111,10 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Service Date</label>
-                                                            <input type="text" class=" form-control"  value="<?= date('m/d/Y', strtotime($val['created_date'])); ?>"  tabindex="1" readonly/>
+                                                            <!-- <input type="text" class=" form-control"  value="<?= date('m/d/Y', strtotime($val['created_date'])); ?>"  tabindex="1" readonly/> -->
+                                                            <input id="dropper-default" class="form-control" name="created_date"  data-date="<?php echo date('d', strtotime($val['created_date'])); ?>" data-month="<?php echo date('m', strtotime($val['created_date'])); ?>" data-formats="<?php echo date('m/d/Y', strtotime($val['created_date'])); ?>" data-year="<?php echo date('Y', strtotime($val['created_date'])); ?>" placeholder="Select your date" value="<?php echo date('d-M-Y', strtotime($val['created_date'])); ?>" />
                                                             <span class="form-bar"></span>
-                                                            <span id="cuserror4" class="val text-danger"></span>
+                                                            <span id="date1" class="val text-danger"></span>
 
                                                         </div>
                                                     </div>
@@ -392,4 +394,28 @@ $user_info = $this->user_auth->get_from_session('user_info');
                 $("#staff_err").html("");
             }
         });
+
+        $("#dropper-default").live('blur', function ()
+    {
+        var date = $("#dropper-default").val();
+
+        if (date == "" || date == null || date.trim().length == 0)
+        {
+            $("#date1").html("Required Field");
+        } else
+        {
+            $("#date1").html("");
+        }
+    });
     </script>
+    <script>
+     var date = $("#dropper-default").val();
+
+if (date == "" || date == null || date.trim().length == 0)
+{
+    $("#date1").html("Required Field");
+    i = 1;
+} else
+{
+    $("#date1").html("");
+}</script>

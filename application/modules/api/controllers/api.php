@@ -94,18 +94,18 @@ class Api extends REST_Controller {
                 $mobile_number = $data_input['mobile_number'];
                 $password = $data_input['password'];
                 $customer_data = $this->api_model->get_customer_by_login($mobile_number, $password);
-                // if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] != 1) {
-                //     $output = array('status' => 'error', 'message' => 'Your OTP has not been verified!Please verify');
-                //     $this->response($output);
-                // } else if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] == 1) {
-                //     $customer_data[0]['type'] = 'customer';
-                //     if ($customer_data[0]['profile_image'] != '') {
-                //         $profile_image = base_url() . 'attachement/cust_image/' . $customer_data[0]['profile_image'];
-                //     } else {
-                //         $profile_image = '';
-                //     }
-                //     $customer_data[0]['profile_image'] = $profile_image;
-                //     $this->admin_model->users_logs_updates('insert', 2, $customer_data[0]['id']);
+                if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] != 1) {
+                    $output = array('status' => 'error', 'message' => 'Your OTP has not been verified!Please verify');
+                    $this->response($output);
+                } else if (!empty($customer_data[0]['id']) && $customer_data[0]['otp_verification_status'] == 1) {
+                    $customer_data[0]['type'] = 'customer';
+                    if ($customer_data[0]['profile_image'] != '') {
+                        $profile_image = base_url() . 'attachement/cust_image/' . $customer_data[0]['profile_image'];
+                    } else {
+                        $profile_image = '';
+                    }
+                    $customer_data[0]['profile_image'] = $profile_image;
+                    $this->admin_model->users_logs_updates('insert', 2, $customer_data[0]['id']);
                     $this->response([
                         'status' => "Success",
                         'message' => 'Customer login successful.',

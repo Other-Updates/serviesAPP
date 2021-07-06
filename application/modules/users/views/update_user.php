@@ -157,7 +157,9 @@
                                                         </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Address <span class="req">*</span></label>
+
                                                             <textarea name="address1" id="address" class="form-control form-align uppercase_class"  tabindex="1"><?php echo $val['address']; ?></textarea>
+                                                            
                                                             <span id="cuserror3" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>

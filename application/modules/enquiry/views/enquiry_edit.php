@@ -93,6 +93,7 @@ if (!empty($customers)) {
                                     </div>
                                 </div>
                             </div>
+
                             <div class="form-material row">
                                 <div class="col-md-3">
                                     <div class="material-group">
@@ -101,13 +102,14 @@ if (!empty($customers)) {
                                         </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Followup Date <span class="req">*</span></label>
-                                            <!--<input type="date" name="followup_date" class="datepicker1 form-control" id="date"  value="<?php //echo $val['followup_date'];                                                  ?>"  tabindex="1"/>-->
+                                            <!--<input type="date" name="followup_date" class="datepicker1 form-control" id="date"  value="<?php //echo $val['followup_date'];?>"  tabindex="1"/>-->
                                             <input id="dropper-default" class="form-control" name="followup_date" type="text" data-date="<?php echo date('d', strtotime($val['followup_date'])); ?>" data-month="<?php echo date('m', strtotime($val['followup_date'])); ?>" data-formats="<?php echo date('m/d/Y', strtotime($val['followup_date'])); ?>" data-year="<?php echo date('Y', strtotime($val['followup_date'])); ?>" placeholder="Select your date" value="<?php echo date('d-M-Y', strtotime($val['followup_date'])); ?>" />
                                             <!--<span class="form-bar"></span>-->
                                             <span id="date1" class="val text-danger"></span>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-3">
                                     <div class="material-group">
                                         <div class="material-addone">

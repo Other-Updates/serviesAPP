@@ -28,7 +28,7 @@
 
             <div class="auth-box card">
                 <div class="text-center m-t-5">
-                    <img src="<?= $theme_path; ?>/assets/images/printlogo.png" alt="logo.png" style="width:200px;">
+                    <img src="<?= $theme_path; ?>/assets/images/f2f-logo.png" alt="logo.png" style="width:200px;">
                 </div>
                 <div class="card-block">
                     <?php

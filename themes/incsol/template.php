@@ -238,7 +238,7 @@
                                 <i class="ti-menu"></i>
                             </a>
                             <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>">
-                                <img class="img-fluid" src="<?= $theme_path; ?>/assets/images/logo.png" alt="Theme-Logo" style="width:135px"/>
+                                <img class="img-fluid" src="<?= $theme_path; ?>/assets/images/f2f-logo.png" alt="Theme-Logo" style="width:135px"/>
                             </a>
                             <a class="mobile-options waves-effect waves-light">
                                 <i class="ti-more"></i>
