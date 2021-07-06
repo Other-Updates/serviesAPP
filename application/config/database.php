@@ -107,7 +107,7 @@ $db['default']['username'] = 'root';
 
 $db['default']['password'] = '';
 
-$db['default']['database'] = 'incsolerp';
+$db['default']['database'] = 'f2fsolut_serviceAPP';
 
 $db['default']['dbdriver'] = 'mysql';
 
