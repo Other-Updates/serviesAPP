@@ -59,13 +59,13 @@
                     </div>
                     <div class="row m-t-30">
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
+                            <button type="submit" class="btn hor-grd btn-grd-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
                         </div>
                     </div>
                     <hr/>
                     <div class="row">
                         <div class="col-md-12 login-copyrights">
-                            <div><p class="text-inverse text-center">Copyright &COPY; <b style='color:#448aff'>Incredible Solutions</b></div> <div>Powered By <b><a href="http://f2fsolutions.co.in/" target="_blank">F2F Solutions</a></b></div></p>
+                            <div><p class="text-inverse text-center">Copyright &COPY; <b style='color:#448aff'>serviesAPP</b></div> <div>Powered By <b><a href="http://f2fsolutions.co.in/" target="_blank">F2F Solutions</a></b></div></p>
                         </div>
                         <!--<div class="col-md-2">
                             <img src="<?= $theme_path; ?>/assets/images/favicon.png" alt="small-logo.png" style="width: 100%">

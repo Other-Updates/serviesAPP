@@ -95,9 +95,9 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
 
                             <div class="form-group row text-center m-10">
                                 <div class="col-md-12 text-center">
-                                    <input type="submit" name="submit" class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
-                                    <input type="reset" value="Clear" class="btn btn-danger waves-effect m-b-10 btn-sm waves-light" id="cancel" tabindex="1"/>
-                                    <a href="<?php echo $this->config->item('base_url') . 'masters/user_roles' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                    <input type="submit" name="submit" class="btn hor-grd btn-grd-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
+                                    <input type="reset" value="Clear" class="btn hor-grd btn-grd-danger waves-effect m-b-10 btn-sm waves-light" id="cancel" tabindex="1"/>
+                                    <a href="<?php echo $this->config->item('base_url') . 'masters/user_roles' ?>" class="btn btn-grd-inverse hor-grd btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                 </div>
                             </div>
                         </form>

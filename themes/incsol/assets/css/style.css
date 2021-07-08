@@ -21873,8 +21873,8 @@ table tfoot td.center.net_bg {
     text-align: right;
 }
 form .btn, .invoice-btn-group .btn, .text-center .btn, .card-header .btn{
-	-webkit-transform: skew(-15deg);
-    transform: skew(-15deg);
+	/* -webkit-transform: skew(-15deg);
+    transform: skew(-15deg); */
 }
 table td .btn {
     -webkit-transform: skew(0deg);
