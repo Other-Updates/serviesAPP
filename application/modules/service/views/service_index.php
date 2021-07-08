@@ -45,7 +45,7 @@ $job_type_arr = array(
                         <!--<th width="35">Product Image</th>-->
                         <th width="35">Description</th>
                         <!-- <th width="35">Warranty</th> -->
-                        <th width="35">Staffname</th>
+                        <th width="35">Empname</th>
                         <th width="35">Inv Date</th>
                         <th width="75">Status</th>
                         <th width="107" class="action-btn-align">Action</th>

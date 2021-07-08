@@ -576,8 +576,12 @@ class Api extends REST_Controller {
     function get_service_list_post() {
 
         $data_input = $this->_get_custom_post_values(); // JSON Input
+      
         $customer_id = $data_input['customer_id'];
+       
+
         $employee_id = $data_input['emp_id'];
+       
         if (!empty($data_input['service_type'])) {
             $type = $data_input['service_type'];
 
@@ -588,6 +592,7 @@ class Api extends REST_Controller {
                 $to_date = $data_input['to_date'];
                 $data["service"] = $this->api_model->get_service_list($employee_id, $type, $from_date, $to_date);
             }
+           
             if (!empty($data["service"])) {
                 $output = array('status' => 'success', 'message' => 'Service List successfully found', 'data' => $data["service"]);
                 $this->response($output);
@@ -1011,8 +1016,9 @@ class Api extends REST_Controller {
         if (!empty($data_input)) {
             if (!empty($data_input['customer_id'])) {
                 $customer_id = $data_input['customer_id'];
-                $inv_no = $data_input['inv_no'];
-                $attendant_list = $this->api_model->get_all_attendant_details_by_invno($customer_id, $inv_no);
+               
+                // $inv_no = $data_input['inv_no'];
+                $attendant_list = $this->api_model->get_all_attendant_details_by_invno($customer_id);
 
                 if (!empty($attendant_list)) {
                     $output = array('status' => 'success', 'message' => 'Attendant Details', 'data' => $attendant_list);

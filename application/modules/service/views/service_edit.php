@@ -146,7 +146,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                                 <i class="icofont icofont-ui-user"></i>
                                                             </div>
                                                             <div class="form-group form-primary">
-                                                                <select name="emp_id[]" class="form-control required hh" id="emp_id" tabindex="1" multiple="multiple">
+                                                                <select name="emp_id[]" class="form-control required hh" id="emp_id" tabindex="1">
                                                                     <?php
                                                                   
                                                                     if (isset($staff_name) && !empty($staff_name)) {
@@ -342,19 +342,19 @@ $user_info = $this->user_auth->get_from_session('user_info');
         </div>
     </div>
     <script>
-        $('#emp_id').select2({
-            placeholder: "Staff Assigned",
-            tags: true
-        });
-        $('#emp_id').on("select2:emp_id", function (evt) {
-            var element = evt.params.data.element;
-            var $element = $(element);
+        // $('#emp_id').select2({
+        //     placeholder: "Staff Assigned",
+        //     tags: true
+        // });
+        // $('#emp_id').on("select2:emp_id", function (evt) {
+        //     var element = evt.params.data.element;
+        //     var $element = $(element);
             
-            $element.detach();
+        //     $element.detach();
             
-            $(this).append($element);
-            $(this).trigger("change");
-        });
+        //     $(this).append($element);
+        //     $(this).trigger("change");
+        // });
 
         $('#submit').on('click', function () {
             var i = 0;

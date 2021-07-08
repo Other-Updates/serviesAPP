@@ -254,6 +254,7 @@ class Api_model extends CI_Model {
 //        $this->db->group_up('erp_service.inv_no');
             $this->db->join('erp_invoice', 'erp_invoice.inv_id=erp_service.inv_no', 'LEFT');
         } else if ($type == 'customer') {
+            // $this->db->select('*');
             $this->db->where('erp_service.customer_id', $id);
         }
         $query = $this->db->get($this->service_table)->result_array();
@@ -637,12 +638,12 @@ class Api_model extends CI_Model {
         return $query;
     }
 
-    function get_all_attendant_details_by_invno($customer_id, $inv_no) {
+    function get_all_attendant_details_by_invno($customer_id) {
         $this->db->select('erp_service.id,erp_service.inv_no,erp_service.emp_id as attendant_id,erp_service.created_date,erp_service.status,erp_service.work_performed');
         $this->db->select('erp_user' . '.name');
         $this->db->where('erp_service.customer_id', $customer_id);
-        $this->db->where('erp_service.inv_no', $inv_no);
-        $this->db->where('erp_service.emp_id !=', '');
+        // $this->db->where('erp_service.inv_no', $inv_no['']);
+        // $this->db->where('erp_service.emp_id !=', '');
         $this->db->where('erp_service.service_status', 1);
         $this->db->join('erp_user', 'erp_service.emp_id=erp_user.id', 'LEFT');
         $query = $this->db->get('erp_service')->result_array();
