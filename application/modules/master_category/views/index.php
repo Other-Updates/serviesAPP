@@ -36,7 +36,9 @@
                                     <tr>
                                         <th>S.No</th>
                                         <th>Category</th>
+                                        <th>image</th>
                                         <th class="action-btn-align">Action</th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody>

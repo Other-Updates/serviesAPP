@@ -63,8 +63,11 @@ class To_do_model extends CI_Model {
 
     function _get_service_datatables_query($serch_data = array()) {
         $this->db->select('erp_service.*');
-        $this->db->where('status', 2);
-        $this->db->where('service_status !=', 0);
+        $this->db->select('erp_user' . '.name');
+        // $this->db->where('status', 2);
+        // $this->db->where('service_status !=', 0);
+        $this->db->where('service_status', 1);
+        $this->db->join('erp_user', 'erp_user.id=erp_service.emp_id', 'LEFT');
         if (isset($serch_data) && !empty($serch_data)) {
             if (!empty($serch_data['from_date']))
                 $serch_data['from_date'] = date('Y-m-d', strtotime($serch_data['from_date']));

@@ -86,7 +86,7 @@ class To_do_service extends MX_Controller {
             $row[] = $val['ticket_no'];
             $row[] = ($val['description']);
             // $row[] = ucfirst($val['warrenty']);
-            $row[] = ($val['id']['name']);
+            $row[] = ($val['name']);
             $row[] = ($val['created_date'] != '') ? date('d-M-Y', strtotime($val['created_date'])) : '-';
             if ($val['status'] == 2) {
                 $status = '<span class="label label-danger">Pending</span>';

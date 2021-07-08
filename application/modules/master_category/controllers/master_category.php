@@ -265,6 +265,7 @@ class Master_category extends MX_Controller {
             $row = array();
             $row[] = $no;
             $row[] = $category_data->categoryName;
+            $row[] = $category_data->category_image;
             $row[] = $edit_row . '&nbsp;&nbsp;' . $delete_row;
             $data[] = $row;
         }

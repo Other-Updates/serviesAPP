@@ -89,14 +89,16 @@ class To_do_service_model extends CI_Model {
         if ($_POST['length'] != -1)
             $this->db->limit($_POST['length'], $_POST['start']);
         $query = $this->db->get('erp_service')->result_array();
-
+        
         return $query;
     }
 
     function _get_service_datatables_query($serch_data = array()) {
         $this->db->select('erp_service.*');
+        $this->db->select('erp_user' . '.name');
        // $this->db->where('status !=', 0);
         $this->db->where('service_status', 1);
+        $this->db->join('erp_user', 'erp_user.id=erp_service.emp_id', 'LEFT');
         $user_info = $this->user_auth->get_from_session('user_info');
         $user_id = $user_info[0]['id'];
         if ($user_info[0]['role'] != 1) {
