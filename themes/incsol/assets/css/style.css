@@ -21946,11 +21946,11 @@ border: 1px solid #448aff !important;}
     text-align: center;
 }
 .pageloader img {
-    width: 15%;
+    width: 8%;
     position: absolute;
     margin-top: 20%;
     z-index: 999999;
-    margin-left:-100px
+    margin-left:-80px
 }
 .modal-header{background-color: #3f85f9;
     color: white;

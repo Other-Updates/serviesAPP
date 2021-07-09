@@ -172,7 +172,7 @@
 
          </div>-->
         <div class="preloader" >
-            <div class="pageloader"><img src="<?= $theme_path; ?>/assets/images/logo.png" alt="processing"></div>
+            <div class="pageloader"><img src="<?= $theme_path; ?>/assets/images/loader.gif" alt="processing" width="200"></div>
         </div>
         <!-- Pre-loader start -->
         <!--<div class="theme-loader">
