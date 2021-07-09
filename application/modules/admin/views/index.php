@@ -27,8 +27,8 @@
         <form class="md-float-material form-material" method="post" >
 
             <div class="auth-box card">
-                <div class="text-center m-t-5">
-                    <img src="<?= $theme_path; ?>/assets/images/f2f-logo.png" alt="logo.png" style="width:200px;">
+                <div class="text-center mt-3">
+                    <img src="<?= $theme_path; ?>/assets/images/logo.png" alt="logo" style="width:250px;">
                 </div>
                 <div class="card-block">
                     <?php

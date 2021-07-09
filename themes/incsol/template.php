@@ -47,7 +47,7 @@
         <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
         <meta name="author" content="Phoenixcoded" />
         <!-- Favicon icon -->
-        <link rel="icon" href="<?= $theme_path; ?>/assets/images/f2f-logo.png" type="image/x-icon">
+        <link rel="icon" href="<?= $theme_path; ?>/assets/images/favicon.png" type="image/x-icon">
         <!--Google font    -->
         <link href="<?= $theme_path; ?>/assets/css/font-style.css?family=Roboto:400,500" rel="stylesheet">
         <!-- Required Fremwork -->
@@ -172,7 +172,7 @@
 
          </div>-->
         <div class="preloader" >
-            <div class="pageloader"><img src="<?= $theme_path; ?>/assets/images/f2f-logo.png" alt="processing"></div>
+            <div class="pageloader"><img src="<?= $theme_path; ?>/assets/images/logo.png" alt="processing"></div>
         </div>
         <!-- Pre-loader start -->
         <!--<div class="theme-loader">
@@ -238,7 +238,7 @@
                                 <i class="ti-menu"></i>
                             </a>
                             <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>">
-                                <img class="img-fluid" src="<?= $theme_path; ?>/assets/images/f2f-logo.png" alt="Theme-Logo" style="width:135px"/>
+                                <img class="img-fluid" src="<?= $theme_path; ?>/assets/images/logo-white.png" alt="Theme-Logo" style="width:170px"/>
                             </a>
                             <a class="mobile-options waves-effect waves-light">
                                 <i class="ti-more"></i>
@@ -1327,7 +1327,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-md-8">
                                             <div class="page-header-title">
-                                                <h5 class="m-b-10"><?php echo $title ?></h5>
+                                                <h5><?php echo $title ?></h5>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
