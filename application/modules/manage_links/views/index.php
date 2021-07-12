@@ -79,10 +79,10 @@
                                                     <?php if ($this->user_auth->is_action_allowed('masters', 'manage_links', 'edit') || $this->user_auth->is_action_allowed('masters', 'advertisement', 'delete')): ?>
                                                         <td class="">
                                                             <?php if ($this->user_auth->is_action_allowed('masters', 'manage_links', 'edit')): ?>
-                                                                <a href="<?php echo base_url(); ?>manage_links/edit/<?php echo $link_list['id']; ?>" class="btn btn-primary btn-mini waves-effect waves-light" title="Edit"><span class="fa fa-pencil" style="color: white;"></span></a>
+                                                                <a href="<?php echo base_url(); ?>manage_links/edit/<?php echo $link_list['id']; ?>" class="btn btn-round btn-primary btn-mini waves-effect waves-light" title="Edit"><span class="fa fa-pencil" style="color: white;"></span></a>
                                                             <?php endif; ?>
 
-                                                            <a href="<?php if ($this->user_auth->is_action_allowed('masters', 'manage_links', 'delete')): ?>#del_ads<?php echo $link_list['id']; ?><?php endif ?>" data-toggle="modal" name="delete" class="btn btn-danger btn-mini waves-effect waves-light deletw-row delete_group <?php if (!$this->user_auth->is_action_allowed('masters', 'manage_links', 'delete')): ?>alerts<?php endif ?>" title="Delete">
+                                                            <a href="<?php if ($this->user_auth->is_action_allowed('masters', 'manage_links', 'delete')): ?>#del_ads<?php echo $link_list['id']; ?><?php endif ?>" data-toggle="modal" name="delete" class="btn btn-round btn-danger btn-mini waves-effect waves-light deletw-row delete_group <?php if (!$this->user_auth->is_action_allowed('masters', 'manage_links', 'delete')): ?>alerts<?php endif ?>" title="Delete">
                                                                 <span class="fa fa-trash-o" style="color: white;"></span></a>
 
                                                         </td>
@@ -120,8 +120,8 @@
                                     <input type="hidden" value="<?php echo $val['id']; ?>" class="id" id="link_hidden_id"/>
                                 </div>
                                 <div class="modal-footer action-btn-align">
-                                    <button class="btn btn-primary btn-sm delete_yes" id="yesin">Yes</button>
-                                    <button type="button" class="btn btn-danger btn-sm delete_all"  data-dismiss="modal" id="no">No</button>
+                                    <button class="btn btn-round btn-primary btn-sm delete_yes" id="yesin">Yes</button>
+                                    <button type="button" class="btn btn-round btn-danger btn-sm delete_all"  data-dismiss="modal" id="no">No</button>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +140,7 @@
                             <tr>
                                 <td style="text-align:right;font-weight:bold;"><input type="text" name="link_name[]" tabindex="-1" class="link_name form-control " ><span class="error_msg"></span></td>
                                 <td> <input name="description[]" class="description form-control"><span class="error_msg"></span></td>
-                                <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-danger btn-mini"><span class="fa fa-trash"></span></a></td>
+                                <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-round btn-danger btn-mini"><span class="fa fa-trash"></span></a></td>
                             </tr>
                         </table>
                         <form class="" action="<?php echo $this->config->item('base_url'); ?>manage_links/add" enctype="multipart/form-data" name="form" method="post" novalidate>
@@ -183,12 +183,12 @@
                                                 <thead id="add_header">
                                                 <th width="5%" class="first_td1">Link Data</th>
                                                 <th width="5%" class="first_td1">Link Description</th>
-                                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' data-type="0" class="btn btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></td>
+                                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' data-type="0" class="btn btn-round btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></td>
                                                     </thead>
                                                 <tbody id="add_body">
                                                 <td style="text-align:right;font-weight:bold;"><input type="text" name="link_name[]" tabindex="-1" class="link_name required form-control " ><span class="error_msg"></span></td>
                                                 <td> <input name="description[]" class="description required form-control"><span class="error_msg"></span></td>
-                                                <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-danger btn-mini"><span class="fa fa-trash"></span></a></td>
+                                                <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-round btn-danger btn-mini"><span class="fa fa-trash"></span></a></td>
 
                                                 </tbody>
 
@@ -197,8 +197,8 @@
                                     </div>
                                     <div class="row text-center m-10">
                                         <div class="col-md-12 text-center">
-                                            <input type="submit" name="submit" class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
-                                            <a href="<?php echo $this->config->item('base_url') . 'manage_links' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                            <input type="submit" name="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
+                                            <a href="<?php echo $this->config->item('base_url') . 'manage_links' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                         </div>
                                     </div>
                                     </form>

@@ -119,9 +119,9 @@
                             </div>
                             <div class="form-group row text-center m-10">
                                 <div class="col-md-12 text-center">
-                                    <input type="button" class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="save_defect" tabindex="1"/>
-                                    <input type="reset" value="Clear" class="btn btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
-                                    <a href="<?php echo $this->config->item('base_url') . 'master_category/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                    <input type="button" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="save_defect" tabindex="1"/>
+                                    <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
+                                    <a href="<?php echo $this->config->item('base_url') . 'master_category/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                 </div>
                             </div>
                         </form>

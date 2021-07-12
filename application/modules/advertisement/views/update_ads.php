@@ -51,7 +51,7 @@
     </td>
 
     <td width="5%" class="action-btn-align" style="text-align:center;">
-        <a  class="remove_data del btn btn-danger btn-mini" onclick="remove_data($(this))">
+        <a  class="remove_data del btn btn-round btn-danger btn-mini" onclick="remove_data($(this))">
             <span class="fa fa-trash" style="color:white;"></span>
         </a>
     </td>
@@ -106,7 +106,7 @@
                                             <th width="15%" class="first_td1 ads_file_type" >File Type</th>
                                             <th width="40%" class="first_td1 add_title_datatype"> Ads Data</th>
                                             <th width="3%" class="first_td1">Sort Order</th>
-                                            <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' onclick="ads_content_clone()" data-type="0" class="btn btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></th>
+                                            <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' onclick="ads_content_clone()" data-type="0" class="btn btn-round btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></th>
                                             </thead>
                                             <tbody id="add_body">
 
@@ -180,7 +180,7 @@
 
                                                     <td width="5%" class="action-btn-align" style="text-align:center;">
                                                         <?php if ($list_content['file_type'] == 1): ?>
-                                                            <a  class="remove_data del btn btn-danger btn-mini" onclick="remove_data($(this))">
+                                                            <a  class="remove_data del btn btn-round btn-danger btn-mini" onclick="remove_data($(this))">
                                                                 <span class="fa fa-trash" style="color:white;"></span>
                                                             </a>
                                                         <?php endif; ?>
@@ -196,9 +196,9 @@
                                     </div>
                                     <div class="form-group row text-center m-10">
                                         <div class="col-md-12 text-center">
-                                            <input type="submit" class="submit btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Update" id="edit" tabindex="1"/>
-                                            <input type="reset" value="Clear" class="btn btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
-                                            <a href="<?php echo $this->config->item('base_url') . 'advertisement/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                            <input type="submit" class="submit btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Update" id="edit" tabindex="1"/>
+                                            <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
+                                            <a href="<?php echo $this->config->item('base_url') . 'advertisement/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                         </div>
                                     </div>
                                 </form>

@@ -251,14 +251,14 @@ class Master_category extends MX_Controller {
         $no = $_POST['start'];
         foreach ($list as $category_data) {
             if ($this->user_auth->is_action_allowed('masters', 'master_category', 'edit')) {
-                $edit_row = '<a class="btn btn-primary btn-mini waves-effect waves-light" href="' . base_url() . 'master_category/update_cat/' . $category_data->cat_id . '" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil"></span></a>';
+                $edit_row = '<a class="btn btn-round btn-primary btn-mini waves-effect waves-light" href="' . base_url() . 'master_category/update_cat/' . $category_data->cat_id . '" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil"></span></a>';
             } else {
-                $edit_row = '<a class="btn btn-primary btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-pencil"></span></a>';
+                $edit_row = '<a class="btn btn-round btn-primary btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-pencil"></span></a>';
             }
             if ($this->user_auth->is_action_allowed('masters', 'master_category', 'delete')) {
-                $delete_row = '<a onclick="delete_category(' . $category_data->cat_id . ')" class="btn btn-danger btn-mini waves-effect waves-light delete_row" delete_id="test3_' . $category_data->cat_id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
+                $delete_row = '<a onclick="delete_category(' . $category_data->cat_id . ')" class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row" delete_id="test3_' . $category_data->cat_id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
             } else {
-                $delete_row = '<a  class="btn btn-danger btn-mini waves-effect waves-light delete_row alerts" delete_id="test3_' . $category_data->cat_id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
+                $delete_row = '<a  class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row alerts" delete_id="test3_' . $category_data->cat_id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
             }
 
             $no++;

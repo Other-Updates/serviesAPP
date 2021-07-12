@@ -148,7 +148,7 @@
                                                             <input type="checkbox" name="ads_state[]" class="state_item" value="<?php echo $state; ?>"> <?php echo $state_arr[$state]['state_name']; ?>
                                                         </label>
                                                         <span class="badge bg-pink"><?php echo $count_state; ?></span>
-                                                        <a href="javascript:void(0);" class="btn bg-teal btn-xs pull-right state_btn"><i class="fa fa-plus"></i></a>
+                                                        <a href="javascript:void(0);" class="btn btn-round bg-teal btn-xs pull-right state_btn"><i class="fa fa-plus"></i></a>
                                                     </div>
                                                 </div>
                                                 <ul class="state_tree_structure" style="display: none;">
@@ -164,7 +164,7 @@
                                                                             <input type="checkbox" name="ads_region[<?php echo $state; ?>][]" class="region_item" value="<?php echo $region_id; ?>"> <?php echo $regions_arr[$region_id]['region_name']; ?>
                                                                         </label>
                                                                         <span class="badge bg-pink"><?php echo $count_region; ?></span>
-                                                                        <a href="javascript:void(0);" class="btn bg-teal btn-xs pull-right region_btn"><i class="fa fa-plus"></i></a>
+                                                                        <a href="javascript:void(0);" class="btn btn-round bg-teal btn-xs pull-right region_btn"><i class="fa fa-plus"></i></a>
                                                                     </div>
                                                                 </div>
                                                                 <ul class="region_tree_structure" style="display: none;">
@@ -180,7 +180,7 @@
                                                                                             <input type="checkbox" name="ads_group[<?php echo $state; ?>][<?php echo $region_id; ?>][]" class="group_item" value="<?php echo $group_id; ?>"> <?php echo ucfirst($groups_arr[$group_id]['group_name']); ?>
                                                                                         </label>
                                                                                         <span class="badge bg-pink"><?php echo $count_group; ?></span>
-                                                                                        <a href="javascript:void(0);" class="btn bg-teal btn-xs pull-right group_btn"><i class="fa fa-plus"></i></a>
+                                                                                        <a href="javascript:void(0);" class="btn btn-round bg-teal btn-xs pull-right group_btn"><i class="fa fa-plus"></i></a>
                                                                                     </div>
                                                                                 </div>
                                                                                 <ul class="group_tree_structure" style="display: none;">
@@ -227,7 +227,7 @@
                                 <th width="4%" class="first_td1">Duration</th>
                                 <th width="3%" class="first_td1">Sort Order</th>
                                 <th width="7%" class="first_td1 add_direction_datatype">Position</th>
-                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' data-type="0" class="btn btn-success btn-xs form-control pad10"><span class="fa fa-plus"></span> </a></td>
+                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' data-type="0" class="btn btn-round btn-success btn-xs form-control pad10"><span class="fa fa-plus"></span> </a></td>
                                     </thead>
                                 <tbody id="add_body">
 
@@ -243,8 +243,8 @@
                     <div class="col-lg-12">
                         <div class="row">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-raised btn-danger mr-1" onclick="window.location = '<?php echo base_url('advertisement'); ?>'" style="float:left;" title="Cancel"><i class="ft-thumbs-down position-left"></i> Cancel</button>
-                                <button type="submit" class="btn btn-raised btn-success submit" style="float:right;" title="Submit">Submit <i class="ft-thumbs-up position-left"></i></button>
+                                <button type="button" class="btn btn-round btn-raised btn-danger mr-1" onclick="window.location = '<?php echo base_url('advertisement'); ?>'" style="float:left;" title="Cancel"><i class="ft-thumbs-down position-left"></i> Cancel</button>
+                                <button type="submit" class="btn btn-round btn-raised btn-success submit" style="float:right;" title="Submit">Submit <i class="ft-thumbs-up position-left"></i></button>
                             </div>
                         </div>
                     </div>
@@ -308,7 +308,7 @@
 </td>
 
 <td width="5%" class="action-btn-align" style="text-align:center;">
-    <a  class="remove_data del btn btn-danger btn-mini">
+    <a  class="remove_data del btn btn-round btn-danger btn-mini">
         <span class="fa fa-trash" style="color:white;"></span>
     </a>
 </td>

@@ -43,10 +43,10 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
                                             <tr><td class="first_td"><?php echo $i; ?></td>
                                                 <td><?php echo ucfirst($list['user_role']); ?></td>
                                                 <td class="action-btn-align">
-                                                    <a href="<?php if ($this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?><?php echo base_url() . 'masters/user_roles/user_permissions/' . $list['id']; ?><?php endif ?>" toggle="tooltip" data-placement="top" title="User Permissions" class="btn btn-info  btn-mini waves-effect waves-light <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?>alerts<?php endif ?>"><span class="fa fa-gear"></span></a>&nbsp;
-                                                    <a href="<?php if ($this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?><?php echo base_url() . 'masters/user_roles/user_role_edit/' . $list['id']; ?><?php endif ?>"  toggle="tooltip" data-placement="top" title="Edit" class="btn btn-primary btn-mini waves-effect waves-light <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?>alerts<?php endif ?>" ><span class="fa fa-pencil"></span></a>
+                                                    <a href="<?php if ($this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?><?php echo base_url() . 'masters/user_roles/user_permissions/' . $list['id']; ?><?php endif ?>" toggle="tooltip" data-placement="top" title="User Permissions" class="btn btn-round btn-info  btn-mini waves-effect waves-light <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?>alerts<?php endif ?>"><span class="fa fa-gear"></span></a>&nbsp;
+                                                    <a href="<?php if ($this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?><?php echo base_url() . 'masters/user_roles/user_role_edit/' . $list['id']; ?><?php endif ?>"  toggle="tooltip" data-placement="top" title="Edit" class="btn btn-round btn-primary btn-mini waves-effect waves-light <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'edit')): ?>alerts<?php endif ?>" ><span class="fa fa-pencil"></span></a>
                                                     <?php if ($list['id'] != '1') { ?>
-                                                        <a onclick="delete_user_role(<?php echo $list['id']; ?>)" delete_id="test3_<?php echo $list['id']; ?>"  toggle="tooltip" data-placement="top" title="Delete" class="btn btn-danger btn-mini waves-effect waves-light delete_row <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'delete')): ?>alerts<?php endif ?>" ><span class="fa fa-trash" style="color: white;"></span></a>
+                                                        <a onclick="delete_user_role(<?php echo $list['id']; ?>)" delete_id="test3_<?php echo $list['id']; ?>"  toggle="tooltip" data-placement="top" title="Delete" class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'delete')): ?>alerts<?php endif ?>" ><span class="fa fa-trash" style="color: white;"></span></a>
                                                     <?php } ?>
                                                 </td>
                                             </tr>
@@ -95,9 +95,9 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
 
                             <div class="form-group row text-center m-10">
                                 <div class="col-md-12 text-center">
-                                    <input type="submit" name="submit" class="btn hor-grd btn-grd-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
-                                    <input type="reset" value="Clear" class="btn hor-grd btn-grd-danger waves-effect m-b-10 btn-sm waves-light" id="cancel" tabindex="1"/>
-                                    <a href="<?php echo $this->config->item('base_url') . 'masters/user_roles' ?>" class="btn btn-grd-inverse hor-grd btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                    <input type="submit" name="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
+                                    <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="cancel" tabindex="1"/>
+                                    <a href="<?php echo $this->config->item('base_url') . 'masters/user_roles' ?>" class="btn btn-inverse btn-round btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                 </div>
                             </div>
                         </form>

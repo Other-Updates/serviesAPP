@@ -41,7 +41,7 @@
                             <tr>
                                 <td style="text-align:right;font-weight:bold;"><input type="text" name="link_name[]" tabindex="-1" class="link_name form-control " ><span class="error_msg"></span></td>
                                 <td> <input name="description[]" class="description form-control"><span class="error_msg"></span></td>
-                                <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-danger btn-mini"><span class="fa fa-trash"></span></a></td>
+                                <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-round btn-danger btn-mini"><span class="fa fa-trash"></span></a></td>
                             </tr>
                         </table>
                         <form class="" method="post"  name="form1" action="<?php echo $this->config->item('base_url') . 'manage_links/edit/' . $links_details[0]['id']; ?>" enctype="multipart/form-data" >
@@ -87,7 +87,7 @@
                                                 <thead id="add_header">
                                                 <th width="3%" class="first_td1">Link Data</th>
                                                 <th width="3%" class="first_td1">Link Description</th>
-                                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' data-type="0" class="btn btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></th>
+                                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' data-type="0" class="btn btn-round btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></th>
                                                 </thead>
                                                 <tbody id="add_body">
                                                     <?php foreach ($val['link_datas'] as $key => $valu) {
@@ -95,7 +95,7 @@
                                                         <tr>
                                                             <td style="text-align:right;font-weight:bold;"><input type="text" name="link_name[]" tabindex="-1" class="link_name form-control required" value="<?php echo $valu['link_data']; ?>" ><span class="error_msg"></span></td>
                                                             <td><input type="text"name="description[]" tabindex="-1" class="description form-control required" value="<?php echo $valu['description']; ?>" ><span class="error_msg"></span></td>
-                                                            <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-danger btn-mini waves-effect waves-light"><span class="fa fa-trash"></span></a></td>
+                                                            <td width="2%" class="action-btn-align"><a id='delete_label' class="del btn btn-round btn-danger btn-mini waves-effect waves-light"><span class="fa fa-trash"></span></a></td>
                                                         </tr>
                                                         <?php
                                                     }
@@ -105,8 +105,8 @@
                                         </div>
                                         <div class="form-group row text-center m-10 col-md-12">
                                             <div class="col-md-12 text-center">
-                                                <input type="submit" id="submit" class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Update" id="edit" tabindex="1"/>
-                                                <a href="<?php echo $this->config->item('base_url') . 'manage_links/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                                <input type="submit" id="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Update" id="edit" tabindex="1"/>
+                                                <a href="<?php echo $this->config->item('base_url') . 'manage_links/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                             </div>
                                         </div>
                                 </form>

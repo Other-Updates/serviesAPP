@@ -154,9 +154,9 @@ $data["user_details"] = $user_details = $this->user_model->get_user1($user_info[
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12 text-center">
-                        <input type="submit" value="Update" name="submit" id="submit"  class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"/>
-                        <input type="reset" value="Clear" id="cancel" class="btn btn-danger waves-effect m-b-10 btn-sm waves-light"  tabindex="9"/>
-                        <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
+                        <input type="submit" value="Update" name="submit" id="submit"  class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"/>
+                        <input type="reset" value="Clear" id="cancel" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light"  tabindex="9"/>
+                        <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
                     </div>
                 </div>
             </div>
@@ -217,9 +217,9 @@ $data["user_details"] = $user_details = $this->user_model->get_user1($user_info[
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12 text-center">
-                        <input type="submit" value="Update" name="submit" id="submit"  class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"/>
-                        <input type="reset" value="Clear" id="cancel" class="btn btn-danger waves-effect m-b-10 btn-sm waves-light"  tabindex="9"/>
-                        <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
+                        <input type="submit" value="Update" name="submit" id="submit"  class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"/>
+                        <input type="reset" value="Clear" id="cancel" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light"  tabindex="9"/>
+                        <a href="<?php echo $this->config->item('base_url') . 'admin/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
                     </div>
                 </div>
             </div>

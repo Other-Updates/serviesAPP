@@ -197,14 +197,14 @@ class Users extends MX_Controller {
         $no = $_POST['start'];
         foreach ($list as $user_data) {
             if ($this->user_auth->is_action_allowed('masters', 'users', 'edit')) {
-                $edit_row = '<a class="btn btn-primary btn-mini waves-effect waves-light" href="' . base_url() . 'users/edit_user/' . $user_data->id . '" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil"></span></a>';
+                $edit_row = '<a class="btn btn-round btn-primary btn-mini waves-effect waves-light" href="' . base_url() . 'users/edit_user/' . $user_data->id . '" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil"></span></a>';
             } else {
                 $edit_row = '<a class="btn btn-primary btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-pencil"></span></a>';
             }
             if ($this->user_auth->is_action_allowed('masters', 'users', 'delete')) {
-                $delete_row = '<a onclick="delete_user(' . $user_data->id . ')" class="btn btn-danger btn-mini waves-effect waves-light delete_row" delete_id="test3_' . $user_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
+                $delete_row = '<a onclick="delete_user(' . $user_data->id . ')" class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row" delete_id="test3_' . $user_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
             } else {
-                $delete_row = '<a  class="btn btn-danger btn-mini waves-effect waves-light delete_row alerts" delete_id="test3_' . $user_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
+                $delete_row = '<a  class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row alerts" delete_id="test3_' . $user_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
             }
             $no++;
             $row = array();
