@@ -97,7 +97,7 @@ $job_type_arr = array(
                     </div>
                     <div class="col-md-3">
                         <div>
-                            <a id='search' class="submit btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"> Search</a>
+                            <a id='search' class="submit btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"> Search</a>
                         </div>
                     </div>
                     <!--                    <div class="col-md-4 emp_select">
@@ -181,7 +181,7 @@ $job_type_arr = array(
                     </div>
                     <div class="form-group row m-10">
                         <div class="col-md-12 text-center">
-                            <button class="btn btn-primary btn-sm waves-effect waves-light" id="save"  tabindex="1"> Create</button>
+                            <button class="btn btn-round btn-primary btn-sm waves-effect waves-light" id="save"  tabindex="1"> Create</button>
 
                         </div>
                     </div>

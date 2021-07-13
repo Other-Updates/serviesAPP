@@ -44,7 +44,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                     </div>
                                                 </div> -->
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-address-book"></i>
@@ -58,7 +58,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-tasks-alt"></i>
@@ -86,7 +86,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                     </div>
                                                 </div> -->
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-notepad"></i>
@@ -104,7 +104,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 </div>
                                             </div>
                                             <div class="form-material row">
-                                                <div class="col-md-3">
+                                                <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-ui-calendar"></i>
@@ -140,7 +140,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 <?php
                                                 if ($user_info[0]['role'] == 1 || $user_info[0]['role'] == 2) {
                                                     ?>
-                                                    <div class="col-md-3">
+                                                    <div class="col-md-4">
                                                         <div class="material-group">
                                                             <div class="material-addone">
                                                                 <i class="icofont icofont-ui-user"></i>
@@ -167,6 +167,18 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                     <?php
                                                 }
                                                 ?>
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+
+
+                                                        <label >Upload Image</label>
+                                                        <input type="file" name="service_image[]" class="wp form-control form-align" id="service_image"   tabindex="1" multiple />
+
+                                                        <span  class="val error_msg text-danger"></span>
+
+
+                                                    </div>
+                                                </div>
 
                                                 <!-- <div class="col-md-3">
                                                     <div class="material-group">
@@ -198,18 +210,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-
-
-                                                        <label >Upload Image</label>
-                                                        <input type="file" name="service_image[]" class="wp form-control form-align" id="service_image"   tabindex="1" multiple />
-
-                                                        <span  class="val error_msg text-danger"></span>
-
-
-                                                    </div>
-                                                </div>
+                                                
                                             </div>
 
                                             <div class="pcoded-inner-content">
@@ -325,8 +326,8 @@ $user_info = $this->user_auth->get_from_session('user_info');
 
                                             <div class="form-group row text-center m-10">
                                                 <div class="col-md-12 text-center">
-                                                    <input type="submit" name="submit" class="btn btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
-                                                    <a href="<?php echo $this->config->item('base_url') . 'service/to_do_service' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
+                                                    <input type="submit" name="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
+                                                    <a href="<?php echo $this->config->item('base_url') . 'service/to_do_service' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
                                                 </div>
                                             </div>
                                         </form>

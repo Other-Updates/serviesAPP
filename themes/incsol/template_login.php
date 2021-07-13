@@ -50,7 +50,13 @@
             }
     
 	.login-block{margin-top:0px;}
-		</style>
+    body[themebg-pattern="theme1"] {
+        background-color: #7cbdff;
+    }
+    body {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.2) 180px, rgba(255, 255, 255, 0.9) 0%);
+    }
+	</style>
     </head>
 
     <body themebg-pattern="theme1">
@@ -112,9 +118,9 @@
 		
         <!-- Pre-loader end -->
 
-        <section class="login-block login-bg-image">
-			<div class="innerlogin-image">
-			</div>
+        <section class="login-block">
+			<!-- <div class="innerlogin-image">
+			</div> -->
             <!-- Container-fluid starts -->
             <div class="container">
                 <?php echo $content; ?>

@@ -22,28 +22,28 @@
     ?>
     <div class="card-header">
         <h5>Leads Details</h5>
-        <a href="<?php if ($this->user_auth->is_action_allowed('enquiry', 'enquiry', 'add')): ?><?php echo $this->config->item('base_url') . 'enquiry/' ?><?php endif ?>" class="btn btn-primary btn-sm waves-effect waves-light f-right d-inline-block md-trigger <?php if (!$this->user_auth->is_action_allowed('enquiry', 'enquiry', 'add')): ?>alerts<?php endif ?>"><i class="fa fa-plus m-r-5"></i> Add Leads</a>
+        <a href="<?php if ($this->user_auth->is_action_allowed('enquiry', 'enquiry', 'add')): ?><?php echo $this->config->item('base_url') . 'enquiry/' ?><?php endif ?>" class="btn btn-round btn-primary btn-sm waves-effect waves-light f-right d-inline-block md-trigger <?php if (!$this->user_auth->is_action_allowed('enquiry', 'enquiry', 'add')): ?>alerts<?php endif ?>"><i class="fa fa-plus m-r-5"></i> Add Leads</a>
     </div>
     <div class="card-block table-border-style">
         <div class="table-responsive" id='result_div'>
             <table class="table table-striped table-bordered" id="leads_table">
                 <thead>
                     <tr>
-                        <td class="action-btn-align">S.No</td>
-                        <td>Leads #</td>
-                        <td>Customer</td>
-                        <td>Cus.Address</td>
-                        <td>Date</td>
-                        <td>Followup Date</td>
-                        <td>Assigned</td>
-                        <td>About</td>
-                        <td>Status</td>
-                        <td>Remarks</td>
+                        <th class="action-btn-align">S.No</th>
+                        <th>Leads #</th>
+                        <th>Customer</th>
+                        <th>Cus.Address</th>
+                        <th>Date</th>
+                        <th>Followup Date</th>
+                        <th>Assigned</th>
+                        <th>About</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
                         <?php
                         $user_info = $this->user_info = $this->user_auth->get_from_session('user_info');
                         if (($user_info[0]['role'] != 5)) {
                             ?>
-                            <td class="hide_class action-btn-align" >Action</td>
+                            <th class="hide_class action-btn-align" >Action</th>
                         <?php } ?>
                     </tr>
                 </thead>
@@ -52,7 +52,7 @@
             </table>
             <div class="row text-center m-10">
                 <div class="col-sm-12 invoice-btn-group text-center">
-                    <button type="button" class="btn btn-primary print_btn btn-sm waves-effect waves-light">Print</button>
+                    <button type="button" class="btn btn-round btn-primary print_btn btn-sm waves-effect waves-light">Print</button>
                 </div>
             </div>
         </div>

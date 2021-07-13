@@ -244,8 +244,8 @@ if (!empty($customers)) {
                     </div>
                     <div class="form-group row text-center m-10">
                         <div class="col-md-12 text-center">
-                            <input type="submit" name="submit" class="btn btn-primary m-b-10 btn-sm waves-effect waves-light m-r-20" value="Save" id="submit" tabindex="1"/>
-                            <input type="reset" value="Clear" class="btn btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
+                            <input type="submit" name="submit" class="btn btn-round btn-primary m-b-10 btn-sm waves-effect waves-light m-r-20" value="Save" id="submit" tabindex="1"/>
+                            <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
                         </div>
                     </div>
                 </form>

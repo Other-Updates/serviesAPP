@@ -54,13 +54,13 @@ background: url(../images/login-bground.jpg) center center/cover no-repeat!impor
 	.innerlogin-image{
 	left:313px;}
 }
-.login-block .auth-box {
+/* .login-block .auth-box {
     margin: 98px auto 0 auto;
     max-width: 425px;
     text-align: left;
     position: absolute;
     width: 330px;
-}
+} */
 ul {
   padding-left: 0;
   list-style-type: none;
@@ -212,7 +212,7 @@ code {
 }
 .card .card-header h5:after {
   content: "";
-  background-color: #fff;
+  /* background-color: #fff; */
   position: absolute;
   left: -10px;
   top: 0;
@@ -21846,9 +21846,6 @@ margin-bottom:4px;
 .btn-print-invoice {
 	color:white !important;
 }
-table thead td {
-    padding: 5px !important;
-}
 table thead tr .text_right{text-align:center !important;}
 .text_right{text-align:right;}
 .modal-content.action-btn-align .btn-sm {
@@ -21892,7 +21889,7 @@ table td .btn {
 }
 form{margin-top:10px;}
 table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
-	bottom: 0.1em !important;
+	bottom: 0.3em !important;
 }
 table.dataTable thead .action-btn-align:before, table.dataTable thead .action-btn-align:after {display:none;}
 table{width:100% !important;}
@@ -21902,7 +21899,7 @@ table tbody tr td{font-size:13px;}
 select span, .req{color:red}
 .main-body{margin-bottom:100px;}
 .table > thead > tr > th{
-	font-weight:bold !important;
+	background: #eaeaea;
 }
 .new-style-form{margin-left:40px;}
 .form-control:focus{box-shadow: 0 0 0 0rem rgba(0,123,255,.25) !important;}
@@ -21910,8 +21907,8 @@ select span, .req{color:red}
     float: right;
     margin-bottom: 5px; margin-right:5px;}
 	table textarea {height:30px !important;}
-.table td {
-    padding: 0.1rem 0.1rem !important;}
+/* .table td {
+    padding: 0.1rem 0.1rem !important;} */
 	.totbold{font-weight:bold;}
 	.cent-align{text-align:center !important;}
 	.right-align{text-align:right !important;}

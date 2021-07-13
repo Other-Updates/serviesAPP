@@ -15,21 +15,16 @@
     .icofont{
         color:red;
     }
-    .login-block .auth-box {
-        margin: 98px auto 0 auto;
-        max-width: 425px;
-    }
 </style>
 
 <div class="row">
     <div class="col-sm-12">
         <!-- Authentication card start -->
         <form class="md-float-material form-material" method="post" >
-
-            <div class="auth-box card">
-                <div class="text-center mt-3">
-                    <img src="<?= $theme_path; ?>/assets/images/logo.png" alt="logo" style="width:250px;">
-                </div>
+            <div class="text-center mt-3">
+                <img src="<?= $theme_path; ?>/assets/images/logo.png" alt="logo" style="width:250px;">
+            </div>
+            <div class="auth-box card">                
                 <div class="card-block">
                     <?php
                     if (isset($_GET['login']) && !empty($_GET['login'])) {
@@ -42,12 +37,12 @@
                         </div>
                     <?php } ?>
 
-                    <div class="row m-b-20">
+                    <div class="row m-b-30">
                         <div class="col-md-12">
                             <h3 class="text-center">Sign In</h3>
                         </div>
                     </div>
-                    <div class="form-group form-primary">
+                    <div class="form-group form-primary mb-5">
                         <input type="text" class="form-control" autocomplete="off" name="username" required="">
                         <span class="form-bar"></span>
                         <label class="float-label newClass">Username</label>
@@ -59,7 +54,7 @@
                     </div>
                     <div class="row m-t-30">
                         <div class="col-md-12">
-                            <button type="submit" class="btn hor-grd btn-grd-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
+                            <button type="submit" class="btn btn-round btn-primary btn-md btn-block waves-effect waves-light text-center m-b-20">Sign in</button>
                         </div>
                     </div>
                     <hr/>

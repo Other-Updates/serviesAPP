@@ -71,8 +71,8 @@ $job_type_arr = array(
                                 <input type="hidden" value="<?php echo $val['id']; ?>" class="id" />
                             </div>
                             <div class="modal-footer action-btn-align">
-                                <button class="btn btn-primary btn-sm delete_yes" id="yesin">Yes</button>
-                                <button type="button" class="btn btn-danger btn-sm delete_all"  data-dismiss="modal" id="no">No</button>
+                                <button class="btn btn-round btn-primary btn-sm delete_yes" id="yesin">Yes</button>
+                                <button type="button" class="btn btn-round btn-danger btn-sm delete_all"  data-dismiss="modal" id="no">No</button>
                             </div>
                         </div>
                     </div>

@@ -264,8 +264,8 @@ if (!empty($customers)) {
                             </div>
                             <div class="form-material row text-center m-10">
                                 <div class="col-md-12 text-center">
-                                    <input type="submit" name="submit" class="btn btn-primary m-b-10 btn-sm waves-effect waves-light m-r-20" value="Update" id="edit" tabindex="1"/>
-                                    <a href="<?php echo $this->config->item('base_url') . 'enquiry/enquiry_list/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
+                                    <input type="submit" name="submit" class="btn btn-round btn-primary m-b-10 btn-sm waves-effect waves-light m-r-20" value="Update" id="edit" tabindex="1"/>
+                                    <a href="<?php echo $this->config->item('base_url') . 'enquiry/enquiry_list/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                 </div>
                             </div>
                         </form>

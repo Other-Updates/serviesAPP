@@ -165,21 +165,21 @@ class Enquiry extends MX_Controller {
         $no = $_POST['start'];
         foreach ($list as $leads_data) {
             if ($this->user_auth->is_action_allowed('enquiry', 'enquiry', 'edit')) {
-                $edit_row = '<a class="btn btn-primary btn-mini waves-effect waves-light" href="' . base_url() . 'enquiry/enquiry_edit/' . $leads_data->id . '" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil"></span></a>';
+                $edit_row = '<a class="btn btn-round btn-primary btn-mini waves-effect waves-light" href="' . base_url() . 'enquiry/enquiry_edit/' . $leads_data->id . '" data-toggle="tooltip" data-placement="top" title="Edit"><span class="fa fa-pencil"></span></a>';
             } else {
-                $edit_row = '<a class="btn btn-primary btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-pencil"></span></a>';
+                $edit_row = '<a class="btn btn-round btn-primary btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-pencil"></span></a>';
             }
 
             if ($this->user_auth->is_action_allowed('enquiry', 'enquiry', 'view')) {
-                $view_row = '<a class="btn btn-info btn-mini waves-effect waves-light" href="' . base_url() . 'enquiry/enquiry_view/' . $leads_data->id . '" data-toggle="tooltip" data-placement="top" title="View"><span class="fa fa-eye"></span></a>';
+                $view_row = '<a class="btn btn-round btn-info btn-mini waves-effect waves-light" href="' . base_url() . 'enquiry/enquiry_view/' . $leads_data->id . '" data-toggle="tooltip" data-placement="top" title="View"><span class="fa fa-eye"></span></a>';
             } else {
-                $view_row = '<a class="btn btn-info btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-eye"></span></a>';
+                $view_row = '<a class="btn btn-round btn-info btn-mini waves-effect waves-light alerts" href=""><span class="fa fa-eye"></span></a>';
             }
 
             if ($this->user_auth->is_action_allowed('enquiry', 'enquiry', 'delete')) {
-                $delete_row = '<a onclick="delete_leads(' . $leads_data->id . ')" class="btn btn-danger btn-mini waves-effect waves-light delete_row" delete_id="test3_' . $leads_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
+                $delete_row = '<a onclick="delete_leads(' . $leads_data->id . ')" class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row" delete_id="test3_' . $leads_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
             } else {
-                $delete_row = '<a  class="btn btn-danger btn-mini waves-effect waves-light delete_row alerts" delete_id="test3_' . $leads_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
+                $delete_row = '<a  class="btn btn-round btn-danger btn-mini waves-effect waves-light delete_row alerts" delete_id="test3_' . $leads_data->id . '" data-toggle="modal" name="delete" title="In-Active" id="delete"><span class="fa fa-trash" style="color: white;"></span></a>';
             }
             $no++;
 

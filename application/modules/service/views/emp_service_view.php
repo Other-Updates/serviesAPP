@@ -178,8 +178,8 @@
 
             <div class="row text-center m-10">
                 <div class="col-sm-12 invoice-btn-group text-center">
-                    <button type="button" class="btn btn-primary print_btn btn-print-invoice m-b-10 btn-sm waves-effect waves-light m-r-20">Print</button>
-                    <a href="<?php echo $this->config->item('base_url') . 'service/to_do_service/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
+                    <button type="button" class="btn btn-round btn-primary print_btn btn-print-invoice m-b-10 btn-sm waves-effect waves-light m-r-20">Print</button>
+                    <a href="<?php echo $this->config->item('base_url') . 'service/to_do_service/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10"><span class="glyphicon"></span> Back </a>
                 </div>
             </div>
         </div>

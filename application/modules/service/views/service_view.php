@@ -323,8 +323,8 @@
                     </table>
                     <div class="row text-center m-10">
                         <div class="col-sm-12 invoice-btn-group hide_class text-center">
-                            <button class="btn btn-primary print_btn btn-sm waves-effect waves-light"> Print</button>
-                            <a href="<?php echo $this->config->item('base_url') . 'service/service_list/' ?>" class="btn btn-inverse btn-sm waves-effect waves-light"><span class="glyphicon"></span> Back </a>
+                            <button class="btn btn-round btn-primary print_btn btn-sm waves-effect waves-light"> Print</button>
+                            <a href="<?php echo $this->config->item('base_url') . 'service/service_list/' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light"><span class="glyphicon"></span> Back </a>
 
                         </div>
                     </div>
