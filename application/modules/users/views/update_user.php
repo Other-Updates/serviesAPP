@@ -5,9 +5,9 @@
     <div class="contentpanel">
         <div class="row">
             <div class="col-sm-12">
-                <div class="tab-header card">
+                <div class="md-tabs-main">
                     <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                        <li class="nav-item col-md-2">
+                        <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#update-user" role="tab">Update User</a>
                             <div class="slide"></div>
                         </li>
@@ -19,19 +19,16 @@
                                 <h5>Update List</h5>
                             </div>
                             <div class="card-block">
-                                <form class="form-material" method="POST"  name="upform" enctype="multipart/form-data" action="<?php echo $this->config->item('base_url') . 'users/update_user'; ?>">
+                                <form class="" method="POST"  name="upform" enctype="multipart/form-data" action="<?php echo $this->config->item('base_url') . 'users/update_user'; ?>">
                                     <?php
                                     if (isset($agent) && !empty($agent)) {
                                         $i = 0;
                                         foreach ($agent as $val) {
                                             $i++
                                             ?>
-                                            <div class="form-material row">
+                                            <div class=" row">
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-building-alt"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">User ID</label>
                                                             <input type="text" name="user_code" value="<?php echo $val["emp_code"]; ?>" class=" form-control" id="user_code" readonly tabindex="1"/>
@@ -42,9 +39,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Name <span class="req">*</span></label>
                                                             <input type="text" name="name" id="name"  class="name form-control form-align uppercase_class" value="<?= $val['name'] ?>"  tabindex="1"/>
@@ -57,9 +51,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Nick Name <span class="req">*</span></label>
                                                             <input type="text" name="nick_name" class="form-control form-align uppercase_class" id="nickname" value="<?= $val['nick_name'] ?>" tabindex="1" />
@@ -71,9 +62,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">User Name</label>
                                                             <input type="text" name="username" class="mail form-control form-align uppercase_class" id="username" value="<?= $val['username'] ?>"  tabindex="1"/>
@@ -83,12 +71,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-material row">
+                                            <div class=" row">
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Password <span class="req">*</span></label>
                                                             <input type="password" name="pass" class="mail form-control form-align" autocomplete="off"  tabindex="1"/>
@@ -98,9 +83,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-ui-call"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Mobile Number <span class="req">*</span></label>
                                                             <input type="text" name="number" class="number form-control form-align" id="number" value="<?= $val['mobile_no'] ?>"  tabindex="1"/>
@@ -112,11 +94,8 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-address-book"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
-
+                                                        <label class="float-label">Select Role <span class="req">*</span></label>
                                                             <select name="role" class="form-control form-align" id="role"  tabindex="1">
                                                                 <?php
                                                                 if (isset($user) && !empty($user)) {
@@ -136,9 +115,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-email"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Email Id <span class="req">*</span></label>
                                                             <input type="text" name="mail" class="mail form-control email_dup form-align" id="mail" value="<?= $val['email_id'] ?>"  tabindex="1"/>
@@ -152,9 +128,6 @@
 
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-location-pin"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Address <span class="req">*</span></label>
 
@@ -167,9 +140,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">ID Proof No: <span class="req">*</span></label>
                                                             <input type="text" name="id_proof_no" class="id_proof_no form-control uppercase_class" value="<?= $val['id_proof_no'] ?>" id="id_proof_no" tabindex="1" />
@@ -180,9 +150,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">ID Proof Type: <span class="req">*</span></label>
                                                             <input type="text" name="id_proof_type" class="id_proof_type form-control uppercase_class"  value="<?= $val['id_proof_type'] ?>" tabindex="1" id="id_proof_type" />
@@ -193,9 +160,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-address-book"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Account No</label>
                                                             <input type="text" name="acnum" class="form-control form-align uppercase_class" id="acnum" value="<?= $val['account_num'] ?>"  tabindex="1"/>
@@ -206,9 +170,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-bank"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Bank Name</label>
                                                             <input type="text" name="bank" class="bank form-control form-align uppercase_class" id="bank" value="<?= $val['bank_name'] ?>"  tabindex="1"/>
@@ -219,9 +180,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-bank-alt"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Bank Branch</label>
                                                             <input type="text" name="branch" class="form-control form-align uppercase_class" id="branch" value="<?= $val['bank_branch'] ?>"  tabindex="1"/>
@@ -232,9 +190,6 @@
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-bank"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">IFSC Code</label>
                                                             <input type="text" name="ifsc" class="form-control form-align uppercase_class" id="" value="<?= $val['ifsc'] ?>"  tabindex="1"/>
@@ -243,16 +198,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
-
+                                                <label class="float-label">ID Proof Photo <span class="req">*</span></label>                   
                                                     <div class="row">
-                                                        <div class="col-md-12 new-style-form">
-                                                            <span class="help-block">ID Proof Photo <span class="req">*</span></span>
-                                                        </div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-md-2 pr-0">
                                                             <?php if ($val['signature'] != '') { ?>
-                                                                <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/sign/' . $val['signature']; ?>" class="img-40 add_staff_thumbnail" alt="">
+                                                                <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/sign/' . $val['signature']; ?>" width="100%" class="add_staff_thumbnail" alt="">
                                                             <?php } else { ?>
-                                                                <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/sign/no-img.gif' ?>" class="img-40 add_staff_thumbnail" alt="">
+                                                                <img id="blah" src="<?= $this->config->item("base_url") . 'themes/incsol/assets/images/default_image.png' ?>" width="100%" class="add_staff_thumbnail" alt="">
                                                             <?php } ?>
                                                         </div>
                                                         <div class="col-md-10 adminprofile">

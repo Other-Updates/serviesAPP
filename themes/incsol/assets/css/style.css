@@ -21,7 +21,7 @@ File: style.css
 ==========================  **/
 body {
   background-color: #f3f3f3;
-  font-size: 13px;
+  font-size: 14px;
  
   color: #455a64;
   font-family: "Roboto", sans-serif;
@@ -5479,12 +5479,11 @@ a[data-toggle="lightbox"] .img-fluid {
 }
 select.form-control:not([size]):not([multiple]) {
   /*height: 36px;*/
-  height:30px;
+  height:34.8px;
   border: 1px solid #ccc;
 }
 .dataTables_length select.form-control:not([size]):not([multiple]) {width:55px;}
 .dataTables_length{margin-top:4px;}
-.form-control {padding: .2rem .2rem !important;}
 .jFiler.jFiler-theme-default .jFiler-input {
   border: none;
   border-bottom: 2px solid #ccc;
@@ -11019,9 +11018,6 @@ body.menu-bottom #collapse-menu {
   width: 100% !important;
 }
 
-.form-group {
-  margin-bottom: 0em;
-}
 .form-group .form-control-lg {
   font-size: 1.25em;
 }
@@ -11033,8 +11029,9 @@ body.menu-bottom #collapse-menu {
 }
 
 .form-control {
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid #cccccc;
+  font-weight: 500;
 }
 .form-control:focus {
   border: 1px solid #448aff;
@@ -22071,3 +22068,21 @@ input:checked + .togslider:before {
 .pcoded[fream-type="theme1"] .page-header:before {
     background: #eff5f7;
 }  
+.md-tabs-main .nav-tabs {
+  border: 0;
+  width: 35%;
+    margin: 0 auto;
+}
+.md-tabs-main .nav-tabs.md-tabs.tab-timeline li a {
+  background: #fff;
+  border-radius: 6px 6px 0 0;
+    box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+    opacity: 0.4;
+}
+.md-tabs-main .md-tabs .nav-item {
+  margin: 0 15px;
+}
+.md-tabs-main .nav-tabs.md-tabs.tab-timeline li a.active {
+  background-color: #f4f4f4;
+  opacity: 1;
+}

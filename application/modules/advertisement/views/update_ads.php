@@ -60,9 +60,9 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-3">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#update-ads" role="tab">Update Advertisement</a>
                     <div class="slide"></div>
                 </li>
@@ -82,15 +82,13 @@
                                 foreach ($ads_details as $val) {
                                     $i++
                                     ?>
-                                    <div class="form-material row">
+                                    <div class=" row">
                                         <div class="col-md-6">
                                             <div class="material-group">
-                                                <div class="material-addone">
-                                                    <i class="icofont icofont-building-alt"></i>
-                                                </div>
                                                 <div class="form-group form-primary">
-                                                    <input type="text" name="ads[ads_name]" class="form-control required " id="ads_name"  value="<?php echo ucfirst($ads_details[0]['name']); ?>"/>
-                                                    <label class="float-label">Ads Name</label>
+                                                <label class="float-label">Ads Name</label>
+                                                    <input type="text" name="ads[ads_name]" class="form-control required " id="ads_name" placeholder="Enter Ads Name" value="<?php echo ucfirst($ads_details[0]['name']); ?>"/>
+                                                    
 
                                                     <span class="form-bar"></span>
                                                     <span class="error_msg"></span>

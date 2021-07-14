@@ -918,8 +918,8 @@ if (isset($agent) && !empty($agent)) {
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-success btn-sm" id="update_customer">Update</button>
-                <button type="button" class="btn btn-danger btn-sm" id="model_discard" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-round btn-success btn-sm" id="update_customer">Update</button>
+                <button type="button" class="btn btn-round btn-danger btn-sm" id="model_discard" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

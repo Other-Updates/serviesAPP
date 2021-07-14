@@ -29,13 +29,13 @@
 </style>
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#links_details" role="tab">Links List</a>
                     <div class="slide"></div>
                 </li>
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link <?php if (!$this->user_auth->is_action_allowed('masters', 'manage_links', 'add')): ?>alerts<?php endif ?>" data-toggle="tab" href="<?php if ($this->user_auth->is_action_allowed('masters', 'manage_links', 'add')): ?>#links<?php endif ?>" role="tab">Add Links</a>
                     <div class="slide"></div>
                 </li>
@@ -144,15 +144,13 @@
                             </tr>
                         </table>
                         <form class="" action="<?php echo $this->config->item('base_url'); ?>manage_links/add" enctype="multipart/form-data" name="form" method="post" novalidate>
-                            <div class="form-material row">
+                            <div class=" row">
                                 <div class="col-md-6">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-building-alt"></i>
-                                        </div>
                                         <div class="form-group form-primary">
+                                        <label class="float-label">Link Name</label>
                                             <input type="text" name="link[name]" class="form-control required" id="link_name"/>
-                                            <label class="float-label">Link Name</label>
+                                            
                                             <span class="form-bar"></span>
                                             <span class="error_msg"></span>
                                         </div>

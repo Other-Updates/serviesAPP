@@ -11,13 +11,13 @@
 </style>
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#category-details" role="tab">Category List</a>
                     <div class="slide"></div>
                 </li>
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link <?php if (!$this->user_auth->is_action_allowed('masters', 'master_category', 'add')): ?>alerts<?php endif ?>" data-toggle="tab" href="<?php if ($this->user_auth->is_action_allowed('masters', 'master_category', 'add')): ?>#category<?php endif ?>" role="tab">Add Category</a>
                     <div class="slide"></div>
                 </li>
@@ -55,16 +55,13 @@
                         <h5 class="card-header-text">Add Category</h5>
                     </div>
                     <div class="card-block">
-                        <form class="form-material" name="defect" id="add_defect" action="<?php echo $this->config->item('base_url'); ?>master_category/save_defect" method="post" enctype="multipart/form-data">
-                            <div class="form-material row">
+                        <form class="" name="defect" id="add_defect" action="<?php echo $this->config->item('base_url'); ?>master_category/save_defect" method="post" enctype="multipart/form-data">
+                            <div class=" row">
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-cc-camera"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Category Name <span class="req">*</span></label>
-                                            <input type="text" class="cat_dup form-control required" name="categoryName" id="defect_type" placeholder=" ">
+                                            <input type="text" class="cat_dup form-control required" name="categoryName" id="defect_type" placeholder="Enter Category Name">
                                             <span class="form-bar"></span>
                                             <span class="error_msg val text-danger"></span>
                                             <span id="duplica" class="val text-danger"></span>
@@ -72,9 +69,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <div class="col-md-12 new-style-form1">
-                                        <span class="help-block">Warranty <span class="req">*</span></span>
-                                    </div>
+                                    <label class="help-block">Warranty <span class="req">*</span></label>
                                     <div class="form-radio">
                                         <div class="radio radiofill radio-primary radio-inline">
                                             <label>
@@ -92,12 +87,10 @@
                                     <span id="warranty_err" class="val text-danger"></span>
                                 </div>
                                 <div class="col-md-3">
+                                <label class="help-block">Category Image <span class="req">*</span></label>
                                     <div class="row">
-                                        <div class="col-md-12 new-style-form">
-                                            <span class="help-block">Category Image <span class="req">*</span></span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/sign/no-img.gif' ?>" class="img-40" alt="" >
+                                        <div class="col-md-2 pr-0">
+                                            <img id="blah" src="<?= $this->config->item("base_url") . 'themes/incsol/assets/images/default_image.png' ?>" width="100%"  alt="" >
                                         </div>
                                         <div class="col-md-10 adminprofile">
                                             <input type="file" name="category_image" class=" imgInp form-control" id="category_image" />

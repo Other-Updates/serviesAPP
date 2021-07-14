@@ -6,13 +6,13 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#userrole-details" role="tab">User Role List</a>
                     <div class="slide"></div>
                 </li>
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link <?php if (!$this->user_auth->is_action_allowed('masters', 'user_roles', 'add')): ?>alerts<?php endif ?>" data-toggle="tab" href="<?php if ($this->user_auth->is_action_allowed('masters', 'user_roles', 'add')): ?>#userrole<?php endif ?>" role="tab">Add User Role</a>
                     <div class="slide"></div>
                 </li>
@@ -73,17 +73,14 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
                         <h5 class="card-header-text">Add User Role</h5>
                     </div>
                     <div class="card-block">
-                        <form class="form-material" name="myform" method="post" action="<?php echo $this->config->item('base_url'); ?>masters/user_roles/add/">
-                            <div class="form-material row">
+                        <form class="" name="myform" method="post" action="<?php echo $this->config->item('base_url'); ?>masters/user_roles/add/">
+                            <div class="row">
 
                                 <div class="col-md-3">
-                                    <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-ui-user"></i>
-                                        </div>
+                                    <div class="">
                                         <div class="form-group form-primary">
                                             <label class="float-label">User Role <span class="req">*</span></label>
-                                            <input type="text" name="user_role[user_role]" id="user_role" class="form-control" placeholder="" id="fit" maxlength="30" />
+                                            <input type="text" name="user_role[user_role]" id="user_role" class="form-control"  id="fit" maxlength="30" placeholder="Enter User Role" />
                                             <span class="form-bar"></span>
                                             <span id="user_role_error" class="reset  text-danger" style="color:#F00;"></span>
                                             <span id="duplica_user" class="val text-danger"  style="color:#F00;"></span>

@@ -23,9 +23,9 @@
 </style>
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-3">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#update-links" role="tab">Update Links</a>
                     <div class="slide"></div>
                 </li>
@@ -51,15 +51,13 @@
                                 foreach ($links_details as $val) {
                                     $i++
                                     ?>
-                                    <div class="form-material row">
+                                    <div class=" row">
                                         <div class="col-md-6">
                                             <div class="material-group">
-                                                <div class="material-addone">
-                                                    <i class="icofont icofont-building-alt"></i>
-                                                </div>
                                                 <div class="form-group form-primary">
+                                                <label class="float-label">Link Name</label>
                                                     <input type="text" name="link[name]" class="form-control required" id="link_name"  value="<?php echo ucfirst($links_details[0]['name']); ?>"/>
-                                                    <label class="float-label">Link Name</label>
+                                                    
 
                                                     <span class="form-bar"></span>
                                                     <span class="error_msg"></span>

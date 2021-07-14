@@ -4,9 +4,9 @@
 
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#update-user" role="tab">Update User Role</a>
                     <div class="slide"></div>
                 </li>
@@ -18,16 +18,13 @@
                         <h5>Update List</h5>
                     </div>
                     <div class="card-block">
-                        <form class="form-material" name="myform" method="post" action="<?php echo $this->config->item('base_url'); ?>masters/user_roles/user_role_edit/<?php echo $role[0]['id']; ?>">
-                            <div class="form-material row">
+                        <form class="" name="myform" method="post" action="<?php echo $this->config->item('base_url'); ?>masters/user_roles/user_role_edit/<?php echo $role[0]['id']; ?>">
+                            <div class="row">
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-ui-user"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">User Role <span class="req">*</span></label>
-                                            <input type="text" name="user_role" id="user_role" class="form-control" placeholder="" id="fit" maxlength="30" value="<?php echo $role[0]['user_role']; ?>"/>
+                                            <input type="text" name="user_role" id="user_role" class="form-control" placeholder="Enter User Role" id="fit" maxlength="30" value="<?php echo $role[0]['user_role']; ?>"/>
                                             <span class="form-bar"></span>
                                             <span id="user_role_error" class="val text-danger"></span>
                                             <span id="duplica_user" class="val text-danger"></span>

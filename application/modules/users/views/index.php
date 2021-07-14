@@ -6,13 +6,13 @@
 </style>
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#user-details" role="tab">User List</a>
                     <div class="slide"></div>
                 </li>
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link <?php if (!$this->user_auth->is_action_allowed('masters', 'users', 'add')): ?>alerts<?php endif ?>" data-toggle="tab" href="<?php if ($this->user_auth->is_action_allowed('masters', 'users', 'add')): ?>#user<?php endif ?>" role="tab">Add User</a>
                     <div class="slide"></div>
                 </li>
@@ -53,13 +53,10 @@
                         <h5 class="card-header-text">Add User</h5>
                     </div>
                     <div class="card-block">
-                        <form class="form-material" action="<?php echo $this->config->item('base_url'); ?>users/insert_user" enctype="multipart/form-data" name="form" method="post">
-                            <div class="form-material row">
+                        <form class="" action="<?php echo $this->config->item('base_url'); ?>users/insert_user" enctype="multipart/form-data" name="form" method="post">
+                            <div class=" row">
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-building-alt"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">User ID</label>
                                             <input type="text" name="user_code" value="<?php echo $emp_code; ?>" class=" form-control" id="user_code" readonly tabindex="1"/>
@@ -70,9 +67,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Name <span class="req">*</span></label>
                                             <input type="text" name="name" class="form-control uppercase_class" id="name" />
@@ -84,9 +78,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Nick Name <span class="req">*</span></label>
                                             <input type="text" name="nick_name" class=" form-control uppercase_class" id="nick_name" />
@@ -98,9 +89,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">User Name <span class="req">*</span></label>
                                             <input type="text" name="user_name" class="mail form-control uppercase_class" id="user_name" />
@@ -110,12 +98,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-material row">
+                            <div class=" row">
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Password <span class="req">*</span></label>
                                             <input type="password" name="pass" class="mail form-control" id="pass" />
@@ -127,9 +112,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-ui-call"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Mobile Number <span class="req">*</span></label>
                                             <input type="text" name="number" class="number form-control" id="number" />
@@ -141,10 +123,8 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-address-book"></i>
-                                        </div>
                                         <div class="form-group form-primary">
+                                            <label class="float-label">Select Role <span class="req">*</span></label>
                                             <select name="role" class="form-control" id="role" >
                                                 <option value="">Select Role</option>
                                                 <?php
@@ -166,9 +146,6 @@
 
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-email"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Email Id <span class="req">*</span></label>
                                             <input type="text" name="mail" class="mail form-control email_dup" id="mail" />
@@ -180,12 +157,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-material row">
+                            <div class=" row">
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-location-pin"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Address <span class="req">*</span></label>
                                             <textarea name="address1" id="address" class="form-control uppercase_class"></textarea>
@@ -197,9 +171,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">ID Proof No: <span class="req">*</span></label>
                                             <input type="text" name="id_proof_no" class="id_proof_no form-control uppercase_class" id="id_proof_no" />
@@ -210,9 +181,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-briefcase-alt-1"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">ID Proof Type: <span class="req">*</span></label>
                                             <input type="text" name="id_proof_type" class="id_proof_type form-control uppercase_class" id="id_proof_type" />
@@ -223,9 +191,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-address-book"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Account No</label>
                                             <input type="text" name="acnum" class="form-control" id="acnum"/>
@@ -236,9 +201,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-bank"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Bank Name</label>
                                             <input type="text" name="bank" class="form-control uppercase_class" id="bank"/>
@@ -249,9 +211,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-bank-alt"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">Bank Branch</label>
                                             <input type="text" name="branch" class="form-control uppercase_class" id="branch"/>
@@ -262,9 +221,6 @@
                                 </div>
                                 <div class="col-md-3">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-bank"></i>
-                                        </div>
                                         <div class="form-group form-primary">
                                             <label class="float-label">IFSC Code</label>
                                             <input type="text" name="ifsc" class="form-control uppercase_class" id="">
@@ -273,13 +229,10 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-
+                                <label class="float-label">ID Proof Photo <span class="req">*</span></label>
                                     <div class="row">
-                                        <div class="col-md-12 new-style-form">
-                                            <span class="help-block">ID Proof Photo <span class="req">*</span></span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/sign/no-img.gif' ?>" class="img-40 add_staff_thumbnail" alt="">
+                                        <div class="col-md-2 pr-0">
+                                            <img id="blah" src="<?= $this->config->item("base_url") . 'themes/incsol/assets/images/default_image.png' ?>" width="100%" class="add_staff_thumbnail" alt="">
                                         </div>
                                         <div class="col-md-10 adminprofile">
 
@@ -294,7 +247,7 @@
 
                                 </div>
                             </div>
-                            <div class="form-material row text-center m-10">
+                            <div class=" row text-center m-10">
                                 <div class="col-md-12 text-center">
                                     <input type="submit" name="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
                                     <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>

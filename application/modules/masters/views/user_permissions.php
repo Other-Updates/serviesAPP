@@ -104,8 +104,8 @@ table tr td:nth-child(6){text-align:center;}
             </table>
             <div class="form-group row text-center m-10">
                 <div class="col-md-12 text-center">
-				<button type="submit" class="btn btn-primary m-b-10 btn-sm waves-effect waves-light" style="">Submit</button>
-                    <button type="button" class="btn btn-inverse btn-sm waves-effect waves-light m-b-10" onclick="window.location = '<?php echo base_url('masters/user_roles'); ?>'" style="">Cancel</button>
+				<button type="submit" class="btn btn-round btn-primary m-b-10 btn-sm waves-effect waves-light" style="">Submit</button>
+                    <button type="button" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" onclick="window.location = '<?php echo base_url('masters/user_roles'); ?>'" style="">Cancel</button>
                     
                 </div>
             </div>

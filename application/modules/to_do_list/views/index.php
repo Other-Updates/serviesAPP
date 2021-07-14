@@ -196,16 +196,16 @@ $job_type_arr = array(
                                 <table class="table table-striped table-bordered" id="leads_table">
                                     <thead>
                                         <tr>
-                                            <td class="action-btn-align">S.No</td>
-                                            <td>Leads #</td>
-                                            <td>Customer</td>
-                                            <td>Cus.Address</td>
-                                            <td>L.Date</td>
-                                            <td>L.Followup Date</td>
-                                            <td>Assigned</td>
-                                            <td>L.About</td>
-                                            <td>Status</td>
-                                            <td>Remarks</td>
+                                            <th class="action-btn-align">S.No</th>
+                                            <th>Leads #</th>
+                                            <th>Customer</th>
+                                            <th>Cus.Address</th>
+                                            <th>L.Date</th>
+                                            <th>L.Followup Date</th>
+                                            <th>Assigned</th>
+                                            <th>L.About</th>
+                                            <th>Status</th>
+                                            <th>Remarks</th>
                                         </tr>
                                     </thead>
                                     <tbody>

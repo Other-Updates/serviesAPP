@@ -14,13 +14,13 @@
 </style>
 <div class="row">
     <div class="col-lg-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#ads_details" role="tab">Ads List</a>
                     <div class="slide"></div>
                 </li>
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link <?php if (!$this->user_auth->is_action_allowed('masters', 'advertisement', 'add')): ?>alerts<?php endif ?>" data-toggle="tab" href="<?php if ($this->user_auth->is_action_allowed('masters', 'advertisement', 'add')): ?>#advertisement<?php endif ?>" role="tab">Add advertisement</a>
                     <div class="slide"></div>
                 </li>
@@ -168,15 +168,13 @@
                     </div>
                     <div class="card-block">
                         <form class="" action="<?php echo $this->config->item('base_url'); ?>advertisement/add" enctype="multipart/form-data" name="form" method="post" novalidate>
-                            <div class="form-material row">
+                            <div class=" row">
                                 <div class="col-md-6">
                                     <div class="material-group">
-                                        <div class="material-addone">
-                                            <i class="icofont icofont-building-alt"></i>
-                                        </div>
                                         <div class="form-group form-primary">
-                                            <input type="text" name="ads[ads_name]" class="form-control required" id="ads_name"/>
-                                            <label class="float-label">Ads Name</label>
+                                        <label class="float-label">Ads Name</label>
+                                            <input type="text" placeholder="Enter Ads Name" name="ads[ads_name]" class="form-control required" id="ads_name"/>
+                                            
                                             <span class="form-bar"></span>
                                             <span class="error_msg"></span>
                                         </div>

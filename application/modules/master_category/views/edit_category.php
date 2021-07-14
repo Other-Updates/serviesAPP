@@ -11,9 +11,9 @@
 </style>
 <div class="row">
     <div class="col-sm-12">
-        <div class="tab-header card">
+        <div class="md-tabs-main">
             <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                <li class="nav-item col-md-2">
+                <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#update-cat-sub" role="tab">Update Category</a>
                     <div class="slide"></div>
                 </li>
@@ -25,15 +25,12 @@
                         <h5>Category List</h5>
                     </div>
                     <div class="card-block">
-                        <form class="form-material" name="defect" id="add_defect" action="<?php echo $this->config->item('base_url'); ?>master_category/update_category "method="post" enctype="multipart/form-data">
+                        <form class="" name="defect" id="add_defect" action="<?php echo $this->config->item('base_url'); ?>master_category/update_category "method="post" enctype="multipart/form-data">
                             <input type="hidden" id="cats" name="cat_id" value="<?php echo $defect_type[0]['cat_id'] ?>" >
                             <?php if (isset($defect_type[0]) && !empty($defect_type[0])) { ?>
-                                <div class="form-material row">
+                                <div class=" row">
                                     <div class="col-md-3">
                                         <div class="material-group">
-                                            <div class="material-addone">
-                                                <i class="icofont icofont-cc-camera"></i>
-                                            </div>
                                             <div class="form-group form-primary">
                                                 <label class="float-label">Category Name <span class="req">*</span></label>
                                                 <input type="text" class="form-control required cat_dup" org_name="<?php echo $defect_type[0]['categoryName'] ?>" name="categoryName" value="<?php echo $defect_type[0]['categoryName'] ?>" id="defect_type" tabindex="1">
@@ -44,9 +41,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <div class="col-md-12 new-style-form1">
-                                            <span class="help-block">Warranty <span class="req">*</span></span>
-                                        </div>
+                                    <label class="help-block">Warranty <span class="req">*</span></label>
                                         <div class="form-radio">
                                             <div class="radio radiofill radio-primary radio-inline">
                                                 <label>
@@ -64,16 +59,13 @@
                                         <span id="warranty_err" class="val text-danger"></span>
                                     </div>
                                     <div class="col-md-3">
-
+                                    <label class="help-block">Category Image <span class="req">*</span></label>
                                         <div class="row">
-                                            <div class="col-md-12 new-style-form">
-                                                <span class="help-block">Category Image <span class="req">*</span></span>
-                                            </div>
-                                            <div class="col-md-2">
+                                            <div class="col-md-2 pr-0">
                                                 <?php if ($defect_type[0]['category_image'] != '') { ?>
-                                                    <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/category/' . $defect_type[0]['category_image']; ?>" class="img-40" alt="" width="40px;"height="40px;">
+                                                    <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/category/' . $defect_type[0]['category_image']; ?>" width="100%" alt="" width="40px;"height="40px;">
                                                 <?php } else { ?>
-                                                    <img id="blah" src="<?= $this->config->item("base_url") . 'attachement/sign/no-img.gif' ?>" class="img-40" alt="">
+                                                    <img id="blah" src="<?= $this->config->item("base_url") . 'themes/incsol/assets/images/default_image.png' ?>" width="100%" alt="">
                                                 <?php } ?>
                                             </div>
                                             <div class="col-md-10">
