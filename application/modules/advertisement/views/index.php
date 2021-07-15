@@ -4,8 +4,6 @@
 <style>
     table tr td:nth-child(9){text-align:center;}
     table tr td:nth-child(6){text-align:center;}
-    .addstbl, .addstbl tr th, .addstbl tr td{border:1px solid #ccc;}
-    .addstbl tr th{font-weight:bold;}
     .table-responsive {
         display: inline-block;
         width: 100%;
@@ -43,11 +41,11 @@
                                 <table class="table table-striped table-bordered" id="ads_table">
                                     <thead>
                                         <tr>
-                                            <th width="33">S.No</th>
-                                            <th width="35">Ads Name</th>
-                                            <th width="92">Status</th>
-                                            <th width="107" class="action-btn-align">Action</th>
-                                            <th width="107" class="action-btn-align"></th>
+                                            <th width="5%">S.No</th>
+                                            <th >Ads Name</th>
+                                            <th >Status</th>
+                                            <th class="action-btn-align">Action</th>
+                                            <th class="action-btn-align"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -122,7 +120,7 @@
                 <tr>
                     <td align="center" class="s_no"></td>
                     <td>
-                        <div class="col-md-12 form-group" >
+                        <div class="" >
                             <select name="adds_file_type[]" autocomplete="off" class="form-control input-sm  adds_file_type" id="">
                                 <option value="1">Images</option>
                             </select>
@@ -131,8 +129,8 @@
                     </td>
                     <td class="file_type_content">
                         <div class="ads_image_div" >
-                            <div class="col-md-9 form-group add-img-upload flt-left">
-                                <fieldset _ngcontent-c7="" class="form-group">
+                            <div class="col-md-9 add-img-upload flt-left">
+                                <fieldset _ngcontent-c7="" class="">
                                     <div _ngcontent-c7="" class="custom-file center-block d-block">
                                         <input _ngcontent-c7="" class="add_data_images custom-file-input adsdata" id="ads" name="ads_data_image[]" data-type="image" type="file">
                                         <label _ngcontent-c7="" class="custom-file-label" for="inputGroupFile01">Choose File</label>	
@@ -148,7 +146,7 @@
                         </div>
                     </td>
                     <td>
-                        <div class="col-md-12 form-group">
+                        <div class="">
                             <input type="text" autocomplete="off" name="ads_sort_order[]" id="" onkeypress="return isNumber(event)" class="form-control ads_sort_order "/>
                             <span class="error_msg sort_order_error"></span>
                         </div>
@@ -180,13 +178,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            
                             <div class="col-lg-12">
                                 <label><strong>Ads Content/File Details:</strong></label><span class="req">*</span>
-                                <div class="row card-block table-border-style">
+                                <div class="table-border-style">
                                     <div class="table-responsive">
-
-                                        <table class="addstbl" id="add_quotation">
+                                        <table class="addstbl table table-bordered" id="add_quotation">
                                             <thead id="add_header">
                                                 <th width="1%" class="first_td1">S.No</th>
                                                 <th width="15%" class="first_td1 ads_file_type" >File Type</th>
@@ -195,47 +192,50 @@
                                                 <th width="1%" class="action-btn-align" style="text-align:center;"><a onclick="ads_content_clone()" id='add_data' data-type="0" class="btn btn-round btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger">
                                                     <span class="fa fa-plus" style="color:white;"></span> </a></th>
                                             </thead>
-                                        <tbody id="add_body"> 
-                                            <tr>
-                                                <td align="center" class="s_no">1</td>
-                                                <td>
-                                                    <div class="col-md-12 form-group" >
-                                                        <select name="adds_file_type[]" autocomplete="off" class="form-control input-sm  adds_file_type required" id="">
-                                                            <option value="3" selected>Content</option>
-                                                        </select>
-                                                        <span class="error_msg adds_file_type_error"></span>
-                                                    </div>
-                                                </td>
-                                                <td class="file_type_content">
-                                                    <div class="ads_content_div">
-                                                        <div class="col-md-12 form-group">
-                                                            <textarea   placeholder="Content" class="add_data_contents required form-control txt_area_height " name="ads_data[]"></textarea>
-                                                            <span class="error_msg file_error"></span>
+                                            <tbody id="add_body"> 
+                                                <tr>
+                                                    <td align="center" class="s_no">1</td>
+                                                    <td>
+                                                        <div class="" >
+                                                            <select name="adds_file_type[]" autocomplete="off" class="form-control input-sm  adds_file_type required" id="">
+                                                                <option value="3" selected>Content</option>
+                                                            </select>
+                                                            <span class="error_msg adds_file_type_error"></span>
                                                         </div>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="col-md-12 form-group">
-                                                        <input type="text" autocomplete="off" name="ads_sort_order[]" id="" onkeypress="return isNumber(event)" class="form-control required ads_sort_order "/>
-                                                        <span class="error_msg sort_order_error"></span>
-                                                    </div>
-                                                </td>
+                                                    </td>
+                                                    <td class="file_type_content">
+                                                        <div class="ads_content_div">
+                                                            <div class="">
+                                                                <textarea   placeholder="Content" class="add_data_contents required form-control txt_area_height " name="ads_data[]"></textarea>
+                                                                <span class="error_msg file_error"></span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <input type="text" autocomplete="off" name="ads_sort_order[]" id="" onkeypress="return isNumber(event)" class="form-control required ads_sort_order "/>
+                                                            <span class="error_msg sort_order_error"></span>
+                                                        </div>
+                                                    </td>
 
-                                                <td width="5%" class="action-btn-align" style="text-align:center;"> -
-                                                </td>
-                                            </tr>
-                                        </tbody>
+                                                    <td width="5%" class="action-btn-align" style="text-align:center;"> -
+                                                    </td>
+                                                </tr>
+                                            </tbody>
 
                                         </table>
                                     </div>
                                 </div>
-                                <div class="row text-center m-10">
-                                    <div class="col-md-12 text-center">
-                                        <input type="submit" name="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
-                                        <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
-                                        <a href="<?php echo $this->config->item('base_url') . 'advertisement' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
-                                    </div>
+                            </div>
+                            </div>
+                            <div class="row text-center m-10">
+                                <div class="col-md-12 text-center">
+                                    <input type="submit" name="submit" class="btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light" value="Save" id="submit" tabindex="1"/>
+                                    <input type="reset" value="Clear" class="btn btn-round btn-danger waves-effect m-b-10 btn-sm waves-light" id="reset" tabindex="1"/>
+                                    <a href="<?php echo $this->config->item('base_url') . 'advertisement' ?>" class="btn btn-round btn-inverse btn-sm waves-effect waves-light m-b-10" tabindex="1"> Back </a>
                                 </div>
+                            </div>
+                        
                         </form>
                     </div>
                 </div>

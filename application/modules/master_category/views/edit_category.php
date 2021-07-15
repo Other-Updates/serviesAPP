@@ -33,7 +33,7 @@
                                         <div class="material-group">
                                             <div class="form-group form-primary">
                                                 <label class="float-label">Category Name <span class="req">*</span></label>
-                                                <input type="text" class="form-control required cat_dup" org_name="<?php echo $defect_type[0]['categoryName'] ?>" name="categoryName" value="<?php echo $defect_type[0]['categoryName'] ?>" id="defect_type" tabindex="1">
+                                                <input type="text" placeholder="Enter Category Name" class="form-control required cat_dup" org_name="<?php echo $defect_type[0]['categoryName'] ?>" name="categoryName" value="<?php echo $defect_type[0]['categoryName'] ?>" id="defect_type" tabindex="1">
                                                 <span class="form-bar"></span>
                                                 <span class="error_msg val text-danger"></span>
                                                 <span id="duplica" class="val text-danger"></span>

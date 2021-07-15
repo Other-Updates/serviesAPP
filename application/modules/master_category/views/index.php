@@ -34,7 +34,7 @@
                             <table class="table table-striped table-bordered" id="category_table">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="5%">S.No</th>
                                         <th>Category</th>
                                         <th>image</th>
                                         <th class="action-btn-align">Action</th>

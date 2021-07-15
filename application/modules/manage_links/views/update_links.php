@@ -5,8 +5,6 @@
     a:focus, a:hover {
         color: #fff;
     }
-    .addstbl, .addstbl tr th, .addstbl tr td{border:1px solid #ccc;}
-    .addstbl tr th{font-weight:bold;}
     .error_msg {
         font-size: 13px;
         color: #ff5252 !important;
@@ -56,7 +54,7 @@
                                             <div class="material-group">
                                                 <div class="form-group form-primary">
                                                 <label class="float-label">Link Name</label>
-                                                    <input type="text" name="link[name]" class="form-control required" id="link_name"  value="<?php echo ucfirst($links_details[0]['name']); ?>"/>
+                                                    <input type="text" placeholder="Enter Link Name" name="link[name]" class="form-control required" id="link_name"  value="<?php echo ucfirst($links_details[0]['name']); ?>"/>
                                                     
 
                                                     <span class="form-bar"></span>
@@ -81,7 +79,7 @@
                                     </div>-->
                                         <div class="col-lg-12">
                                             <label><strong>Link Details:</strong></label><span class="req">*</span>
-                                            <table class="addstbl" id="add_quotation">
+                                            <table class="addstbl table table-bordered" id="add_quotation">
                                                 <thead id="add_header">
                                                 <th width="3%" class="first_td1">Link Data</th>
                                                 <th width="3%" class="first_td1">Link Description</th>

@@ -33,16 +33,13 @@ if (!empty($customers)) {
                 <h5>Add Leads</h5>
             </div>
             <div class="card-block">
-                <form class="form-material" action="<?php echo $this->config->item('base_url'); ?>enquiry/add_enquiry" enctype="multipart/form-data" name="form" method="post" novalidate>
-                    <div class="form-material row">
+                <form class="" action="<?php echo $this->config->item('base_url'); ?>enquiry/add_enquiry" enctype="multipart/form-data" name="form" method="post" novalidate>
+                    <div class=" row">
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-address-book"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Leads Number</label>
-                                    <input type="text" name="enquiry_no" value="<?php echo $last_id; ?>" class=" form-control" id="user_name" readonly tabindex="1"/>
+                                    <input type="text" placeholder="Enter Leads Number" name="enquiry_no" value="<?php echo $last_id; ?>" class=" form-control" id="user_name" readonly tabindex="1"/>
                                     <span class="form-bar"></span>
                                     <span id="cuserror8" class="val text-danger"></span>
                                 </div>
@@ -50,12 +47,9 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-contact-add"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Customer Name <span class="req">*</span></label>
-                                    <input type="text" name="customer_name"  class="form-control" id="name" tabindex="1">
+                                    <input type="text" name="customer_name" placeholder="Enter Customer Name" class="form-control" id="name" tabindex="1">
                                     <input type="hidden"  name="customer_id" id="customer_id" class='id_customer form-control' />
                                     <span class="form-bar"></span>
                                     <span id="cuserror1" class="val text-danger"></span>
@@ -64,40 +58,31 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-email"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Customer Email</label>
-                                    <input type="text" name="customer_email" class="mail form-control email_dup" id="mail" tabindex="1" />
+                                    <input type="text" name="customer_email" placeholder="Enter Customer Email" class="mail form-control email_dup" id="mail" tabindex="1" />
                                     <span class="form-bar"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-architecture-alt"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Leads About <span class="req">*</span></label>
-                                    <input type="text" name="enquiry_about" class="number form-control form-align" id="enquiry_about" tabindex="1"/>
+                                    <input type="text" name="enquiry_about" placeholder="Enter Leads About" class="number form-control form-align" id="enquiry_about" tabindex="1"/>
                                     <span class="form-bar"></span>
                                     <span id="cuserror_enquiry_about" class="val text-danger" ></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="form-material row">
+                    <div class=" row">
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-ui-calendar"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Followup Date <span class="req">*</span></label>
                                     <!--<input type="date" name="followup_date" class="form-control" id="date" tabindex="1"/>-->
-                                    <input id="dropper-default" name="followup_date" data-date="" data-month="" data-year="" value="<?php echo date('d-M-Y'); ?>" class="form-control" type="text" placeholder="" />
+                                    <input id="dropper-default" placeholder="Enter Followup Date" name="followup_date" data-date="" data-month="" data-year="" value="<?php echo date('d-M-Y'); ?>" class="form-control" type="text" placeholder="" />
                                     <!--<span class="form-bar"></span>-->
                                     <span id="date1" class="val text-danger"></span>
                                 </div>
@@ -105,12 +90,9 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-ui-call"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Contact Number <span class="req">*</span></label>
-                                    <input type="text" name="contact_number"  class="form-control" id="number" tabindex="1" >
+                                    <input type="text" name="contact_number"  placeholder="Enter Contact Number" class="form-control" id="number" tabindex="1" >
                                     <span class="form-bar"></span>
                                     <span id="cuserror4" class="val text-danger"></span>
                                 </div>
@@ -118,12 +100,9 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-ui-call"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Contact Number 2</label>
-                                    <input type="text" name="contact_number_2"  class="form-control" id="phone2" tabindex="1" >
+                                    <input type="text" name="contact_number_2"  placeholder="Enter Contact Number 2" class="form-control" id="phone2" tabindex="1" >
                                     <span class="form-bar"></span>
                                     <span id="phone2_err" class="val text-danger"></span>
                                 </div>
@@ -132,12 +111,9 @@ if (!empty($customers)) {
                         <div class="col-md-3">
                             <div class="form-group form-primary">
                                 <div class="material-group">
-                                    <div class="material-addone">
-                                        <i class="icofont icofont-tasks-alt"></i>
-                                    </div>
                                     <div class="form-group form-primary">
                                         <label class="float-label">Remarks <span class="req">*</span></label>
-                                        <input type="text" name="remarks" class="number form-control" id="remarks" tabindex="1"/>
+                                        <input type="text" name="remarks" placeholder="Enter Remarks" class="number form-control" id="remarks" tabindex="1"/>
                                         <span class="form-bar"></span>
                                         <span id="cuserror_remarks" class="val text-danger" ></span>
                                     </div>
@@ -145,15 +121,12 @@ if (!empty($customers)) {
                             </div>
                         </div>
                     </div>
-                    <div class="form-material row">
+                    <div class=" row">
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-location-pin"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Customer Address <span class="req">*</span></label>
-                                    <textarea name="customer_address" id="address" class="form-control" tabindex="1" ></textarea>
+                                    <textarea name="customer_address" id="address" placeholder="Enter Customer Address" class="form-control" tabindex="1" ></textarea>
                                     <span class="form-bar"></span>
                                     <span id="cuserror3" class="val text-danger"></span>
                                 </div>
@@ -161,10 +134,8 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-address-book"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Assign to Staff <span class="req">*</span></label>
                                     <select id='staff_name' name="assigned_to[]" class="form-control" multiple="multiple">
                                         <option value="">Assign to Staff</option>
                                         <?php
@@ -184,10 +155,8 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-address-book"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Select Category <span class="req">*</span></label>
                                     <select class='form-control' name='cat_id' id='category' tabindex="1">
                                         <option value='' >Select Category</option>
                                         <?php
@@ -208,11 +177,8 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-address-book"></i>
-                                </div>
                                 <div class="form-group form-primary">
-
+                                <label class="float-label">Select Status <span class="req">*</span></label>
                                     <select class='form-control' name='status' id='status' tabindex="1">
                                         <option value='' >Select Status</option>
                                         <option value='leads' selected="" >Pending Leads</option>
@@ -230,12 +196,9 @@ if (!empty($customers)) {
                         </div>
                         <div class="col-md-3 q_ref_no" style="display:none;">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-notepad"></i>
-                                </div>
                                 <div class="form-group form-primary">
                                     <label class="float-label">Quotation Ref.No</label>
-                                    <input type="text" name="quotation_ref_no" class="form-control form-align" id="quotation_ref_no" tabindex="1"/>
+                                    <input type="text" placeholder="Enter Quotation Ref.No" name="quotation_ref_no" class="form-control form-align" id="quotation_ref_no" tabindex="1"/>
                                     <span class="form-bar"></span>
                                     <span id="q_ref_no_err" class="val text-danger" ></span>
                                 </div>
@@ -667,14 +630,14 @@ if (isset($agent) && !empty($agent)) {
                         success: function (data) {
                             result = JSON.parse(data);
                             if (result != null && result.length > 0) {
-                                $("#number").parent().find(".float-label").removeClass('newClass1');
-                                $("#number").parent().find(".float-label").addClass('newClass');
-                                $("#phone2").parent().find(".float-label").removeClass('newClass1');
-                                $("#phone2").parent().find(".float-label").addClass('newClass');
-                                $("#mail").parent().find(".float-label").removeClass('newClass1');
-                                $("#mail").parent().find(".float-label").addClass('newClass');
-                                $("#address").parent().find(".float-label").removeClass('newClass1');
-                                $("#address").parent().find(".float-label").addClass('newClass');
+                                // $("#number").parent().find(".float-label").removeClass('newClass1');
+                                // $("#number").parent().find(".float-label").addClass('newClass');
+                                // $("#phone2").parent().find(".float-label").removeClass('newClass1');
+                                // $("#phone2").parent().find(".float-label").addClass('newClass');
+                                // $("#mail").parent().find(".float-label").removeClass('newClass1');
+                                // $("#mail").parent().find(".float-label").addClass('newClass');
+                                // $("#address").parent().find(".float-label").removeClass('newClass1');
+                                // $("#address").parent().find(".float-label").addClass('newClass');
 
                                 $("#customer_id").val(result[0].id);
                                 $("#name").val(result[0].name);
@@ -792,16 +755,16 @@ if (isset($agent) && !empty($agent)) {
                         success: function (data) {
                             var result = JSON.parse(data);
                             if (result != null && result.length > 0) {
-                                $("#name").parent().find(".float-label").removeClass('newClass1');
-                                $("#name").parent().find(".float-label").addClass('newClass');
-                                $("#number").parent().find(".float-label").removeClass('newClass1');
-                                $("#number").parent().find(".float-label").addClass('newClass');
-                                $("#phone2").parent().find(".float-label").removeClass('newClass1');
-                                $("#phone2").parent().find(".float-label").addClass('newClass');
-                                $("#mail").parent().find(".float-label").removeClass('newClass1');
-                                $("#mail").parent().find(".float-label").addClass('newClass');
-                                $("#address").parent().find(".float-label").removeClass('newClass1');
-                                $("#address").parent().find(".float-label").addClass('newClass');
+                                // $("#name").parent().find(".float-label").removeClass('newClass1');
+                                // $("#name").parent().find(".float-label").addClass('newClass');
+                                // $("#number").parent().find(".float-label").removeClass('newClass1');
+                                // $("#number").parent().find(".float-label").addClass('newClass');
+                                // $("#phone2").parent().find(".float-label").removeClass('newClass1');
+                                // $("#phone2").parent().find(".float-label").addClass('newClass');
+                                // $("#mail").parent().find(".float-label").removeClass('newClass1');
+                                // $("#mail").parent().find(".float-label").addClass('newClass');
+                                // $("#address").parent().find(".float-label").removeClass('newClass1');
+                                // $("#address").parent().find(".float-label").addClass('newClass');
                                 $("#customer_id").val(result[0].id);
                                 $("#name").val(result[0].name);
                                 $("#number").val(result[0].mobil_number);
@@ -834,82 +797,70 @@ if (isset($agent) && !empty($agent)) {
 
                 <form id="customer_model_form" action="<?php echo $this->config->item('base_url'); ?>customer/insert_customer" enctype="multipart/form-data" name="form" method="post">
 
-                    <div class="form-material row">
+                    <div class=" row">
                         <div class="col-md-12">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-ui-user"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Customer Name <span class="req">*</span></label>
                                     <input type="text" name="customer_name"  class="form-control mandatory" id="customername" tabindex="1">
                                     <span class="error_msg" class="val text-danger"></span>
                                     <span class="form-bar"></span>
-                                    <label class="float-label">Customer Name <span class="req">*</span></label>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-email"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Customer Email <span class="req">*</span></label>
                                     <input type="text" name="customer_email" class="form-control mandatory" id="email_address" tabindex="1"/>
                                     <span class="error_msg" class="val text-danger"></span>
                                     <span class="form-bar"></span>
-                                    <label class="float-label">Customer Email <span class="req">*</span></label>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-ui-call"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Contact Number <span class="req">*</span></label>
                                     <input type="text" name="contact_number"  class="form-control mandatory" id="mobile_num" tabindex="1">
                                     <span class="error_msg" class="val text-danger"></span>
                                     <span class="form-bar"></span>
-                                    <label class="float-label">Contact Number <span class="req">*</span></label>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-ui-call"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Contact Number 2 <span class="req">*</span></label>
                                     <input type="text" name="contact_number_2"  class="form-control mandatory" id="mobile_num_2" tabindex="1">
                                     <span class="error_msg" class="val text-danger"></span>
                                     <span class="form-bar"></span>
-                                    <label class="float-label">Contact Number 2 <span class="req">*</span></label>
+                                   
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-location-pin"></i>
-                                </div>
                                 <div class="form-group form-primary">
+                                <label class="float-label">Customer Address <span class="req">*</span></label>
                                     <textarea name="customer_address" id="address1" class="form-control mandatory" tabindex="1"></textarea>
                                     <span class="error_msg" class="val text-danger"></span>
                                     <span class="form-bar"></span>
-                                    <label class="float-label">Customer Address <span class="req">*</span></label>
+                                    
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="material-group">
-                                <div class="material-addone">
-                                    <i class="icofont icofont-briefcase-alt-1"></i>
-                                </div>
-                                <div class="form-group form-primary">
+                                <div class="form-group form-primary m-0">
+                                <label class="float-label">Company Name <span class="req">*</span></label>
                                     <input type="text" name="store" class="store form-control mandatory" id="company_name"/>
                                     <span class="error_msg" class="val text-danger"></span>
                                     <span class="form-bar"></span>
-                                    <label class="float-label">Company Name <span class="req">*</span></label>
+                                    
                                 </div>
                             </div>
                         </div>

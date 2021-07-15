@@ -29,7 +29,7 @@ $theme_path = $this->config->item('theme_locations') . $this->config->item('acti
                             <table class="table table-striped table-bordered" id="user_role_table">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="10%">S.No</th>
                                         <th>User Role</th>
                                         <th class="action-btn-align">Action</th>
                                     </tr>

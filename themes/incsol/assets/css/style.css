@@ -159,6 +159,7 @@ code {
   background-color: #0000000a;
   padding: 10px;
   position: relative;
+  border: 2px solid #fff;
   /* -webkit-box-shadow: 0px 1px 20px 0px rgba(69, 90, 100, 0.08);
           box-shadow: 0px 1px 20px 0px rgba(69, 90, 100, 0.08); */
 }
@@ -21884,7 +21885,7 @@ table td .btn {
     border: 0px solid #448aff !important;
 	border-bottom: 1px solid #ccc !important;
 }
-form{margin-top:10px;}
+
 table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
 	bottom: 0.3em !important;
 }
@@ -21892,18 +21893,18 @@ table.dataTable thead .action-btn-align:before, table.dataTable thead .action-bt
 table{width:100% !important;}
 .form-material input[type="file"] {height:32px !important; margin-top:-8px;}
 table thead{font-weight:bold;}
-table tbody tr td{font-size:13px;}
 select span, .req{color:red}
 .main-body{margin-bottom:100px;}
 .table > thead > tr > th{
 	background: #eaeaea;
+  vertical-align: middle;
 }
 .new-style-form{margin-left:40px;}
 .form-control:focus{box-shadow: 0 0 0 0rem rgba(0,123,255,.25) !important;}
 .action-btn-inner-table{    display: inline;
     float: right;
     margin-bottom: 5px; margin-right:5px;}
-	table textarea {height:30px !important;}
+	table textarea {height:34.8px;}
 /* .table td {
     padding: 0.1rem 0.1rem !important;} */
 	.totbold{font-weight:bold;}
@@ -22076,8 +22077,9 @@ input:checked + .togslider:before {
 .md-tabs-main .nav-tabs.md-tabs.tab-timeline li a {
   background: #fff;
   border-radius: 6px 6px 0 0;
-    box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
-    opacity: 0.4;
+  box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+  opacity: 0.4;
+  border: 2px solid #fff;
 }
 .md-tabs-main .md-tabs .nav-item {
   margin: 0 15px;
@@ -22085,4 +22087,11 @@ input:checked + .togslider:before {
 .md-tabs-main .nav-tabs.md-tabs.tab-timeline li a.active {
   background-color: #f4f4f4;
   opacity: 1;
+}
+table td label.pos-rel {
+  margin: 0;
+  padding: 0;
+}
+.form-control {
+  border-radius: 0.375rem;
 }

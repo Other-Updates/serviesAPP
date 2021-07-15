@@ -41,7 +41,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Name <span class="req">*</span></label>
-                                                            <input type="text" name="name" id="name"  class="name form-control form-align uppercase_class" value="<?= $val['name'] ?>"  tabindex="1"/>
+                                                            <input type="text" placeholder="Enter Name" name="name" id="name"  class="name form-control form-align uppercase_class" value="<?= $val['name'] ?>"  tabindex="1"/>
                                                             <input type="hidden" name="id" class="id id_dup form-control" readonly="readonly" value="<?php echo $val['id']; ?>" />
                                                             <span class="form-bar"></span>
                                                             <span id="cuserror1" class="val text-danger"></span>
@@ -53,7 +53,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Nick Name <span class="req">*</span></label>
-                                                            <input type="text" name="nick_name" class="form-control form-align uppercase_class" id="nickname" value="<?= $val['nick_name'] ?>" tabindex="1" />
+                                                            <input type="text" name="nick_name" placeholder="Enter Nick Name" class="form-control form-align uppercase_class" id="nickname" value="<?= $val['nick_name'] ?>" tabindex="1" />
                                                             <span class="form-bar"></span>
                                                             <span id="nick"  class="val text-danger"></span>
 
@@ -64,7 +64,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">User Name</label>
-                                                            <input type="text" name="username" class="mail form-control form-align uppercase_class" id="username" value="<?= $val['username'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="username" placeholder="Enter User Name" class="mail form-control form-align uppercase_class" id="username" value="<?= $val['username'] ?>"  tabindex="1"/>
                                                             <span id="cuserror8" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
@@ -76,7 +76,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Password <span class="req">*</span></label>
-                                                            <input type="password" name="pass" class="mail form-control form-align" autocomplete="off"  tabindex="1"/>
+                                                            <input type="password" name="pass" placeholder="Enter Password" class="mail form-control form-align" autocomplete="off"  tabindex="1"/>
                                                             <span class="form-bar"></span>
                                                         </div>
                                                     </div>
@@ -85,7 +85,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Mobile Number <span class="req">*</span></label>
-                                                            <input type="text" name="number" class="number form-control form-align" id="number" value="<?= $val['mobile_no'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="number" placeholder="Enter Mobile Number" class="number form-control form-align" id="number" value="<?= $val['mobile_no'] ?>"  tabindex="1"/>
                                                             <span class="form-bar"></span>
                                                             <span id="cuserror4" class="val text-danger"></span>
 
@@ -117,7 +117,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Email Id <span class="req">*</span></label>
-                                                            <input type="text" name="mail" class="mail form-control email_dup form-align" id="mail" value="<?= $val['email_id'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="mail" placeholder="Enter Email Id" class="mail form-control email_dup form-align" id="mail" value="<?= $val['email_id'] ?>"  tabindex="1"/>
                                                             <span class="form-bar"></span>
                                                             <span id="cuserror5" class="val text-danger"></span>
                                                             <span id="upduplica" class="val text-danger"></span>
@@ -131,7 +131,7 @@
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Address <span class="req">*</span></label>
 
-                                                            <textarea name="address1" id="address" class="form-control form-align uppercase_class"  tabindex="1"><?php echo $val['address']; ?></textarea>
+                                                            <textarea name="address1" placeholder="Enter Address" id="address" class="form-control form-align uppercase_class"  tabindex="1"><?php echo $val['address']; ?></textarea>
                                                             
                                                             <span id="cuserror3" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
@@ -142,7 +142,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">ID Proof No: <span class="req">*</span></label>
-                                                            <input type="text" name="id_proof_no" class="id_proof_no form-control uppercase_class" value="<?= $val['id_proof_no'] ?>" id="id_proof_no" tabindex="1" />
+                                                            <input type="text" placeholder="Enter ID Proof No" name="id_proof_no" class="id_proof_no form-control uppercase_class" value="<?= $val['id_proof_no'] ?>" id="id_proof_no" tabindex="1" />
                                                             <span id="id_proof_no_err" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
@@ -152,7 +152,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">ID Proof Type: <span class="req">*</span></label>
-                                                            <input type="text" name="id_proof_type" class="id_proof_type form-control uppercase_class"  value="<?= $val['id_proof_type'] ?>" tabindex="1" id="id_proof_type" />
+                                                            <input type="text" name="id_proof_type" placeholder="Enter ID Proof Type" class="id_proof_type form-control uppercase_class"  value="<?= $val['id_proof_type'] ?>" tabindex="1" id="id_proof_type" />
                                                             <span id="id_proof_type_err" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
@@ -162,7 +162,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Account No</label>
-                                                            <input type="text" name="acnum" class="form-control form-align uppercase_class" id="acnum" value="<?= $val['account_num'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="acnum" placeholder="Enter Account No" class="form-control form-align uppercase_class" id="acnum" value="<?= $val['account_num'] ?>"  tabindex="1"/>
                                                             <span id="cuserror11"class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
@@ -172,7 +172,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Bank Name</label>
-                                                            <input type="text" name="bank" class="bank form-control form-align uppercase_class" id="bank" value="<?= $val['bank_name'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="bank" placeholder="Enter Bank Name" class="bank form-control form-align uppercase_class" id="bank" value="<?= $val['bank_name'] ?>"  tabindex="1"/>
                                                             <span id="cuserror6" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
@@ -182,7 +182,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Bank Branch</label>
-                                                            <input type="text" name="branch" class="form-control form-align uppercase_class" id="branch" value="<?= $val['bank_branch'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="branch" placeholder="Enter Bank Branch" class="form-control form-align uppercase_class" id="branch" value="<?= $val['bank_branch'] ?>"  tabindex="1"/>
                                                             <span id="cuserror10" class="val text-danger"></span>
                                                             <span class="form-bar"></span>
                                                         </div>
@@ -192,7 +192,7 @@
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">IFSC Code</label>
-                                                            <input type="text" name="ifsc" class="form-control form-align uppercase_class" id="" value="<?= $val['ifsc'] ?>"  tabindex="1"/>
+                                                            <input type="text" name="ifsc" placeholder="Enter IFSC Code" class="form-control form-align uppercase_class" id="" value="<?= $val['ifsc'] ?>"  tabindex="1"/>
                                                             <span class="form-bar"></span>
                                                         </div>
                                                     </div>

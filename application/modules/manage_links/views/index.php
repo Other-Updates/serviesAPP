@@ -4,8 +4,6 @@
 <style>
     table tr td:nth-child(4){text-align:center;}
     table tr td:nth-child(6){text-align:center;}
-    .addstbl, .addstbl tr th, .addstbl tr td{border:1px solid #ccc;}
-    .addstbl tr th{font-weight:bold;}
     #delete_group, #add_data, #delete_label {
         color: #fff;
     }
@@ -58,11 +56,11 @@
                                 <table class="table table-striped table-bordered" id="link_table" >
                                     <thead>
                                         <tr>
-                                            <th width="33">S.No</th>
-                                            <th width="35">Links name</th>
-                                            <th width="35">Status</th>
-                                            <th width="107" class="action-btn-align">Action</th>
-                                            <th width="107" class="action-btn-align"></th>
+                                            <th width="5%">S.No</th>
+                                            <th>Links name</th>
+                                            <th>Status</th>
+                                            <th class="action-btn-align">Action</th>
+                                            <th class="action-btn-align"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -149,7 +147,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                         <label class="float-label">Link Name</label>
-                                            <input type="text" name="link[name]" class="form-control required" id="link_name"/>
+                                            <input type="text" name="link[name]" placeholder="Enter Link Name" class="form-control required" id="link_name"/>
                                             
                                             <span class="form-bar"></span>
                                             <span class="error_msg"></span>
@@ -174,10 +172,10 @@
                             </div>-->
                                 <div class="col-lg-12">
                                     <label><strong>Link Details:</strong></label>
-                                    <div class="row card-block table-border-style">
+                                    <div class="table-border-style">
                                         <div class="table-responsive">
 
-                                            <table class="addstbl" id="add_quotation">
+                                            <table class="addstbl table table-bordered" id="add_quotation">
                                                 <thead id="add_header">
                                                 <th width="5%" class="first_td1">Link Data</th>
                                                 <th width="5%" class="first_td1">Link Description</th>

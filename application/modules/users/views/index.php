@@ -29,7 +29,7 @@
                             <table class="table table-striped table-bordered" id="user_table">
                                 <thead>
                                     <tr>
-                                        <th>S.No</th>
+                                        <th width="5%">S.No</th>
                                         <th>Emp Code</th>
                                         <!--<th>Nick Name</th>-->
                                         <th>User Name</th>
@@ -69,7 +69,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Name <span class="req">*</span></label>
-                                            <input type="text" name="name" class="form-control uppercase_class" id="name" />
+                                            <input type="text" name="name" placeholder="Enter Name" class="form-control uppercase_class" id="name" />
                                             <span class="form-bar"></span>
                                             <span id="cuserror1" class="val text-danger"></span>
 
@@ -80,7 +80,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Nick Name <span class="req">*</span></label>
-                                            <input type="text" name="nick_name" class=" form-control uppercase_class" id="nick_name" />
+                                            <input type="text" name="nick_name" placeholder="Enter Nick Name" class=" form-control uppercase_class" id="nick_name" />
                                             <span class="form-bar"></span>
                                             <span id="nick" class="val text-danger"></span>
 
@@ -91,7 +91,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">User Name <span class="req">*</span></label>
-                                            <input type="text" name="user_name" class="mail form-control uppercase_class" id="user_name" />
+                                            <input type="text" name="user_name" placeholder="Enter User Name" class="mail form-control uppercase_class" id="user_name" />
                                             <span id="cuserror8" class="val text-danger"></span>
                                             <span class="form-bar"></span>
                                         </div>
@@ -103,7 +103,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Password <span class="req">*</span></label>
-                                            <input type="password" name="pass" class="mail form-control" id="pass" />
+                                            <input type="password" name="pass" placeholder="Enter Password" class="mail form-control" id="pass" />
                                             <span class="form-bar"></span>
                                             <span id="cuserror11" class="val text-danger"></span>
 
@@ -114,7 +114,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Mobile Number <span class="req">*</span></label>
-                                            <input type="text" name="number" class="number form-control" id="number" />
+                                            <input type="text" name="number" placeholder="Enter Mobile Number" class="number form-control" id="number" />
                                             <span class="form-bar"></span>
                                             <span id="cuserror4" class="val text-danger"></span>
 
@@ -148,7 +148,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Email Id <span class="req">*</span></label>
-                                            <input type="text" name="mail" class="mail form-control email_dup" id="mail" />
+                                            <input type="text" name="mail" placeholder="Enter Email Id" class="mail form-control email_dup" id="mail" />
                                             <span class="form-bar"></span>
                                             <span id="cuserror5" class="val text-danger" ></span>
                                             <span id="duplica" class="val text-danger" ></span>
@@ -162,7 +162,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Address <span class="req">*</span></label>
-                                            <textarea name="address1" id="address" class="form-control uppercase_class"></textarea>
+                                            <textarea name="address1" id="address" placeholder="Enter Address" class="form-control uppercase_class"></textarea>
                                             <span class="form-bar"></span>
                                             <span id="cuserror3" class="val text-danger"></span>
 
@@ -173,7 +173,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">ID Proof No: <span class="req">*</span></label>
-                                            <input type="text" name="id_proof_no" class="id_proof_no form-control uppercase_class" id="id_proof_no" />
+                                            <input type="text" name="id_proof_no" placeholder="Enter ID Proof No" class="id_proof_no form-control uppercase_class" id="id_proof_no" />
                                             <span id="id_proof_no_err" class="val text-danger"></span>
                                             <span class="form-bar"></span>
                                         </div>
@@ -182,8 +182,8 @@
                                 <div class="col-md-3">
                                     <div class="material-group">
                                         <div class="form-group form-primary">
-                                            <label class="float-label">ID Proof Type: <span class="req">*</span></label>
-                                            <input type="text" name="id_proof_type" class="id_proof_type form-control uppercase_class" id="id_proof_type" />
+                                            <label class="float-label">ID Proof Type:  <span class="req">*</span></label>
+                                            <input type="text" name="id_proof_type" placeholder="Enter ID Proof Type" class="id_proof_type form-control uppercase_class" id="id_proof_type" />
                                             <span id="id_proof_type_err" class="val text-danger"></span>
                                             <span class="form-bar"></span>
                                         </div>
@@ -193,7 +193,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Account No</label>
-                                            <input type="text" name="acnum" class="form-control" id="acnum"/>
+                                            <input type="text" name="acnum" placeholder="Enter Account No" class="form-control" id="acnum"/>
                                             <span id="cuserror11" class="val text-danger"></span>
                                             <span class="form-bar"></span>
                                         </div>
@@ -203,7 +203,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Bank Name</label>
-                                            <input type="text" name="bank" class="form-control uppercase_class" id="bank"/>
+                                            <input type="text" name="bank" placeholder="Enter Bank Name" class="form-control uppercase_class" id="bank"/>
                                             <span id="cuserror6" class="val text-danger"></span>
                                             <span class="form-bar"></span>
                                         </div>
@@ -213,7 +213,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">Bank Branch</label>
-                                            <input type="text" name="branch" class="form-control uppercase_class" id="branch"/>
+                                            <input type="text" name="branch" placeholder="Enter Bank Branch" class="form-control uppercase_class" id="branch"/>
                                             <span id="cuserror10" class="val text-danger"></span>
                                             <span class="form-bar"></span>
                                         </div>
@@ -223,7 +223,7 @@
                                     <div class="material-group">
                                         <div class="form-group form-primary">
                                             <label class="float-label">IFSC Code</label>
-                                            <input type="text" name="ifsc" class="form-control uppercase_class" id="">
+                                            <input type="text" name="ifsc" placeholder="Enter IFSC Code" class="form-control uppercase_class" id="">
                                             <span class="form-bar"></span>
                                         </div>
                                     </div>

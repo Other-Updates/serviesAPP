@@ -5,8 +5,6 @@
     a:focus, a:hover {
         color: #fff;
     }
-    .addstbl, .addstbl tr th, .addstbl tr td{border:1px solid #ccc;}
-    .addstbl tr th{font-weight:bold;}
 </style>
 
 <table class="static" style="display: none;">
@@ -18,7 +16,7 @@
 
     <td align="center" class="s_no"></td>
     <td>
-        <div class="col-md-12 form-group" >
+        <div class="col-md-12" >
             <select name="adds_file_type[]" autocomplete="off" class="form-control input-sm  adds_file_type ads_req" id="">
                 <option value="1">Images</option>
             </select>
@@ -27,8 +25,8 @@
     </td>
     <td class="file_type_content">
         <div class="ads_image_div" >
-            <div class="col-md-9 form-group add-img-upload flt-left">
-                <fieldset _ngcontent-c7="" class="form-group">
+            <div class="col-md-9 add-img-upload flt-left">
+                <fieldset _ngcontent-c7="" class="">
                     <div _ngcontent-c7="" class="custom-file center-block d-block">
                         <input _ngcontent-c7="" class="add_data_images custom-file-input adsdata ads_req" id="ads" name="ads_data_image[]" data-type="image" type="file">
                         <label _ngcontent-c7="" class="custom-file-label" for="inputGroupFile01">Choose File</label>
@@ -44,7 +42,7 @@
         </div>
     </td>
     <td>
-        <div class="col-md-12 form-group">
+        <div class="col-md-12">
             <input type="text" autocomplete="off" name="ads_sort_order[]" id="" onkeypress="return isNumber(event)" class="ads_req form-control ads_sort_order "/>
             <span class="error_msg sort_order_error"></span>
         </div>
@@ -95,102 +93,103 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <label><strong>Ads Content/File Details:</strong></label><span class="req">*</span>
-                                        <table class="addstbl" id="add_data_table">
-                                            <thead id="add_header">
-                                            <th width="1%" class="first_td1">S.No</th>
-                                            <th width="15%" class="first_td1 ads_file_type" >File Type</th>
-                                            <th width="40%" class="first_td1 add_title_datatype"> Ads Data</th>
-                                            <th width="3%" class="first_td1">Sort Order</th>
-                                            <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' onclick="ads_content_clone()" data-type="0" class="btn btn-round btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></th>
-                                            </thead>
-                                            <tbody id="add_body">
+                                    
+                                        <div class="col-lg-12">
+                                            <label><strong>Ads Content/File Details:</strong></label><span class="req">*</span>
+                                            <table class="addstbl table table-bordered" id="add_data_table">
+                                                <thead id="add_header">
+                                                <th width="1%" class="first_td1">S.No</th>
+                                                <th width="15%" class="first_td1 ads_file_type" >File Type</th>
+                                                <th width="40%" class="first_td1 add_title_datatype"> Ads Data</th>
+                                                <th width="3%" class="first_td1">Sort Order</th>
+                                                <th width="1%" class="action-btn-align" style="text-align:center;"><a id='add_data' onclick="ads_content_clone()" data-type="0" class="btn btn-round btn-primary btn-mini waves-effect waves-light d-inline-block md-trigger"><span class="fa fa-plus" style="color:white;"></span> </a></th>
+                                                </thead>
+                                                <tbody id="add_body">
 
-                                                <?php
-                                                if (isset($ads_content_details) && $ads_content_details != '') {
-                                                    foreach ($ads_content_details as $ads_key => $list_content) {
-                                                        $j = $ads_key;
-                                                        ?>
-                                                        <tr class="ads_row<?php echo $j; ?>" data-rowid="<?php echo $ads_key; ?>">
-                                                    <input type="hidden" class="ads_detail_id" name="" value="<?php echo $list_content['id']; ?>">
-                                                    <input type="hidden" class="is_delete" name="ads_delete[<?php echo $j; ?>][is_delete]" value="0">
-                                                    <input type="hidden" class="is_remove_id" name="ads_remove_id[<?php echo $j; ?>][is_delete]" value="<?php echo $list_content['id']; ?>">
-                                                    <?php if ($list_content['file_type'] != '3') { ?>
-                                                        <input type="hidden" name="old[ads_detail_id][]" value="<?php echo $list_content['id']; ?>"/>
-                                                        <input type="hidden" name="old[ads_detail_data][]" value="<?php echo $list_content['ads_data_link']; ?>"/>
-                                                    <?php } ?>
-                                                    <td class="s_no" align="center"><?php echo $ads_key + 1; ?></td>
-                                                    <td>
-                                                        <div class="col-md-12 form-group" >
-                                                            <select name="adds_file_type[]" autocomplete="off" class="form-control input-sm  adds_file_type ads_req" id="">
-                                                                <?php if ($list_content['file_type'] == 1) { ?>
-                                                                    <option value="1" <?php if ($list_content['file_type'] == 1) echo "selected"; ?>>Images</option>
-                                                                <?php } else { ?>
-                                                                    <option value="3" <?php if ($list_content['file_type'] == 3) echo "selected"; ?>>Content</option>
-                                                                <?php } ?>
-                                                            </select>
-                                                            <span class="error_msg adds_file_type_error"></span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="file_type_content">
-                                                        <?php if ($list_content['file_type'] == 1): ?>
-                                                            <div class="ads_image_div" >
-                                                                <?php
-                                                                if ($list_content['ads_data'] != '')
-                                                                    $image_url = $list_content['ads_data_link'];
-                                                                else
-                                                                    $image_url = base_url('/') . 'themes/incsol/assets/images/default_image.png';
-                                                                ?>
-                                                                <div class="col-md-9 form-group add-img-upload flt-left">
-                                                                    <fieldset _ngcontent-c7="" class="form-group"><div _ngcontent-c7="" class="custom-file center-block d-block">
-                                                                            <input type="file" name="ads_data_image[<?php echo $ads_key; ?>]"  value="<?php echo $image_url; ?>" class="ads_req custom-file-input add_data_images  adsdata" id="ads_image<?php echo $j; ?>" data-type="image" onchange="loadImageFileAsURL(<?php echo $j; ?>)"/>
-                                                                            <label _ngcontent-c7="" class="custom-file-label" for="inputGroupFile01">Choose File</label></div></fieldset>
-
-
-                                                                    <span class="error_msg file_error"></span>
-                                                                </div>
-
-                                                                <div class="col-md-3 flt-left">
-                                                                    <img src="<?php echo $image_url; ?>"  class="img_src" width="40px" height="40px"/>
-                                                                </div>
-                                                            </div>
-
-                                                        <?php elseif ($list_content['file_type'] == 3): ?>
-                                                            <div class="ads_content_div">
-                                                                <div class="col-md-12 form-group">
-                                                                    <textarea name="ads_data[<?php echo $ads_key; ?>]"  class="add_data_contents ads_req form-control required txt_area_height"><?php echo $list_content['ads_data']; ?></textarea>
-                                                                    <span class="error_msg file_error"></span>
-                                                                </div>
-
-                                                            </div>
-
-                                                        <?php endif; ?>
-                                                    </td>
-
-                                                    <td>
-                                                        <div class="col-md-12 form-group">
-                                                            <input type="text" autocomplete="off" name="ads_sort_order[]" id="" onkeypress="return isNumber(event)" class="ads_req form-control ads_sort_order required" value="<?php echo $list_content['sort_order']; ?>"/>
-                                                            <span class="error_msg sort_order_error"></span>
-                                                        </div>
-                                                    </td>
-
-                                                    <td width="5%" class="action-btn-align" style="text-align:center;">
-                                                        <?php if ($list_content['file_type'] == 1): ?>
-                                                            <a  class="remove_data del btn btn-round btn-danger btn-mini" onclick="remove_data($(this))">
-                                                                <span class="fa fa-trash" style="color:white;"></span>
-                                                            </a>
-                                                        <?php endif; ?>
-                                                    </td>
-                                                    </tr>
                                                     <?php
-                                                }
-                                            }
-                                            ?>
-                                            </tbody>
+                                                    if (isset($ads_content_details) && $ads_content_details != '') {
+                                                        foreach ($ads_content_details as $ads_key => $list_content) {
+                                                            $j = $ads_key;
+                                                            ?>
+                                                            <tr class="ads_row<?php echo $j; ?>" data-rowid="<?php echo $ads_key; ?>">
+                                                        <input type="hidden" class="ads_detail_id" name="" value="<?php echo $list_content['id']; ?>">
+                                                        <input type="hidden" class="is_delete" name="ads_delete[<?php echo $j; ?>][is_delete]" value="0">
+                                                        <input type="hidden" class="is_remove_id" name="ads_remove_id[<?php echo $j; ?>][is_delete]" value="<?php echo $list_content['id']; ?>">
+                                                        <?php if ($list_content['file_type'] != '3') { ?>
+                                                            <input type="hidden" name="old[ads_detail_id][]" value="<?php echo $list_content['id']; ?>"/>
+                                                            <input type="hidden" name="old[ads_detail_data][]" value="<?php echo $list_content['ads_data_link']; ?>"/>
+                                                        <?php } ?>
+                                                        <td class="s_no" align="center"><?php echo $ads_key + 1; ?></td>
+                                                        <td>
+                                                            <div class="col-md-12" >
+                                                                <select name="adds_file_type[]" autocomplete="off" class="form-control input-sm  adds_file_type ads_req" id="">
+                                                                    <?php if ($list_content['file_type'] == 1) { ?>
+                                                                        <option value="1" <?php if ($list_content['file_type'] == 1) echo "selected"; ?>>Images</option>
+                                                                    <?php } else { ?>
+                                                                        <option value="3" <?php if ($list_content['file_type'] == 3) echo "selected"; ?>>Content</option>
+                                                                    <?php } ?>
+                                                                </select>
+                                                                <span class="error_msg adds_file_type_error"></span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="file_type_content">
+                                                            <?php if ($list_content['file_type'] == 1): ?>
+                                                                <div class="ads_image_div" >
+                                                                    <?php
+                                                                    if ($list_content['ads_data'] != '')
+                                                                        $image_url = $list_content['ads_data_link'];
+                                                                    else
+                                                                        $image_url = base_url('/') . 'themes/incsol/assets/images/default_image.png';
+                                                                    ?>
+                                                                    <div class="col-md-9 add-img-upload flt-left">
+                                                                        <fieldset _ngcontent-c7="" class=""><div _ngcontent-c7="" class="custom-file center-block d-block">
+                                                                                <input type="file" name="ads_data_image[<?php echo $ads_key; ?>]"  value="<?php echo $image_url; ?>" class="ads_req custom-file-input add_data_images  adsdata" id="ads_image<?php echo $j; ?>" data-type="image" onchange="loadImageFileAsURL(<?php echo $j; ?>)"/>
+                                                                                <label _ngcontent-c7="" class="custom-file-label" for="inputGroupFile01">Choose File</label></div></fieldset>
 
-                                        </table>
+
+                                                                        <span class="error_msg file_error"></span>
+                                                                    </div>
+
+                                                                    <div class="col-md-3 flt-left">
+                                                                        <img src="<?php echo $image_url; ?>"  class="img_src" width="40px" height="40px"/>
+                                                                    </div>
+                                                                </div>
+
+                                                            <?php elseif ($list_content['file_type'] == 3): ?>
+                                                                <div class="ads_content_div">
+                                                                    <div class="col-md-12">
+                                                                        <textarea name="ads_data[<?php echo $ads_key; ?>]"  class="add_data_contents ads_req form-control required txt_area_height"><?php echo $list_content['ads_data']; ?></textarea>
+                                                                        <span class="error_msg file_error"></span>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            <?php endif; ?>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="col-md-12">
+                                                                <input type="text" autocomplete="off" name="ads_sort_order[]" id="" onkeypress="return isNumber(event)" class="ads_req form-control ads_sort_order required" value="<?php echo $list_content['sort_order']; ?>"/>
+                                                                <span class="error_msg sort_order_error"></span>
+                                                            </div>
+                                                        </td>
+
+                                                        <td width="5%" class="action-btn-align" style="text-align:center;">
+                                                            <?php if ($list_content['file_type'] == 1): ?>
+                                                                <a  class="remove_data del btn btn-round btn-danger btn-mini" onclick="remove_data($(this))">
+                                                                    <span class="fa fa-trash" style="color:white;"></span>
+                                                                </a>
+                                                            <?php endif; ?>
+                                                        </td>
+                                                        </tr>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
                                     </div>
                                     <div class="form-group row text-center m-10">
                                         <div class="col-md-12 text-center">
