@@ -30,13 +30,13 @@ $job_type_arr = array(
         display:none;
     }
 
-    #service_table1 tbody tr td:nth-child(6){text-align:center;}
+    #service_table1 tbody tr td:nth-child(6), #service_table tbody tr td:nth-child(5) {text-align:center;}
     #service_table1 tbody tr td:nth-child(7){text-align:center;}
     #leads_table tbody tr td:nth-child(9){text-align:center;}
     #leads_table tbody tr td:nth-child(6){text-align:center;}
     #leads_table tbody tr td:nth-child(5){text-align:center;}
     #project_table tbody tr td:nth-child(3){text-align:center;}
-    project_table tbody tr td:nth-child(4){text-align:right;}
+    #project_table tbody tr td:nth-child(4){text-align:right;}
 
 </style>
 <div class="row">
@@ -46,12 +46,10 @@ $job_type_arr = array(
                 <h5>Add To Do List</h5>
             </div>
             <div class="card-block">
-                <div class="form-material row">
+                <div class="row">
                     <div class="col-md-4">
                         <div class="material-group">
-                            <div class="material-addone">
-                                <i class="icofont icofont-address-book"></i>
-                            </div>
+                        <label class="float-label">Select Category</label>
                             <div class="form-group form-primary">
                                 <select class='form-control required' name='cat_id' id='category' tabindex="1">
                                     <option value=''>Select Category</option>
@@ -72,9 +70,6 @@ $job_type_arr = array(
                     </div>
                     <div class="col-md-2">
                         <div class="material-group">
-                            <div class="material-addone">
-                                <i class="icofont icofont-ui-calendar"></i>
-                            </div>
                             <div class="form-group form-primary">
                                 <label class="float-label">From Date</label>
                                 <input tabindex="1" id="from_date" name="from_date" data-date="" data-month="" data-year=""  class="form-control required dropper-default" type="text" placeholder="" />
@@ -84,9 +79,6 @@ $job_type_arr = array(
                     </div>
                     <div class="col-md-2">
                         <div class="material-group">
-                            <div class="material-addone">
-                                <i class="icofont icofont-ui-calendar"></i>
-                            </div>
                             <div class="form-group form-primary">
                                 <label class="float-label">To Date</label>
                                 <input tabindex="1" id="to_date" name="to_date" data-date="" data-month="" data-year="" class="form-control required dropper-default" type="text" placeholder="" />
@@ -96,7 +88,8 @@ $job_type_arr = array(
 
                     </div>
                     <div class="col-md-3">
-                        <div>
+                        <div class="form-group form-primary">
+                            <label class="float-label">&nbsp;</label><br>
                             <a id='search' class="submit btn btn-round btn-primary btn-print-invoice m-b-10 btn-sm waves-effect waves-light"> Search</a>
                         </div>
                     </div>
@@ -138,15 +131,15 @@ $job_type_arr = array(
                                 <table class="table table-striped table-bordered" id="service_table">
                                     <thead>
                                         <tr>
-                                            <th width="33">S.No</th>
+                                            <th width="5%">S.No</th>
                                             <!-- <th width="35">Inv #</th> -->
-                                            <th width="35">Ticket #</th>
+                                            <th>Ticket #</th>
                                             <!--<th width="35">Product Image</th>-->
-                                            <th width="35">Description</th>
+                                            <th>Description</th>
                                             <!-- <th width="35">Warranty</th> -->
-                                            <th width="35">Empname</th>
-                                            <th width="35">Inv Date</th>
-                                            <th width="92">Status</th>
+                                            <th>Empname</th>
+                                            <th>Inv Date</th>
+                                            <th>Status</th>
                                             <!--<th width="107" class="action-btn-align">Action</th>-->
                                         </tr>
                                     </thead>
@@ -196,7 +189,7 @@ $job_type_arr = array(
                                 <table class="table table-striped table-bordered" id="leads_table">
                                     <thead>
                                         <tr>
-                                            <th class="action-btn-align">S.No</th>
+                                            <th width="5%" class="action-btn-align">S.No</th>
                                             <th>Leads #</th>
                                             <th>Customer</th>
                                             <th>Cus.Address</th>

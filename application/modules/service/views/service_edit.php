@@ -10,9 +10,9 @@ $user_info = $this->user_auth->get_from_session('user_info');
     <div class="contentpanel">
         <div class="row">
             <div class="col-sm-12">
-                <div class="tab-header card">
+                <div class="md-tabs-main">
                     <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
-                        <li class="nav-item col-md-2">
+                        <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab" href="#update-user" role="tab">Update Service</a>
                             <div class="slide"></div>
                         </li>
@@ -29,8 +29,8 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                     foreach ($edit_service as $val) {
                                         $selected_array = explode(',', $val['emp_id']);
                                         ?>
-                                        <form class="form-material" action="<?php echo $this->config->item('base_url'); ?>service/to_do_service/update_service/<?php echo $val['id']; ?>" method="POST" enctype="multipart/form-data">
-                                            <div class="form-material row">
+                                        <form class="" action="<?php echo $this->config->item('base_url'); ?>service/to_do_service/update_service/<?php echo $val['id']; ?>" method="POST" enctype="multipart/form-data">
+                                            <div class=" row">
                                                 <!-- <div class="col-md-3">
                                                     <div class="material-group">
                                                         <div class="material-addone">
@@ -46,9 +46,6 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 </div> -->
                                                 <div class="col-md-4">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-address-book"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Ticket Number</label>
                                                             <input type="text"  class=" form-control" value="<?= $val['ticket_no'] ?>"  tabindex="1" readonly/>
@@ -60,9 +57,6 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-tasks-alt"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Description</label>
                                                             <!-- <textarea class="form-control" readonly="" tabindex="1"><?php echo $val['description']; ?></textarea> -->
@@ -88,10 +82,8 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 </div> -->
                                                 <div class="col-md-4">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-notepad"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
+                                                        <label class="float-label">Status</label>
                                                             <select name="status" class="form-control " id="status"  tabindex="1">
                                                                 <option value="2" <?php echo ($val['status'] == 2) ? 'selected' : ''; ?>>Pending</option>
                                                                 <option value="1" <?php echo ($val['status'] == 1) ? 'selected' : ''; ?>>Completed</option>
@@ -103,12 +95,9 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-material row">
+                                            <div class=" row">
                                                 <div class="col-md-4">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-ui-calendar"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Service Date</label>
                                                             <!-- <input type="text" class=" form-control"  value="<?= date('m/d/Y', strtotime($val['created_date'])); ?>"  tabindex="1" readonly/> -->
@@ -142,10 +131,8 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                     ?>
                                                     <div class="col-md-4">
                                                         <div class="material-group">
-                                                            <div class="material-addone">
-                                                                <i class="icofont icofont-ui-user"></i>
-                                                            </div>
                                                             <div class="form-group form-primary">
+                                                            <label class="float-label">Select User</label>
                                                                 <select name="emp_id[]" class="form-control required hh" id="emp_id" tabindex="1">
                                                                     <?php
                                                                   
@@ -198,9 +185,6 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 </div> -->
                                                 <div class="col-md-12">
                                                     <div class="material-group">
-                                                        <div class="material-addone">
-                                                            <i class="icofont icofont-email"></i>
-                                                        </div>
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Work Performed </label>
                                                             <input type="text" name="work_performed" class="wp form-control form-align" id="wp" value="<?= $val['work_performed']; ?>"  tabindex="1"/>
@@ -213,7 +197,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 
                                             </div>
 
-                                            <div class="pcoded-inner-content">
+                                            <div class="">
                                                 <div class="">
                                                     <div class="page-wrapper">
                                                         <!-- Page body start -->
