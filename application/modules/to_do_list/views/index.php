@@ -172,12 +172,12 @@ $job_type_arr = array(
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row m-10">
-                        <div class="col-md-12 text-center">
-                            <button class="btn btn-round btn-primary btn-sm waves-effect waves-light" id="save"  tabindex="1"> Create</button>
+                                    <!-- <div class="form-group row m-10">
+                                        <div class="col-md-12 text-center">
+                                            <button class="btn btn-round btn-primary btn-sm waves-effect waves-light" id="save"  tabindex="1"> Create</button>
 
-                        </div>
-                    </div>
+                                        </div>
+                                    </div> -->
                 </div>
                 <div class="tab-pane active hidden_leads" id="leads_details" role="tabpanel" >
                     <div class="card">
@@ -365,58 +365,58 @@ $job_type_arr = array(
         maxYear: new Date().getFullYear() + 50,
         format: 'd-m-Y'
     });
-    $('#save').click(function () {
+    // $('#save').click(function () {
 
-        m = 0;
-        var pay_checkbox = $(".assign_service").is(':checked') ? 1 : 0;
-        if (pay_checkbox == 0) {
-            m = 1;
-            $('#service_error').empty();
-            $('#service_error').append('Please select service list');
-            setTimeout(function () {
-                $('#service_error').html('');
-            }, 5000);
-        }
-        $('.required').each(function () {
-            this_val = $.trim($(this).val());
-            if (this_val == '') {
-                $(this).closest('div.form-group').find('.error_msg').text('This field is required').slideDown('500').css('display', 'inline-block');
-                m = 1;
-            } else {
-                $(this).closest('div.form-group').find('.error_msg').text('').slideUp('500');
-            }
-        });
-        if (m > 0) {
-            return false;
-        } else
-        {
-            return true;
-        }
+    //     m = 0;
+    //     var pay_checkbox = $(".assign_service").is(':checked') ? 1 : 0;
+    //     if (pay_checkbox == 0) {
+    //         m = 1;
+    //         $('#service_error').empty();
+    //         $('#service_error').append('Please select service list');
+    //         setTimeout(function () {
+    //             $('#service_error').html('');
+    //         }, 5000);
+    //     }
+    //     $('.required').each(function () {
+    //         this_val = $.trim($(this).val());
+    //         if (this_val == '') {
+    //             $(this).closest('div.form-group').find('.error_msg').text('This field is required').slideDown('500').css('display', 'inline-block');
+    //             m = 1;
+    //         } else {
+    //             $(this).closest('div.form-group').find('.error_msg').text('').slideUp('500');
+    //         }
+    //     });
+    //     if (m > 0) {
+    //         return false;
+    //     } else
+    //     {
+    //         return true;
+    //     }
 
-        /* else {
-         var service_id = [];
-         var employee_id = $.trim($('#employee').val());
-         $('input:checkbox:checked').each(function () {
-         var id = $(this).closest('tr').find('.hidden_service_id').text();
-         service_id.push(id);
-         });
-         $.ajax({
-         type: 'POST',
-         data: {employee_id: employee_id, service_id: service_id},
-         url: '<?php echo base_url(); ?>to_do_list/update_employee_assigned/',
-         success: function (data) {
-         if (data == 1) {
-         setTimeout(function ()
-         {
-         location.reload();
-         }, 1000);
-         }
+    //     /* else {
+    //      var service_id = [];
+    //      var employee_id = $.trim($('#employee').val());
+    //      $('input:checkbox:checked').each(function () {
+    //      var id = $(this).closest('tr').find('.hidden_service_id').text();
+    //      service_id.push(id);
+    //      });
+    //      $.ajax({
+    //      type: 'POST',
+    //      data: {employee_id: employee_id, service_id: service_id},
+    //      url: '<?php echo base_url(); ?>to_do_list/update_employee_assigned/',
+    //      success: function (data) {
+    //      if (data == 1) {
+    //      setTimeout(function ()
+    //      {
+    //      location.reload();
+    //      }, 1000);
+    //      }
 
-         }
-         });
-         } */
+    //      }
+    //      });
+    //      } */
 
-    });
+    // });
     $('#employee').on('change', function () {
         var employee = $(this).val();
         if (employee == '') {
