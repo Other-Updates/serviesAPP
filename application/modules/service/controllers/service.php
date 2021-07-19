@@ -3,9 +3,11 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Service extends MX_Controller {
+class Service extends MX_Controller
+{
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
         if (!$this->user_auth->is_logged_in()) {
             redirect($this->config->item('base_url') . 'admin');
@@ -51,7 +53,8 @@ class Service extends MX_Controller {
         $this->load->model('api/increment_model');
     }
 
-    public function index() {
+    public function index()
+    {
         if ($this->input->post()) {
             $input = $this->input->post();
 
@@ -59,11 +62,11 @@ class Service extends MX_Controller {
             $user_info = $this->user_info = $this->user_auth->get_from_session('user_info');
             $input['quotation']['created_by'] = $user_info[0]['id'];
             $input['quotation']['created_date'] = date('Y-m-d H:i');
-//            if ($input['check_gst'] == 'on') {
-//                $input_gst['is_gst'] = '1';
-//            } else {
-//                $input_gst['is_gst'] = '0';
-//            }
+            //            if ($input['check_gst'] == 'on') {
+            //                $input_gst['is_gst'] = '1';
+            //            } else {
+            //                $input_gst['is_gst'] = '0';
+            //            }
             $input['quotation']['is_gst'] = $input_gst['is_gst'];
             //$this->service_model->delete_quotation( $input['quotation']['q_id']);
             $this->service_model->delete_quotation_deteils_by_id($input['quotation']['q_id']);
@@ -84,12 +87,12 @@ class Service extends MX_Controller {
                         $insert['brand'] = $input['brand'][$key];
                         $insert['quantity'] = $input['quantity'][$key];
                         $insert['per_cost'] = $input['per_cost'][$key];
-//                        if ($input_gst['is_gst'] == '1') {
-//                            if ($input['hsn_sac'][$key] != '')
-//                                $insert['hsn_sac'] = $input['hsn_sac'][$key];
-//                        } else {
+                        //                        if ($input_gst['is_gst'] == '1') {
+                        //                            if ($input['hsn_sac'][$key] != '')
+                        //                                $insert['hsn_sac'] = $input['hsn_sac'][$key];
+                        //                        } else {
                         $insert['add_amount'] = $input['add_amount'][$key];
-//                        }
+                        //                        }
                         $insert['tax'] = $input['tax'][$key];
                         $insert['gst'] = $input['gst'][$key];
                         $insert['igst'] = $input['igst'][$key];
@@ -113,7 +116,7 @@ class Service extends MX_Controller {
 
                                     $dfff1 = $input['quantity'][$key] - $input['old_quantity'][$key];
                                     $insertss['quantity'] = $input['available_quantity'][$key] - $dfff1;
-                                    $inv_id['diff'] = - $dfff1;
+                                    $inv_id['diff'] = -$dfff1;
                                     $insertss['category'] = $val;
                                     $insertss['brand'] = $input['brand'][$key];
                                     $insertss['product_id'] = $input['product_id'][$key];
@@ -148,7 +151,8 @@ class Service extends MX_Controller {
         }
     }
 
-    public function add_invoice() {
+    public function add_invoice()
+    {
         if ($this->input->post()) {
             $input = $this->input->post();
             $date = date('Y-m-d', strtotime($input['quotation']['warranty_from']));
@@ -205,30 +209,33 @@ class Service extends MX_Controller {
         }
     }
 
-    function stock_details($stock_info, $inv_id) {
+    function stock_details($stock_info, $inv_id)
+    {
 
         $this->service_model->check_stock($stock_info, $inv_id);
     }
 
-    public function get_service() {
+    public function get_service()
+    {
         $atten_inputs = $this->input->post();
         $product_data = $this->service_model->get_service($atten_inputs);
         echo json_encode($product_data);
         exit;
-//        echo '<ul id="service-list">';
-//        if (isset($product_data) && !empty($product_data)) {
-//            foreach ($product_data as $st_rlno) {
-//                if ($st_rlno['model_no'] != '')
-//                    echo '<li class="ser_class" ser_cost="' . $st_rlno['cost_price'] . '"ser_sell="' . $st_rlno['selling_price'] . '" ser_type="' . $st_rlno['type'] . '" ser_id="' . $st_rlno['id'] . '" ser_no="' . $st_rlno['model_no'] . '" ser_name="' . $st_rlno['product_name'] . '" ser_description="' . $st_rlno['product_description'] . '" ser_image="' . $st_rlno['product_image'] . '"ser_cat ="' . $st_rlno['category_id'] . '"ser_brand ="' . $st_rlno['brand_id'] . '">' . $st_rlno['model_no'] . '</li>';
-//            }
-//        }
-//        else {
-//            echo '<li style="color:red;">No Data Found</li>';
-//        }
-//        echo '</ul>';
+        //        echo '<ul id="service-list">';
+        //        if (isset($product_data) && !empty($product_data)) {
+        //            foreach ($product_data as $st_rlno) {
+        //                if ($st_rlno['model_no'] != '')
+        //                    echo '<li class="ser_class" ser_cost="' . $st_rlno['cost_price'] . '"ser_sell="' . $st_rlno['selling_price'] . '" ser_type="' . $st_rlno['type'] . '" ser_id="' . $st_rlno['id'] . '" ser_no="' . $st_rlno['model_no'] . '" ser_name="' . $st_rlno['product_name'] . '" ser_description="' . $st_rlno['product_description'] . '" ser_image="' . $st_rlno['product_image'] . '"ser_cat ="' . $st_rlno['category_id'] . '"ser_brand ="' . $st_rlno['brand_id'] . '">' . $st_rlno['model_no'] . '</li>';
+        //            }
+        //        }
+        //        else {
+        //            echo '<li style="color:red;">No Data Found</li>';
+        //        }
+        //        echo '</ul>';
     }
 
-    public function quotation_view($id) {
+    public function quotation_view($id)
+    {
         $datas["quotation"] = $quotation = $this->service_model->get_all_pc_by_id($id);
         $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_pc_details_by_id($id);
         $datas["category"] = $category = $this->service_model->get_all_category();
@@ -238,7 +245,8 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function invoice_view($id) {
+    public function invoice_view($id)
+    {
         $datas["quotation"] = $quotation = $this->service_model->get_all_invoice_by_id($id);
         $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_invoice_details_by_id($id);
         //echo "<pre>"; print_r($datas); exit;
@@ -249,12 +257,14 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function change_status($id, $status) {
+    public function change_status($id, $status)
+    {
         $this->service_model->change_quotation_status($id, $status);
         redirect($this->config->item('base_url') . 'service/service_list');
     }
 
-    public function service_list() {
+    public function service_list()
+    {
 
         $datas["quotation"] = $quotation = $this->service_model->get_all_quotation();
         $datas['company_details'] = $this->admin_model->get_company_details();
@@ -263,7 +273,8 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function service_view($id) {
+    public function service_view($id)
+    {
 
         $datas["quotation"] = $quotation = $this->service_model->get_all_inv_by_id($id);
         $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_inv_details_by_id($id);
@@ -276,55 +287,60 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function get_customer() {
+    public function get_customer()
+    {
         $atten_inputs = $this->input->post();
         $data = $this->service_model->get_customer($atten_inputs);
         echo json_encode($data);
         exit;
-//        echo '<ul id="country-list">';
-//        if (isset($data) && !empty($data)) {
-//            foreach ($data as $st_rlno) {
-//                if ($st_rlno['name'] != '')
-//                    echo '<li class="cust_class" cust_name="' . $st_rlno['name'] . '" cust_id="' . $st_rlno['id'] . '" cust_no="' . $st_rlno['mobil_number'] . '" cust_email="' . $st_rlno['email_id'] . '" cust_address="' . $st_rlno['address1'] . '">' . $st_rlno['name'] . '</li>';
-//            }
-//        }
-//        else {
-//            echo '<li style="color:red;">No Data Found</li>';
-//        }
-//        echo '</ul>';
+        //        echo '<ul id="country-list">';
+        //        if (isset($data) && !empty($data)) {
+        //            foreach ($data as $st_rlno) {
+        //                if ($st_rlno['name'] != '')
+        //                    echo '<li class="cust_class" cust_name="' . $st_rlno['name'] . '" cust_id="' . $st_rlno['id'] . '" cust_no="' . $st_rlno['mobil_number'] . '" cust_email="' . $st_rlno['email_id'] . '" cust_address="' . $st_rlno['address1'] . '">' . $st_rlno['name'] . '</li>';
+        //            }
+        //        }
+        //        else {
+        //            echo '<li style="color:red;">No Data Found</li>';
+        //        }
+        //        echo '</ul>';
     }
 
-    public function get_customer_by_id() {
+    public function get_customer_by_id()
+    {
         $input = $this->input->post();
         $data_customer["customer_details"] = $this->service_model->get_customer_by_id($input['id']);
         echo json_encode($data_customer);
     }
 
-    public function get_product() {
+    public function get_product()
+    {
         $atten_inputs = $this->input->post();
         $product_data = $this->service_model->get_product($atten_inputs);
         echo json_encode($product_data);
         exit;
-//        echo '<ul id="product-list">';
-//        if (isset($product_data) && !empty($product_data)) {
-//            foreach ($product_data as $st_rlno) {
-//                if ($st_rlno['model_no'] != '')
-//                    echo '<li class="pro_class" pro_cost="' . $st_rlno['cost_price'] . '"pro_sell="' . $st_rlno['selling_price'] . '" pro_id="' . $st_rlno['id'] . '" mod_no="' . $st_rlno['model_no'] . '" pro_name="' . $st_rlno['product_name'] . '" pro_description="' . $st_rlno['product_description'] . '" pro_image="' . $st_rlno['product_image'] . '"pro_cat ="' . $st_rlno['category_id'] . '"pro_brand ="' . $st_rlno['brand_id'] . '">' . $st_rlno['model_no'] . '</li>';
-//            }
-//        }
-//        else {
-//            echo '<li style="color:red;">No Data Found</li>';
-//        }
-//        echo '</ul>';
+        //        echo '<ul id="product-list">';
+        //        if (isset($product_data) && !empty($product_data)) {
+        //            foreach ($product_data as $st_rlno) {
+        //                if ($st_rlno['model_no'] != '')
+        //                    echo '<li class="pro_class" pro_cost="' . $st_rlno['cost_price'] . '"pro_sell="' . $st_rlno['selling_price'] . '" pro_id="' . $st_rlno['id'] . '" mod_no="' . $st_rlno['model_no'] . '" pro_name="' . $st_rlno['product_name'] . '" pro_description="' . $st_rlno['product_description'] . '" pro_image="' . $st_rlno['product_image'] . '"pro_cat ="' . $st_rlno['category_id'] . '"pro_brand ="' . $st_rlno['brand_id'] . '">' . $st_rlno['model_no'] . '</li>';
+        //            }
+        //        }
+        //        else {
+        //            echo '<li style="color:red;">No Data Found</li>';
+        //        }
+        //        echo '</ul>';
     }
 
-    public function get_product_by_id() {
+    public function get_product_by_id()
+    {
         $input = $this->input->post();
         $data_customer["product_details"] = $this->service_model->get_product_by_id($input['id']);
         echo json_encode($data_customer);
     }
 
-    public function get_invoice() {
+    public function get_invoice()
+    {
         $input = $this->input->get();
 
         $data["invoice"] = $invoice = $this->service_model->get_all_invoice_by_id($input['q_id']);
@@ -338,7 +354,7 @@ class Service extends MX_Controller {
         $date = Date($invoice[0]['warranty_to']) - Date($invoice[0]['warranty_from']);
         $current_date = date("Y-m-d");
         $warranty_to_date = Date($invoice[0]['warranty_to']);
-//        if ($date == 1) {
+        //        if ($date == 1) {
         if (strtotime($warranty_to_date) > strtotime($current_date)) {
             echo '<table class="table table-striped table-bordered responsive dataTable no-footer dtr-inline" ><tr> <th colspan="2">  Free Warranty Service is Avaliable </th> </tr>';
             echo '<tr><td class="text-left">Warranty From</td><td> <input type="text"  name="available_quantity[]" style="width: 175px;" class="code form-control colournamedup tabwid form-control " value="' . $invoice[0]['warranty_from'] . '" readonly="readonly" ></td></tr>';
@@ -375,15 +391,16 @@ class Service extends MX_Controller {
         }
     }
 
-    public function project_cost_add($id) {
+    public function project_cost_add($id)
+    {
 
         //  $datas["quotation"] = $quotation = $this->service_model->get_all_quotation_by_id($id);
         // $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_quotation_details_by_id($id);
         $datas["quotation"] = $quotation = $this->service_model->get_all_pc_by_id($id);
         $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_pc_details_by_id($id);
-//        echo "<pre>";
-//        print_r($datas);
-//        exit;
+        //        echo "<pre>";
+        //        print_r($datas);
+        //        exit;
         $datas["job_id"] = $job_id = $this->service_model->get_all_quotations();
         $datas["category"] = $category = $this->master_category_model->get_all_category();
         $datas['company_details'] = $this->admin_model->get_company_details();
@@ -397,15 +414,16 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function project_cost_warranty_service($id) {
+    public function project_cost_warranty_service($id)
+    {
 
         //  $datas["quotation"] = $quotation = $this->service_model->get_all_quotation_by_id($id);
         // $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_quotation_details_by_id($id);
         $datas["quotation"] = $quotation = $this->service_model->get_all_pc_by_id($id);
         $datas["quotation_details"] = $quotation_details = $this->service_model->get_all_pc_details_by_id($id);
-//        echo "<pre>";
-//        print_r($datas);
-//        exit;
+        //        echo "<pre>";
+        //        print_r($datas);
+        //        exit;
         $datas["job_id"] = $job_id = $this->service_model->get_all_quotations();
         $datas["category"] = $category = $this->master_category_model->get_all_category();
         $datas['company_details'] = $this->admin_model->get_company_details();
@@ -419,7 +437,8 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function project_cost_update($id) {
+    public function project_cost_update($id)
+    {
         $this->load->model('grn/grn_model');
         $datas["job_id"] = $job_id = $this->service_model->get_all_quotations();
         $datas["products"] = $this->Gen_model->get_all_product();
@@ -433,7 +452,8 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function paid_service_add() {
+    public function paid_service_add()
+    {
         $this->load->model('masters/ref_increment_model');
         $this->load->model('sales_return/sales_return_model');
         if ($this->input->post()) {
@@ -456,10 +476,10 @@ class Service extends MX_Controller {
                 $input['quotation']['created_date'] = date('Y-m-d', strtotime($input['quotation']['created_date']));
                 $input['quotation']['estatus'] = 2;
                 $insert_id = $this->Gen_model->insert_quotation($input['quotation']);
-//                $insert_idss = $insert_id + 1;
-//                $inc['type'] = 'job_code';
-//                $inc['value'] = 'JOB000' . $insert_idss;
-//                $this->service_model->update_increment($inc);
+                //                $insert_idss = $insert_id + 1;
+                //                $inc['type'] = 'job_code';
+                //                $inc['value'] = 'JOB000' . $insert_idss;
+                //                $this->service_model->update_increment($inc);
                 //$this->ref_increment_model->update_increment_id('JOB', 'JOB');
                 $datas["quotation"] = $quotation = $this->project_cost_model->get_all_quotation_by_id($insert_id);
                 $datas["quotation_details"] = $quotation_details = $this->project_cost_model->get_all_pc_details_by_id($id);
@@ -654,7 +674,8 @@ class Service extends MX_Controller {
         $this->template->render();
     }
 
-    public function update_quotation($id) {
+    public function update_quotation($id)
+    {
         $his_quo = $this->service_model->get_his_quotation_by_id($id);
         $his_quo[0]['org_q_id'] = $his_quo[0]['id'];
         unset($his_quo[0]['id']);
@@ -711,20 +732,23 @@ class Service extends MX_Controller {
         redirect($this->config->item('base_url') . 'service/service_list');
     }
 
-    public function quotation_delete() {
+    public function quotation_delete()
+    {
         $id = $this->input->POST('value1');
         $datas["quotation"] = $quotation = $this->service_model->get_all_quotation();
         $del_id = $this->service_model->delete_quotation($id);
         redirect($this->config->item('base_url') . 'service/service_list');
     }
 
-    public function history_view($id) {
+    public function history_view($id)
+    {
         $datas["his_quo"] = $his_quo = $this->service_model->all_history_quotations($id);
         $this->template->write_view('content', 'history_view', $datas);
         $this->template->render();
     }
 
-    public function ajaxList() {
+    public function ajaxList()
+    {
         $search_data = array();
         $search_data = $this->input->post();
         $list = $this->service_model->get_datatables($search_data);
@@ -761,13 +785,15 @@ class Service extends MX_Controller {
         exit;
     }
 
-    function convert_number(float $number) {
+    function convert_number(float $number)
+    {
         $decimal = round($number - ($no = floor($number)), 2) * 100;
         $hundred = null;
         $digits_length = strlen($no);
         $i = 0;
         $str = array();
-        $words = array(0 => '', 1 => 'one', 2 => 'two',
+        $words = array(
+            0 => '', 1 => 'one', 2 => 'two',
             3 => 'three', 4 => 'four', 5 => 'five', 6 => 'six',
             7 => 'seven', 8 => 'eight', 9 => 'nine',
             10 => 'ten', 11 => 'eleven', 12 => 'twelve',
@@ -775,7 +801,8 @@ class Service extends MX_Controller {
             16 => 'sixteen', 17 => 'seventeen', 18 => 'eighteen',
             19 => 'nineteen', 20 => 'twenty', 30 => 'thirty',
             40 => 'forty', 50 => 'fifty', 60 => 'sixty',
-            70 => 'seventy', 80 => 'eighty', 90 => 'ninety');
+            70 => 'seventy', 80 => 'eighty', 90 => 'ninety'
+        );
         $digits = array('', 'hundred', 'thousand', 'lakh', 'crore');
         while ($i < $digits_length) {
             $divider = ($i == 2) ? 10 : 100;
@@ -785,7 +812,7 @@ class Service extends MX_Controller {
             if ($number) {
                 $plural = (($counter = count($str)) && $number > 9) ? 's' : null;
                 $hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
-                $str [] = ($number < 21) ? $words[$number] . ' ' . $digits[$counter] . $plural . ' ' . $hundred : $words[floor($number / 10) * 10] . ' ' . $words[$number % 10] . ' ' . $digits[$counter] . $plural . ' ' . $hundred;
+                $str[] = ($number < 21) ? $words[$number] . ' ' . $digits[$counter] . $plural . ' ' . $hundred : $words[floor($number / 10) * 10] . ' ' . $words[$number % 10] . ' ' . $digits[$counter] . $plural . ' ' . $hundred;
             } else
                 $str[] = null;
         }
@@ -793,7 +820,6 @@ class Service extends MX_Controller {
         $paise = ($decimal) ? "." . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' Paise' : '';
         return ($Rupees ? $Rupees . 'Rupees ' : '') . $paise;
     }
-
 }
 
 /* End of file welcome.php */
