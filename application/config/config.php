@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('BASEPATH'))
-    exit('No direct script access allowed');
+  exit('No direct script access allowed');
 
 
 
@@ -747,7 +747,7 @@ $config['proxy_ips'] = '';
 
 $config['modules_locations'] = array(APPPATH . 'modules/' => '../modules/',);
 
-$config['theme_locations'] = 'http://localhost/F2F/INCSL/themes/';
+$config['theme_locations'] = 'http://localhost/F2F/serviesAPP/themes/';
 
 $config['default_email'] = "info@f2fsolutions.co.in";
 

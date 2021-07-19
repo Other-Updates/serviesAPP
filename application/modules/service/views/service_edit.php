@@ -132,8 +132,9 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                     <div class="col-md-4">
                                                         <div class="material-group">
                                                             <div class="form-group form-primary">
-                                                            <label class="float-label">Select User</label>
+                                                            <label class="float-label">Select Employee</label>
                                                                 <select name="emp_id[]" class="form-control required hh" id="emp_id" tabindex="1">
+                                                                <option value=''>-Select Employee-</option>
                                                                     <?php
                                                                   
                                                                     if (isset($staff_name) && !empty($staff_name)) {
