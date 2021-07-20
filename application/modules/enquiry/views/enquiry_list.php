@@ -8,12 +8,6 @@
     table tr td:nth-child(8){ }
     @media print{
         table tr td:last-child{display:none;}
-        body{font-size:8px !important;}
-        table, table tr th, table tr td, table tr td p{font-size:9px !important;}
-    }
-    @page {
-        size:A5 Portrait !important;
-
     }
 </style>
 <div class="card">

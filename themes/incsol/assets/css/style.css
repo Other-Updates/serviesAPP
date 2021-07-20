@@ -224,7 +224,7 @@ code {
   padding: 10px;
 }
 .card .card-block table tr {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 .card .card-block .sub-title {
   font-size: 14px;
@@ -21948,9 +21948,10 @@ border: 1px solid #448aff !important;}
 .modal-header{background-color: #3f85f9;
     color: white;
     text-align: center;
+    border-radius: 1rem 1rem 0 0;
 padding: 6px;}
 .modal-header .close {
-    padding: 1.3rem;
+  padding: 1rem 1.5rem;
     margin: -1rem -1rem -1rem -1rem;
 }	
 #myModalLabel{
@@ -21991,7 +21992,7 @@ margin-top: 20%;}
 .modal .modal-footer{text-align: center;
     margin: 0px auto;
 border-top: 0px;
-padding: 0.3rem;}
+padding: 0.5rem;}
 .modal-footer.btn-sm {
 padding: 7px 11px;}
 .togswitch {
@@ -22108,4 +22109,15 @@ button:focus {
 .form-control:disabled, .form-control[readonly] {
   background-color: #eceff4;
   opacity: 1;
+}
+.modal-header h3, .modal-header h4 {
+  font-size: 1rem;
+  line-height: 30px;
+}
+.modal-content {
+  border-radius: 1rem;
+  border: 0;
+}
+.modal-footer .btn {
+  border-radius: 15px;
 }
