@@ -359,7 +359,7 @@
                                     </a>
                                 </li>
                                 <li class="user-profile header-notification">
-                                    <a href="#!" class="waves-effect waves-light">
+                                    <a href="#!" class="waves-effect waves-light header-notify">
                                         <?php
                                         $exists = file_exists(FCPATH . 'admin_image/original/' . $this->user_auth->get_from_session('profile_image'));
                                         $f_name = $this->user_auth->get_from_session('profile_image');
