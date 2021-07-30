@@ -258,7 +258,7 @@
                             </ul>
                             <ul class="nav-right">
                                 <li class="header-notification">
-                                    <a href="#!" class="waves-effect waves-light">
+                                    <a href="#!" class="waves-effect waves-light header-notify">
                                         <i class="ti-bell"></i>
                                         <span class="badge bg-c-red"></span>
                                     </a>
@@ -1455,6 +1455,9 @@
         <script>
             $('.excel_btn').live('click', function () {
                 fnExcelReport();
+            });
+            $('.header-notify').click(function() {
+                $('#sidebar').css({display:"none"})
             });
         </script>
         <script>
