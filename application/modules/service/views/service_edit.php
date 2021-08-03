@@ -29,9 +29,9 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                     foreach ($edit_service as $val) {
                                         $selected_array = explode(',', $val['emp_id']);
                                         ?>
-                                        <form class="" action="<?php echo $this->config->item('base_url'); ?>service/to_do_service/update_service/<?php echo $val['id']; ?>" method="POST" enctype="multipart/form-data">
-                                            <div class=" row">
-                                                <!-- <div class="col-md-3">
+                                        <form class="form-material" action="<?php echo $this->config->item('base_url'); ?>service/to_do_service/update_service/<?php echo $val['id']; ?>" method="POST" enctype="multipart/form-data">
+                                            <div class="form-material row">
+                                                <div class="col-md-3">
                                                     <div class="material-group">
                                                         <div class="material-addone">
                                                             <i class="icofont icofont-address-book"></i>
@@ -43,12 +43,12 @@ $user_info = $this->user_auth->get_from_session('user_info');
 
                                                         </div>
                                                     </div>
-                                                </div> -->
+                                                </div>
                                                 <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Ticket Number</label>
-                                                            <input type="text"  class=" form-control" value="<?= $val['ticket_no'] ?>"  tabindex="1" readonly/>
+                                                            <input type="text"  class=" form-control" value="<?= $val['ticket_no'] ?>"  tabindex="1"  readonly/>
                                                             <span class="form-bar"></span>
                                                             <span id="cuserror1" class="val text-danger"></span>
 
@@ -83,7 +83,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                 <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
-                                                        <label class="float-label">Status</label>
+                                                        <label class="float-label">Status</label><br>
                                                             <select name="status" class="form-control " id="status"  tabindex="1">
                                                                 <option value="2" <?php echo ($val['status'] == 2) ? 'selected' : ''; ?>>Pending</option>
                                                                 <option value="1" <?php echo ($val['status'] == 1) ? 'selected' : ''; ?>>Completed</option>
@@ -95,15 +95,15 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" row">
+                                            <div class="form-material row">
                                                 <div class="col-md-4">
                                                     <div class="material-group">
                                                         <div class="form-group form-primary">
                                                             <label class="float-label">Service Date</label>
-                                                            <!-- <input type="text" class=" form-control"  value="<?= date('m/d/Y', strtotime($val['created_date'])); ?>"  tabindex="1" readonly/> -->
-                                                            <input id="dropper-default" class="form-control" name="created_date"  data-date="<?php echo date('d', strtotime($val['created_date'])); ?>" data-month="<?php echo date('m', strtotime($val['created_date'])); ?>" data-formats="<?php echo date('m/d/Y', strtotime($val['created_date'])); ?>" data-year="<?php echo date('Y', strtotime($val['created_date'])); ?>" placeholder="Select your date" value="<?php echo date('d-M-Y', strtotime($val['created_date'])); ?>" />
+                                                            <input type="text" class=" form-control"  value="<?= date('d/m/Y', strtotime($val['created_date'])); ?>"  tabindex="1" />
+                                                            <!-- <input id="dropper-default" class="form-control" name="created_date"  data-date="<?php echo date('d', strtotime($val['created_date'])); ?>" data-month="<?php echo date('m', strtotime($val['created_date'])); ?>" data-formats="<?php echo date('m/d/Y', strtotime($val['created_date'])); ?>" data-year="<?php echo date('Y', strtotime($val['created_date'])); ?>" placeholder="Select your date" value="<?php echo date('d-M-Y', strtotime($val['created_date'])); ?>" /> -->
                                                             <span class="form-bar"></span>
-                                                            <span id="date1" class="val text-danger"></span>
+                                                            <span id="cuserror4" class="val text-danger"></span>
 
                                                         </div>
                                                     </div>
@@ -132,7 +132,7 @@ $user_info = $this->user_auth->get_from_session('user_info');
                                                     <div class="col-md-4">
                                                         <div class="material-group">
                                                             <div class="form-group form-primary">
-                                                            <label class="float-label">Select Employee</label>
+                                                            <label class="float-label"></label>
                                                                 <select name="emp_id[]" class="form-control required hh" id="emp_id" tabindex="1">
                                                                 <option value=''>-Select Employee-</option>
                                                                     <?php
@@ -344,64 +344,52 @@ $user_info = $this->user_auth->get_from_session('user_info');
 
         $('#submit').on('click', function () {
             var i = 0;
-//            var wp = $(this).closest('form').find('.wp').val();
-//            if (wp == '') {
-//                $(this).closest('form').find('.error_msg').text('This field is required');
-//                i = 1;
-//            } else {
-//                $(this).closest('form').find('.error_msg').text('');
-//            }
-            var emp_id = $('#emp_id').val();
-            if (emp_id == "")
-            {
-                $('#staff_err').html("This field is required");
-                i = 1;
-                $('#staff_err').focus();
-            } else
-            {
-                $('#category').html("");
-            }
-            if (i == 1)
-            {
-                return false;
-            } else
-            {
-                return true;
-            }
+        //    var wp = $(this).closest('form').find('.wp').val();
+        //    if (wp == '') {
+        //        $(this).closest('form').find('.error_msg').text('This field is required');
+        //        i = 1;
+        //    } else {
+        //        $(this).closest('form').find('.error_msg').text('');
+        //    }
+        //     var emp_id = $('#emp_id').val();
+        //     if (emp_id == "")
+        //     {
+        //         $('#staff_err').html("This field is required");
+        //         i = 1;
+        //         $('#staff_err').focus();
+        //     } else
+        //     {
+        //         $('#category').html("");
+        //     }
+        //     if (i == 1)
+        //     {
+        //         return false;
+        //     } else
+        //     {
+        //         return true;
+        //     }
         })
-        $("#emp_id").live('blur', function ()
-        {
-            var emp_id = $("#emp_id").val();
-            if (emp_id == "" || emp_id == null || emp_id.trim().length == 0)
-            {
-                $("#staff_err").html("This field is required");
-            } else
-            {
-                $("#staff_err").html("");
-            }
-        });
-
-        $("#dropper-default").live('blur', function ()
-    {
-        var date = $("#dropper-default").val();
-
-        if (date == "" || date == null || date.trim().length == 0)
-        {
-            $("#date1").html("Required Field");
-        } else
-        {
-            $("#date1").html("");
-        }
-    });
+        // $("#emp_id").live('blur', function ()
+        // {
+        //     var emp_id = $("#emp_id").val();
+        //     if (emp_id == "" || emp_id == null || emp_id.trim().length == 0)
+        //     {
+        //         $("#staff_err").html("This field is required");
+        //     } else
+        //     {
+        //         $("#staff_err").html("");
+        //     }
+        // });
     </script>
+    
     <script>
-     var date = $("#dropper-default").val();
+//      var date = $("#dropper-default").val();
 
-if (date == "" || date == null || date.trim().length == 0)
-{
-    $("#date1").html("Required Field");
-    i = 1;
-} else
-{
-    $("#date1").html("");
-}</script>
+// if (date == "" || date == null || date.trim().length == 0)
+// {
+//     $("#date1").html("Required Field");
+//     i = 1;
+// } else
+// {
+//     $("#date1").html("");
+// }</script>

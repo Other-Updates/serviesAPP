@@ -87,7 +87,7 @@ class To_do_service extends MX_Controller {
             $row[] = ($val['description']);
             // $row[] = ucfirst($val['warrenty']);
             $row[] = ($val['name']);
-            $row[] = ($val['created_date'] != '') ? date('d-M-Y', strtotime($val['created_date'])) : '-';
+            $row[] = ($val['created_date'] != '') ? date('d/m/Y', strtotime($val['created_date'])) : '-';
             if ($val['status'] == 2) {
                 $status = '<span class="label label-danger">Pending</span>';
             } else if($val['status'] == 1) {
@@ -107,7 +107,7 @@ class To_do_service extends MX_Controller {
             "data" => $data,
         );
         echo json_encode($output);
-        exit;
+        // exit;
     }
 
     public function service_delete() {
@@ -123,6 +123,8 @@ class To_do_service extends MX_Controller {
 
         if ($input['emp_id'] != '') {
             $input['emp_id'] = implode(',', $this->input->post('emp_id'));
+            // $input['updated_date'] = date('Y-m-d', strtotime($input['created_date']));
+
         }
         $this->to_do_service_model->updateservice($id, $input);
 

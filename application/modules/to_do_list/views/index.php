@@ -30,7 +30,7 @@ $job_type_arr = array(
         display:none;
     }
 
-    #service_table1 tbody tr td:nth-child(6), #service_table tbody tr td:nth-child(5) {text-align:center;}
+    #service_table tbody tr td:nth-child(2),#service_table tbody tr td:nth-child(4), #service_table tbody tr td:nth-child(5) {text-align:center;}
     #service_table1 tbody tr td:nth-child(7){text-align:center;}
     #leads_table tbody tr td:nth-child(9){text-align:center;}
     #leads_table tbody tr td:nth-child(6){text-align:center;}
@@ -137,7 +137,7 @@ $job_type_arr = array(
                                             <!--<th width="35">Product Image</th>-->
                                             <th>Description</th>
                                             <!-- <th width="35">Warranty</th> -->
-                                            <th>Empname</th>
+                                            <th>Employee Name</th>
                                             <th>Inv Date</th>
                                             <th>Status</th>
                                             <!--<th width="107" class="action-btn-align">Action</th>-->

@@ -18,8 +18,11 @@ $job_type_arr = array(
 );
 ?>
 <style>
+    #service_table tbody tr td:nth-child(2){text-align:center;}
+    #service_table tbody tr td:nth-child(3){text-align:center;}
+    #service_table tbody tr td:nth-child(4){text-align:center;}
     #service_table tbody tr td:nth-child(6){text-align:center;}
-    #service_table tbody tr td:nth-child(7){text-align:center;}
+    #service_table tbody tr td:nth-child(5){text-align:center;}
     #leads_table tbody tr td:nth-child(9){text-align:center;}
     #leads_table tbody tr td:nth-child(6){text-align:center;}
     #leads_table tbody tr td:nth-child(5){text-align:center;}

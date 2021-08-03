@@ -52,6 +52,9 @@ class User_section_model extends CI_Model {
         $this->db->join($this->module_table . ' AS tab_2', 'tab_2.id = tab_1.module_id', 'LEFT');
         $this->db->where('tab_1.module_id', $id);
         $this->db->where('tab_1.status', 1);
+        $key=["vendor","email","product","master_category","master_brand","db_backup","expense_category","purchase_order","purchase_return","purchase_receipt","stock","project_cost","sales_return","quotation_report","purchase_report","purchase_receipt","stock_report","pc_report","invoice_report","profit_list","service_inward_and_outward_dc","quotation","receipt","death_stock","customer_report","grn_report","gst_return_report","service","monthly_attendance_report","attendance","balance_sheet","expense","daily_cash_book_report","company_amount","goods_receive_note","employee_report","service_material_report","outstanding_report","service_list","conversion_list","dashboard"];
+        
+        $this->db->where_not_in('tab_1.user_section_key',$key);
         $query = $this->db->get($this->table_name . ' AS tab_1');
         if ($query->num_rows() > 0) {
             return $query->result_array();

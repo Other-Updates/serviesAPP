@@ -236,11 +236,14 @@ class Api_model extends CI_Model {
 
     public function get_service_list($id, $type, $from_date, $to_date) {
 
-        $from_date = str_replace('/', '-', $from_date);
-        $to_date = str_replace('/', '-', $to_date);
-        $formated_from_date = date('Y-m-d', strtotime($from_date));
-        $formated_to_date = date('Y-m-d', strtotime($to_date));
+        $from_date = str_replace('-', '/', $from_date);
+        $to_date = str_replace('-', '/', $to_date);
+        $formated_from_date = date('Y/m/d', strtotime($from_date));
+        $formated_to_date = date('Y/m/d', strtotime($to_date));
         $this->db->select('erp_service.*,erp_user.name as attendant,erp_user.mobile_no as attendant_mobile_no');
+        $this->db->select('DATE_FORMAT(erp_service.created_date,"%d/%m/%Y %H:%i") as created_date',false);
+        $this->db->select('DATE_FORMAT(erp_service.updated_date,"%d/%m/%Y %H:%i") as updated_date',false);
+
         $this->db->join('erp_user', 'erp_user.id=erp_service.emp_id', 'LEFT');
         $this->db->where('erp_service.service_status', 1);
         if ($type == 'employee') {
@@ -248,8 +251,8 @@ class Api_model extends CI_Model {
 //            $this->db->where('erp_service.emp_id', $id);
             $this->db->where("FIND_IN_SET('$id',emp_id) > 0");
             if (isset($from_date) && $from_date != '' && isset($to_date) && $to_date != '') {
-                $this->db->where('DATE_FORMAT(erp_service.created_date, "%Y-%m-%d")>=', $formated_from_date);
-                $this->db->where('DATE_FORMAT(erp_service.created_date, "%Y-%m-%d")<=', $formated_to_date);
+                $this->db->where('DATE_FORMAT(erp_service.created_date, "%Y/%m/%d")>=', $formated_from_date);
+                $this->db->where('DATE_FORMAT(erp_service.created_date, "%Y/%m/%d")<=', $formated_to_date);
             }
 //        $this->db->group_up('erp_service.inv_no');
             $this->db->join('erp_invoice', 'erp_invoice.inv_id=erp_service.inv_no', 'LEFT');

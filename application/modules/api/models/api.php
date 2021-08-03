@@ -665,7 +665,7 @@ class Api extends REST_Controller {
                 $insert['ticket_no'] = 'TKNO-'.str_pad(($get_token_number+1), 3, '0', STR_PAD_LEFT);
                 $insert['description'] = $data_input['description'];
                 $insert['created_date'] = date('Y-m-d H:i:s');
-                $insert['updated_date'] = date('Y-m-d H:i:s');
+                // $insert['updated_date'] = date('Y-m-d H:i:s');
                 if ($data_input['service_type'] == 'warranty') {
                     $insert['inv_no'] = $data_input['inv_no'];
                     $insert['warrenty'] = $data_input['warranty'];

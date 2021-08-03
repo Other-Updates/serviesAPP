@@ -352,7 +352,7 @@
                                                                                 </ul>-->
                                     <?php } ?>
                                 </li>
-                                <li class="">
+                                <li>
                                     <a href="#!" class="displayChatbox waves-effect waves-light">
                                         <i class="ti-comments"></i>
                                         <span class="badge bg-c-green"></span>
@@ -415,8 +415,8 @@
                                 if (!empty($user_activation)) {
                                     $default_image = $this->config->item("base_url") . "admin_image/original/admin_icon.jpg";
                                     foreach ($user_activation as $key => $notify_cust_data) {
-                                        if ($notify_cust_data['user_type'] == 2) {
-                                            $customer_name = $notify_cust_data['store_name'];
+                                        if ($notify_cust_data['user_type'] == 1 && $notify_cust_data['status'] == 1) {
+                                            $customer_name = $notify_cust_data['user_name'];
                                             $cust_image = $notify_cust_data['customer_image'];
                                             $cust_path = "attachement/cust_image/";
                                             $exists = file_exists(FCPATH . 'attachement/cust_image/' . $cust_image);
@@ -797,7 +797,7 @@
                                 </ul> -->
                                 <div class="pcoded-navigation-label">Masters</div>
                                 <ul class="pcoded-item pcoded-left-item">
-                                    <li class="pcoded-hasmenu <?php echo $menu_trigger; ?> <?= ($cur_class == 'users' || $cur_class == 'master_colour' || $cur_class == 'product' || $cur_class == 'master_size' || $cur_class == 'item_code' || $cur_class == 'master_style_type' || $cur_class == 'master_fit' || $cur_class == 'vendor' || $cur_class == 'agent' || $cur_class == 'customer' || $cur_class == 'master_brand' || $cur_class == 'master_category' || $cur_class == 'master_transport' || $cur_class == 'email' || $cur_class == 'advertisement' || $cur_class == 'expense_category' && $cur_method == 'fixed_expense' && $cur_method == 'variable_expense' || $cur_class == 'manage_links' ) ? 'active' : '' ?>">
+                                    <li class="pcoded-hasmenu <?php echo $menu_trigger; ?> <?= ($cur_class == 'users' || $cur_class == 'master_colour' || $cur_class == 'product'  || $cur_class == 'user_roles'|| $cur_class == 'master_size' || $cur_class == 'item_code' || $cur_class == 'master_style_type' || $cur_class == 'master_fit' || $cur_class == 'vendor' || $cur_class == 'agent' || $cur_class == 'customer' || $cur_class == 'master_brand' || $cur_class == 'master_category' || $cur_class == 'master_transport' || $cur_class == 'email' || $cur_class == 'advertisement' || $cur_class == 'expense_category' && $cur_method == 'fixed_expense' && $cur_method == 'variable_expense' || $cur_class == 'manage_links' ) ? 'active' : '' ?>">
                                         <a href="javascript:void(0)" class="waves-effect waves-dark">
                                             <span class="pcoded-micon "><i class="ti-dashboard"></i><b>M</b></span>
                                             <span class="pcoded-mtext">Masters</span>
@@ -813,7 +813,7 @@
                                                     </a>
                                                 </li>
                                             <?php endif; ?> -->
-                                            <!-- <?php if ($this->user_auth->is_section_allowed('masters', 'customer')): ?>
+                                            <?php if ($this->user_auth->is_section_allowed('masters', 'customer')): ?>
                                                 <li class="<?php echo ($cur_class == 'customer') ? 'active' : '' ?>">
                                                     <a href="<?php echo $this->config->item('base_url') . 'customer/index' ?>" class="waves-effect waves-dark">
                                                         <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -821,7 +821,7 @@
                                                         <span class="pcoded-mcaret"></span>
                                                     </a>
                                                 </li>
-                                            <?php endif; ?> -->
+                                            <?php endif; ?>
                                             <?php if (($user_info[0]['role'] != 2)) { ?>
                                                 <?php if ($this->user_auth->is_section_allowed('masters', 'user_roles')): ?>
                                                     <li class="<?php echo ($cur_class == 'user_roles') ? 'active' : '' ?>">

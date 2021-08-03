@@ -680,7 +680,7 @@ class Admin_model extends CI_Model {
         $this->db->where('ua.logged_out_date is NULL', NULL, FALSE);
         $this->db->group_by('ua.user_id,ua.user_type');
         $query = $this->db->get('erp_active_users as ua')->result_array();
-
+        // return $this->db->last_query();
         return $query;
     }
 
